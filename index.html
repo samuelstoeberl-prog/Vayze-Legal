@@ -3,14 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Website</title>
+    <title>Vayze - Rechtliche Informationen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #3b82f6;
+            --secondary-color: #64748b;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --border-color: #e2e8f0;
+            --accent: #3b82f6;
+            --success: #10b981;
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Cards Container */
+        .cards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.1));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--primary-color);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: gap 0.3s ease;
+        }
+
+        .card:hover .card-link {
+            gap: 0.75rem;
+        }
+
+        .card-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(59, 130, 246, 0.05));
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .info-box h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-box h3 svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--primary-color);
+        }
+
+        .info-box p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+                padding: 0 1rem 2rem;
+            }
+
+            .card {
+                padding: 2rem;
+            }
+
+            .header-content {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .nav-links a {
+                font-size: 0.875rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Willkommen auf meiner Website</h1>
-    <p>Hier findest du wichtige Informationen:</p>
-    <ul>
-        <li><a href="Nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
-        <li><a href="Datenschutzerklärung.html">Datenschutzerklärung</a></li>
-    </ul>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">Vayze</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Startseite</a></li>
+                    <li><a href="Nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
+                    <li><a href="Datenschutzerklärung.html">Datenschutz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="badge">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            DSGVO-konform
+        </div>
+        <h1>
+            Rechtliche Informationen<br>
+            <span class="gradient-text">Vayze App</span>
+        </h1>
+        <p>Transparenz und Datenschutz stehen für uns an erster Stelle. Hier findest du alle wichtigen rechtlichen Informationen zu unserer App.</p>
+    </section>
+
+    <!-- Cards -->
+    <section class="cards-container">
+        <!-- Terms Card -->
+        <a href="Nutzungsbedingungen.html" class="card">
+            <div class="card-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+            </div>
+            <h2>Nutzungsbedingungen</h2>
+            <p>Die Bedingungen für die Nutzung der Vayze App, einschließlich Funktionen, Accounts, Lizenzen und Haftungsausschluss.</p>
+            <span class="card-link">
+                Mehr erfahren
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </span>
+        </a>
+
+        <!-- Privacy Card -->
+        <a href="Datenschutzerklärung.html" class="card">
+            <div class="card-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                </svg>
+            </div>
+            <h2>Datenschutzerklärung</h2>
+            <p>Wie wir deine Daten schützen, welche Informationen lokal gespeichert werden und welche Rechte du gemäß DSGVO hast.</p>
+            <span class="card-link">
+                Mehr erfahren
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </span>
+        </a>
+    </section>
+
+    <!-- Info Box -->
+    <section class="cards-container">
+        <div class="info-box">
+            <h3>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Privacy-First App
+            </h3>
+            <p>
+                Vayze speichert alle deine persönlichen Daten ausschließlich lokal auf deinem Gerät.
+                Wir haben keinen Zugriff auf deine Entscheidungen, Board-Karten oder sonstige Inhalte.
+                Deine Privatsphäre ist uns wichtig.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Vayze App</h3>
+                <p>Eine Privacy-First Entscheidungshilfe-App für iOS und Android.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Rechtliches</h3>
+                <a href="Nutzungsbedingungen.html">Nutzungsbedingungen</a>
+                <a href="Datenschutzerklärung.html">Datenschutzerklärung</a>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>E-Mail: vayze.app@gmail.com</p>
+                <p>Adresse: Josef-Schwaab-Straße 7<br>94559 Niederwinkling</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Samuel / Vayze Apps. Version 1.3.0</p>
+        </div>
+    </footer>
 </body>
 </html>
