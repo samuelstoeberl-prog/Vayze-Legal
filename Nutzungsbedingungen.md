@@ -4,9 +4,9 @@
 
 **Vayze App**
 
-**Version 1.3.0**
+**Version 1.4.0**
 
-**Stand: 18. Dezember 2025**
+**Stand: 21. Dezember 2025**
 
  
 
@@ -431,13 +431,79 @@ Die App ist für **persönliche, nicht-kommerzielle Zwecke** bestimmt.
 
 **Kommerzielle Nutzung** (z.B. als Entscheidungstool für Unternehmen) ist **nur mit schriftlicher Genehmigung** erlaubt. Kontakt: vayze.app@gmail.com
 
+
+
+## 6. Benachrichtigungen
+
+
+
+### 7.1 Opt-In
+
+Benachrichtigungen sind vollständig **optional**. Du wirst beim ersten Start der App gefragt, ob du Benachrichtigungen aktivieren möchtest. Du kannst jederzeit in den Einstellungen:
+
+- Benachrichtigungen komplett deaktivieren
+
+- Einzelne Benachrichtigungstypen auswählen
+
+- Die Uhrzeit für tägliche Erinnerungen anpassen
+
+
+
+### 7.2 Arten von Benachrichtigungen
+
+Wir senden ausschließlich **nützliche, nicht-kommerzielle** Benachrichtigungen:
+
+- **Tägliche Reflexion** (optional) - Eine Erinnerung zur Selbstreflexion
+
+- **Entscheidungs-Erinnerungen** (optional) - Erinnerungen für offene Entscheidungen, die du selbst erstellst
+
+- **Review-Erinnerungen** (optional) - 7 Tage nach einer Entscheidung, um den Ausgang zu reflektieren
+
+
+
+### 7.3 Keine Werbung
+
+Wir garantieren:
+
+- ❌ Keine Werbe-Benachrichtigungen
+
+- ❌ Keine Marketing-Nachrichten
+
+- ❌ Keine Benachrichtigungen von Drittanbietern
+
+- ❌ Kein Verkauf deines Benachrichtigungs-Tokens
+
+
+
+### 7.4 Häufigkeit
+
+- **Tägliche Reflexion:** Maximal 1x pro Tag (von dir festgelegte Uhrzeit)
+
+- **Entscheidungs-Erinnerungen:** Nur wenn du selbst eine Erinnerung erstellst
+
+- **Review-Erinnerungen:** 1x pro Entscheidung nach 7 Tagen
+
+
+
+**Maximale Häufigkeit:** Durchschnittlich 1-3 Benachrichtigungen pro Tag (nur wenn aktiviert)
+
+
+
+### 7.5 Widerruf
+
+Du kannst Benachrichtigungen jederzeit widerrufen durch:
+
+1. **In der App:** Einstellungen → Benachrichtigungen → Alle deaktivieren
+
+2. **Betriebssystem:** iOS/Android Systemeinstellungen → Vayze → Benachrichtigungen deaktivieren
+
+
+
+## 8. Haftung und Gewährleistung
+
  
 
-## 6. Haftung und Gewährleistung
-
- 
-
-### 6.1 Keine Garantie
+### 7.1 Keine Garantie
 
 Die App wird **"wie besehen"** (as-is) bereitgestellt. Wir übernehmen **keine Garantie** für:
 
@@ -453,7 +519,7 @@ Die App wird **"wie besehen"** (as-is) bereitgestellt. Wir übernehmen **keine G
 
  
 
-### 6.2 Haftungsausschluss
+### 7.2 Haftungsausschluss
 
 **Wir haften nicht** für Schäden, die durch die Nutzung der App entstehen, insbesondere:
 
@@ -477,7 +543,7 @@ Die App wird **"wie besehen"** (as-is) bereitgestellt. Wir übernehmen **keine G
 
  
 
-### 6.3 Haftungsbeschränkung
+### 7.3 Haftungsbeschränkung
 
 Soweit gesetzlich zulässig, ist unsere Haftung **beschränkt auf**:
 
@@ -493,7 +559,7 @@ Soweit gesetzlich zulässig, ist unsere Haftung **beschränkt auf**:
 
  
 
-### 6.4 Deine Verantwortung
+### 7.4 Deine Verantwortung
 
 **Du bist verantwortlich für**:
 
@@ -513,7 +579,7 @@ Soweit gesetzlich zulässig, ist unsere Haftung **beschränkt auf**:
 
  
 
-### 6.5 Keine Garantie für Verfügbarkeit
+### 7.5 Keine Garantie für Verfügbarkeit
 
 Wir bemühen uns, die App **24/7 verfügbar** zu halten, garantieren dies jedoch **nicht**.
 
@@ -535,11 +601,11 @@ Wir bemühen uns, die App **24/7 verfügbar** zu halten, garantieren dies jedoch
 
  
 
-## 7. Updates und Änderungen der App
+## 8. Updates und Änderungen der App
 
  
 
-### 7.1 Updates
+### 8.1 Updates
 
 Wir können **jederzeit Updates** der App veröffentlichen, die:
 
@@ -569,7 +635,7 @@ Wir können **jederzeit Updates** der App veröffentlichen, die:
 
  
 
-### 7.2 Breaking Changes
+### 8.2 Breaking Changes
 
 **Falls ein Update Breaking Changes enthält** (z.B. Änderung des Datenformats):
 
@@ -581,7 +647,7 @@ Wir können **jederzeit Updates** der App veröffentlichen, die:
 
  
 
-### 7.3 Einstellung der App
+### 8.3 Einstellung der App
 
 Wir behalten uns das Recht vor, die App **jederzeit einzustellen** (Sunset).
 
@@ -603,11 +669,11 @@ Wir behalten uns das Recht vor, die App **jederzeit einzustellen** (Sunset).
 
  
 
-## 8. Drittanbieter-Dienste
+## 9. Drittanbieter-Dienste
 
  
 
-### 8.1 App Stores
+### 9.1 App Stores
 
 Die App ist über folgende **Drittanbieter** verfügbar:
 
@@ -621,7 +687,7 @@ Die App ist über folgende **Drittanbieter** verfügbar:
 
  
 
-### 8.2 Betriebssysteme
+### 9.2 Betriebssysteme
 
 Die App benötigt:
 
@@ -641,7 +707,7 @@ Die App benötigt:
 
  
 
-### 8.3 Expo und React Native
+### 9.3 Expo und React Native
 
 Die App basiert auf **Expo** und **React Native**:
 
@@ -655,7 +721,7 @@ Die App basiert auf **Expo** und **React Native**:
 
  
 
-### 8.4 Keine weiteren Drittanbieter
+### 9.4 Keine weiteren Drittanbieter
 
 Die App nutzt **keine weiteren Drittanbieter-Dienste** (wie Analytics, Werbung, etc.).
 
@@ -665,11 +731,11 @@ Die App nutzt **keine weiteren Drittanbieter-Dienste** (wie Analytics, Werbung, 
 
  
 
-## 9. Datenschutz
+## 10. Datenschutz
 
  
 
-### 9.1 Datenschutzerklärung
+### 10.1 Datenschutzerklärung
 
 Die Verarbeitung deiner personenbezogenen Daten regelt unsere **Datenschutzerklärung**:
 
@@ -691,13 +757,13 @@ Die Verarbeitung deiner personenbezogenen Daten regelt unsere **Datenschutzerkl�
 
  
 
-### 9.2 Cookies
+### 10.2 Cookies
 
 Die App verwendet **keine Cookies**, da es sich um eine native mobile App handelt.
 
  
 
-### 9.3 Tracking
+### 10.3 Tracking
 
 Die App verwendet **kein Tracking** (kein Google Analytics, Facebook Pixel, etc.).
 
@@ -707,11 +773,11 @@ Die **Analytics-Einstellung** in der App hat derzeit **keine Funktion** und ist 
 
  
 
-## 10. Mindestalter und Schutz Minderjähriger
+## 11. Mindestalter und Schutz Minderjähriger
 
  
 
-### 10.1 Mindestalter
+### 11.1 Mindestalter
 
 Du musst mindestens **13 Jahre alt** sein, um die App zu nutzen.
 
@@ -727,7 +793,7 @@ Du musst mindestens **13 Jahre alt** sein, um die App zu nutzen.
 
  
 
-### 10.2 Jugendliche (13-17 Jahre)
+### 11.2 Jugendliche (13-17 Jahre)
 
 **Jugendliche zwischen 13 und 17 Jahren** dürfen die App mit **Zustimmung der Erziehungsberechtigten** nutzen.
 
@@ -743,7 +809,7 @@ Du musst mindestens **13 Jahre alt** sein, um die App zu nutzen.
 
  
 
-### 10.3 Keine sensiblen Inhalte
+### 11.3 Keine sensiblen Inhalte
 
 Die App enthält **keine sensiblen Inhalte** (keine Gewalt, Pornografie, Drogen, etc.).
 
@@ -759,11 +825,11 @@ Die App enthält **keine sensiblen Inhalte** (keine Gewalt, Pornografie, Drogen,
 
  
 
-## 11. Internationale Nutzung
+## 12. Internationale Nutzung
 
  
 
-### 11.1 Verfügbarkeit
+### 12.1 Verfügbarkeit
 
 Die App ist **weltweit verfügbar** (sofern in den jeweiligen App Stores verfügbar).
 
@@ -773,7 +839,7 @@ Die App ist **weltweit verfügbar** (sofern in den jeweiligen App Stores verfüg
 
  
 
-### 11.2 Lokale Gesetze
+### 12.2 Lokale Gesetze
 
 Du bist verantwortlich für die Einhaltung **lokaler Gesetze** in deinem Land.
 
@@ -783,7 +849,7 @@ Du bist verantwortlich für die Einhaltung **lokaler Gesetze** in deinem Land.
 
  
 
-### 11.3 Export-Kontrollen
+### 12.3 Export-Kontrollen
 
 Die App unterliegt möglicherweise **Export-Kontrollen** (z.B. Verschlüsselungstechnologie).
 
@@ -793,11 +859,11 @@ Du darfst die App **nicht** in Länder exportieren, die unter **US-Sanktionen** 
 
  
 
-## 12. Beendigung der Nutzung
+## 13. Beendigung der Nutzung
 
  
 
-### 12.1 Kündigung durch dich
+### 13.1 Kündigung durch dich
 
 Du kannst die Nutzung **jederzeit beenden**, indem du:
 
@@ -811,7 +877,7 @@ Du kannst die Nutzung **jederzeit beenden**, indem du:
 
  
 
-### 12.2 Kündigung durch uns
+### 13.2 Kündigung durch uns
 
 Wir können deinen **Account sperren oder löschen**, wenn:
 
@@ -829,7 +895,7 @@ Wir können deinen **Account sperren oder löschen**, wenn:
 
  
 
-### 12.3 Folgen der Beendigung
+### 13.3 Folgen der Beendigung
 
 **Nach Beendigung**:
 
@@ -843,11 +909,11 @@ Wir können deinen **Account sperren oder löschen**, wenn:
 
  
 
-## 13. Streitbeilegung und anwendbares Recht
+## 14. Streitbeilegung und anwendbares Recht
 
  
 
-### 13.1 Anwendbares Recht
+### 14.1 Anwendbares Recht
 
 Es gilt das Recht der **Bundesrepublik Deutschland** unter Ausschluss des UN-Kaufrechts.
 
@@ -857,7 +923,7 @@ Es gilt das Recht der **Bundesrepublik Deutschland** unter Ausschluss des UN-Kau
 
  
 
-### 13.2 Gerichtsstand
+### 14.2 Gerichtsstand
 
 **Ausschließlicher Gerichtsstand** ist Straubing, Deutschland.
 
@@ -867,7 +933,7 @@ Es gilt das Recht der **Bundesrepublik Deutschland** unter Ausschluss des UN-Kau
 
  
 
-### 13.3 Online-Streitbeilegung (EU)
+### 14.3 Online-Streitbeilegung (EU)
 
 Die EU-Kommission stellt eine Plattform zur **Online-Streitbeilegung (OS)** bereit:
 
@@ -879,7 +945,7 @@ Wir sind **nicht verpflichtet**, an einem Streitbeilegungsverfahren teilzunehmen
 
  
 
-### 13.4 Verbraucherschlichtung
+### 14.4 Verbraucherschlichtung
 
 Wir sind **nicht bereit und nicht verpflichtet**, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
 
@@ -889,11 +955,11 @@ Wir sind **nicht bereit und nicht verpflichtet**, an einem Streitbeilegungsverfa
 
  
 
-## 14. Salvatorische Klausel
+## 15. Salvatorische Klausel
 
  
 
-### 14.1 Unwirksamkeit einzelner Bestimmungen
+### 15.1 Unwirksamkeit einzelner Bestimmungen
 
 Falls eine Bestimmung dieser Nutzungsbedingungen **unwirksam** ist oder wird, bleiben die übrigen Bestimmungen **wirksam**.
 
@@ -903,7 +969,7 @@ Die unwirksame Bestimmung wird durch eine wirksame Bestimmung ersetzt, die dem *
 
  
 
-### 14.2 Vertragsergänzungen
+### 15.2 Vertragsergänzungen
 
 **Nebenabreden, Änderungen oder Ergänzungen** dieser Nutzungsbedingungen bedürfen der **Schriftform**.
 
@@ -913,11 +979,11 @@ Die unwirksame Bestimmung wird durch eine wirksame Bestimmung ersetzt, die dem *
 
  
 
-## 15. Kontakt und Support
+## 16. Kontakt und Support
 
  
 
-### 15.1 Support
+### 16.1 Support
 
 Bei Fragen oder Problemen:
 
@@ -937,7 +1003,7 @@ Bei Fragen oder Problemen:
 
  
 
-### 15.2 Feedback
+### 16.2 Feedback
 
 Wir freuen uns über dein Feedback:
 
@@ -953,7 +1019,7 @@ Wir freuen uns über dein Feedback:
 
  
 
-### 15.3 Bugs melden
+### 16.3 Bugs melden
 
 Wenn du einen Bug findest:
 
@@ -979,11 +1045,11 @@ Wenn du einen Bug findest:
 
  
 
-## 16. Marken und Urheberrecht
+## 17. Marken und Urheberrecht
 
  
 
-### 16.1 Marken
+### 17.1 Marken
 
 **"Vayze"** ist eine **Marke** des Anbieters (Registrierung geplant).
 
@@ -1007,7 +1073,7 @@ Wenn du einen Bug findest:
 
  
 
-### 16.2 Urheberrecht
+### 17.2 Urheberrecht
 
 **Alle Inhalte der App** (Texte, Grafiken, Code, Design) sind **urheberrechtlich geschützt**.
 
@@ -1017,7 +1083,7 @@ Wenn du einen Bug findest:
 
  
 
-### 16.3 Open Source
+### 17.3 Open Source
 
 Die App verwendet **Open-Source-Bibliotheken**, die unter ihren jeweiligen Lizenzen stehen:
 
@@ -1035,11 +1101,21 @@ Die App verwendet **Open-Source-Bibliotheken**, die unter ihren jeweiligen Lizen
 
  
 
-## 17. Änderungshistorie
+## 18. Änderungshistorie
 
  
 
-### 17.1 Version 1.3.0 (18. Dezember 2025)
+### 18.1 Version 1.4.0 (21. Dezember 2025)
+
+- Hinzugefügt: Section 6 über Benachrichtigungen
+
+- Klarstellung: Benachrichtigungen sind optional und nur mit Einwilligung
+
+- Keine Werbe-Benachrichtigungen, nur nützliche Erinnerungen
+
+
+
+### 18.2 Version 1.3.0 (18. Dezember 2025)
 
 - Initiale Version der Nutzungsbedingungen
 
@@ -1049,9 +1125,9 @@ Die App verwendet **Open-Source-Bibliotheken**, die unter ihren jeweiligen Lizen
 
 - Datenschutz und DSGVO-Konformität
 
- 
 
-### 17.2 Zukünftige Änderungen
+
+### 18.3 Zukünftige Änderungen
 
 **Zukünftige Änderungen** werden hier dokumentiert:
 
@@ -1066,11 +1142,11 @@ Die App verwendet **Open-Source-Bibliotheken**, die unter ihren jeweiligen Lizen
 **Du wirst über wesentliche Änderungen** in der App informiert.
 
  
-## 18. Besondere Bestimmungen für iOS (Apple)
+## 19. Besondere Bestimmungen für iOS (Apple)
 
  
 
-### 18.1 Apple-Endnutzer-Lizenzvereinbarung (EULA)
+### 21.1 Apple-Endnutzer-Lizenzvereinbarung (EULA)
 
 Wenn du die App über den **Apple App Store** herunterlädst, gelten zusätzlich die **Apple-Standard-Lizenzbedingungen (EULA)**:
 
@@ -1078,7 +1154,7 @@ Wenn du die App über den **Apple App Store** herunterlädst, gelten zusätzlich
 
  
 
-### 18.2 Haftungsausschluss Apple
+### 21.2 Haftungsausschluss Apple
 
 **Apple ist kein Vertragspartner** dieser Nutzungsbedingungen.
 
@@ -1100,17 +1176,17 @@ Wenn du die App über den **Apple App Store** herunterlädst, gelten zusätzlich
 
  
 
-### 18.3 Geistiges Eigentum
+### 21.3 Geistiges Eigentum
 
 Apple hat **keine Eigentumsrechte** an der App. Alle Rechte verbleiben beim Anbieter.
 
  
 
-## 19. Besondere Bestimmungen für Android (Google Play)
+## 20. Besondere Bestimmungen für Android (Google Play)
 
  
 
-### 19.1 Google Play-Nutzungsbedingungen
+### 21.1 Google Play-Nutzungsbedingungen
 
 Wenn du die App über **Google Play** herunterlädst, gelten zusätzlich die **Google Play-Nutzungsbedingungen**:
 
@@ -1118,7 +1194,7 @@ Wenn du die App über **Google Play** herunterlädst, gelten zusätzlich die **G
 
  
 
-### 19.2 Haftungsausschluss Google
+### 21.2 Haftungsausschluss Google
 
 **Google ist kein Vertragspartner** dieser Nutzungsbedingungen.
 
@@ -1138,11 +1214,11 @@ Wenn du die App über **Google Play** herunterlädst, gelten zusätzlich die **G
 
  
 
-## 20. Schlussbemerkungen
+## 21. Schlussbemerkungen
 
  
 
-### 20.1 Vollständigkeit
+### 21.1 Vollständigkeit
 
 Diese Nutzungsbedingungen stellen **die gesamte Vereinbarung** zwischen dir und uns dar.
 
@@ -1152,13 +1228,13 @@ Diese Nutzungsbedingungen stellen **die gesamte Vereinbarung** zwischen dir und 
 
  
 
-### 20.2 Überschriften
+### 21.2 Überschriften
 
 Die Überschriften dienen **nur der Übersichtlichkeit** und haben keine rechtliche Bedeutung.
 
  
 
-### 20.3 Sprachversionen
+### 21.3 Sprachversionen
 
 Diese Nutzungsbedingungen sind auf **Deutsch** verfasst. Bei Übersetzungen in andere Sprachen ist die **deutsche Version** maßgeblich.
 
@@ -1166,13 +1242,13 @@ Diese Nutzungsbedingungen sind auf **Deutsch** verfasst. Bei Übersetzungen in a
 
  
 
-## Zuletzt aktualisiert: 18. Dezember 2025
+## Zuletzt aktualisiert: 21. Dezember 2025
 
- 
 
-**Version**: 1.3.0
 
-**Gültig ab**: 18. Dezember 2025
+**Version**: 1.4.0
+
+**Gültig ab**: 21. Dezember 2025
 
  
 

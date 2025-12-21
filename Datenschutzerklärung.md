@@ -4,9 +4,9 @@
 
 **Vayze App**
 
-**Version 1.3.0**
+**Version 1.4.0**
 
-**Stand: 18. Dezember 2025**
+**Stand: 21. Dezember 2025**
 
  
 
@@ -165,7 +165,47 @@ Wir erfassen **KEINE** der folgenden Daten:
 
  
 
-### 3.4 Technische Daten
+### 3.4 Push-Benachrichtigungen (Optional)
+
+Wenn du Benachrichtigungen aktivierst, verwenden wir:
+
+- **Lokale Benachrichtigungen** - Alle Erinnerungen werden lokal auf deinem Gerät erstellt
+
+- **Benachrichtigungs-Token** - Ein technischer Identifier, um Benachrichtigungen zu senden (wird NICHT für Tracking verwendet)
+
+- **Benachrichtigungs-Präferenzen** - Welche Arten von Erinnerungen du erhalten möchtest
+
+
+
+**Was wir NICHT tun:**
+
+- ❌ Keine Push-Benachrichtigungen zu Werbezwecken
+
+- ❌ Kein Tracking durch Benachrichtigungen
+
+- ❌ Keine Weitergabe deines Benachrichtigungs-Tokens an Dritte
+
+- ❌ Keine Benachrichtigungen ohne deine explizite Zustimmung
+
+
+
+**Arten von Benachrichtigungen:**
+
+1. **Tägliche Reflexion** - Optionale Erinnerung zur Selbstreflexion (Standard: 20:00 Uhr)
+
+2. **Entscheidungs-Erinnerungen** - Erinnerungen für offene Entscheidungen
+
+3. **Review-Erinnerungen** - Follow-up nach 7 Tagen zur Bewertung deiner Entscheidung
+
+
+
+Du kannst jederzeit in den Einstellungen festlegen, welche Benachrichtigungen du erhalten möchtest.
+
+**Rechtsgrundlage**: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
+
+
+
+### 3.5 Technische Daten
 
 Die App benötigt folgende Berechtigungen:
 
@@ -173,7 +213,9 @@ Die App benötigt folgende Berechtigungen:
 
 - **Speicher** - Zum lokalen Speichern deiner Daten auf dem Gerät
 
- 
+- **Benachrichtigungen** (Optional) - Für Erinnerungen und Reflexions-Prompts
+
+
 
 **Keine weiteren Berechtigungen erforderlich**.
 
@@ -875,6 +917,16 @@ Wir behalten uns vor, diese Datenschutzerklärung **anzupassen**, um sie an geä
 
 ### 13.3 Änderungshistorie
 
+**Version 1.4.0** (21. Dezember 2025):
+
+- Hinzugefügt: Push-Benachrichtigungen (Section 3.4)
+
+- Aktualisiert: Technische Daten (Section 3.5)
+
+- Klarstellung: Benachrichtigungen sind optional und nur mit Einwilligung
+
+
+
 **Version 1.3.0** (18. Dezember 2025):
 
 - Initiale Version
@@ -885,7 +937,7 @@ Wir behalten uns vor, diese Datenschutzerklärung **anzupassen**, um sie an geä
 
 - DSGVO-konforme Rechte
 
- 
+
 
 **Zukünftige Änderungen werden hier dokumentiert.**
 
@@ -1043,10 +1095,10 @@ Wir freuen uns über dein Feedback:
 
  
 
-## Zuletzt aktualisiert: 18. Dezember 2025
+## Zuletzt aktualisiert: 21. Dezember 2025
 
- 
 
-**Version**: 1.3.0
 
-**Gültig ab**: 18. Dezember 2025
+**Version**: 1.4.0
+
+**Gültig ab**: 21. Dezember 2025
