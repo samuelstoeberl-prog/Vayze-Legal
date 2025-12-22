@@ -18,7 +18,7 @@
 
 **Anbieter**: Samuel / Vayze Apps
 
-**Adresse**: Josef-Schwaab-Straße 7 94559 Niederwinkling 
+**Adresse**: Josef-Schwab-Straße 7 94559 Niederwinkling 
 
 **E-Mail**: vayze.app@gmail.com
 
