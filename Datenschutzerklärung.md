@@ -1,1104 +1,497 @@
-# Datenschutzerklärung (Privacy Policy)
-
- 
-
-**Vayze App**
-
-**Version 1.4.0**
-
-**Stand: 21. Dezember 2025**
-
- 
-
-## 1. Verantwortlicher
-
- 
-
-**Anbieter**: Samuel / Vayze Apps
-
-**Adresse**: Josef-Schwab-Straße 7 94559 Niederwinkling 
-
-**E-Mail**: vayze.app@gmail.com
-
-
- 
-
-## 2. Allgemeines zur Datenverarbeitung
-
- 
-
-Wir nehmen den Schutz deiner persönlichen Daten sehr ernst und behandeln diese vertraulich sowie entsprechend der gesetzlichen Datenschutzvorschriften (EU-DSGVO, BDSG) und dieser Datenschutzerklärung.
-
- 
-
-**Grundsatz**: Vayze ist eine **Privacy-First App**. Alle deine persönlichen Daten werden ausschließlich lokal auf deinem Gerät gespeichert. Wir haben keinen Zugriff auf deine Entscheidungen, Board-Karten oder sonstige Inhalte.
-
- 
-
-## 3. Welche Daten werden erhoben?
-
- 
-
-### 3.1 Account-Daten (bei Registrierung)
-
-Wenn du ein Konto erstellst, speichern wir folgende Daten **lokal auf deinem Gerät**:
-
-- **E-Mail-Adresse** (Pflichtfeld) - zur Identifikation und Account-Verwaltung
-
-- **Name** (optional) - zur Personalisierung der App-Erfahrung
-
-- **Passwort** (gehashed mit modernen Krypto-Algorithmen) - niemals im Klartext gespeichert
-
-- **Erstellungsdatum** des Accounts
-
-- **User ID** (zufällig generiert) - zur internen Datentrennung
-
- 
-
-**Rechtsgrundlage**: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)
-
- 
-
-### 3.2 Nutzungsdaten (App-Inhalte)
-
-Folgende Daten werden **ausschließlich lokal auf deinem Gerät** gespeichert:
-
- 
-
-**Entscheidungsassistent**:
-
-- Entscheidungstitel und Beschreibung
-
-- Antworten auf die Analysefragen (6 Schritte im vollständigen Modus, 2 Schritte im Schnellmodus)
-
-- Berechnete Empfehlungen und Konfidenzwerte
-
-- Kategorien (Leben, Arbeit, Finanzen, Beziehung, Gesundheit, Projekte)
-
-- Journal-Einträge (optionale Reflexionen)
-
-- Favoriten-Markierungen
-
-- Zeitstempel der Entscheidungen
-
-- Entscheidungsmodus (Vollständig/Schnell)
-
- 
-
-**Kanban Board**:
-
-- Kartentitel und Beschreibungen
-
-- Kategorien (Backlog, To-Do, In Progress, Done)
-
-- Prioritäten (Low, Medium, High)
-
-- Kartentypen (Task, Idea, Bug, Feature)
-
-- Tags und Labels
-
-- Status-Informationen
-
-- Verknüpfungen zu Entscheidungen
-
-- Erstellungs- und Änderungszeitpunkte
-
- 
-
-**Tracker/Kalender**:
-
-- Entscheidungsdaten für Kalenderanzeige
-
-- Streak-Berechnungen (Tage-Statistik)
-
-- Monats- und Jahresansichten
-
- 
-
-**App-Einstellungen**:
-
-- Benachrichtigungs-Präferenzen (aktiviert/deaktiviert)
-
-- Dark Mode Einstellung (aktiviert/deaktiviert)
-
-- Analytics-Präferenz (aktiviert/deaktiviert)
-
-- Onboarding-Status (abgeschlossen/nicht abgeschlossen)
-
- 
-
-**Session-Daten**:
-
-- Verschlüsselter Auth-Token (365 Tage Gültigkeit)
-
-- Login-Status
-
-- Aktuelle Tab-Position
-
- 
-
-**Rechtsgrundlage**: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung der App-Funktionalität)
-
- 
-
-### 3.3 Gerätedaten
-
-Wir erfassen **KEINE** der folgenden Daten:
-
-- ❌ Geräte-ID (IMEI, UDID)
-
-- ❌ Standortdaten (GPS, IP-basiert)
-
-- ❌ Kontakte
-
-- ❌ Fotos oder Mediendateien
-
-- ❌ Kamera oder Mikrofon
-
-- ❌ Andere Apps auf deinem Gerät
-
-- ❌ Telefonnummer
-
-- ❌ Werbe-ID (IDFA/AAID)
-
-- ❌ Netzwerkinformationen
-
- 
-
-### 3.4 Push-Benachrichtigungen (Optional)
-
-Wenn du Benachrichtigungen aktivierst, verwenden wir:
-
-- **Lokale Benachrichtigungen** - Alle Erinnerungen werden lokal auf deinem Gerät erstellt
-
-- **Benachrichtigungs-Token** - Ein technischer Identifier, um Benachrichtigungen zu senden (wird NICHT für Tracking verwendet)
-
-- **Benachrichtigungs-Präferenzen** - Welche Arten von Erinnerungen du erhalten möchtest
-
-
-
-**Was wir NICHT tun:**
-
-- ❌ Keine Push-Benachrichtigungen zu Werbezwecken
-
-- ❌ Kein Tracking durch Benachrichtigungen
-
-- ❌ Keine Weitergabe deines Benachrichtigungs-Tokens an Dritte
-
-- ❌ Keine Benachrichtigungen ohne deine explizite Zustimmung
-
-
-
-**Arten von Benachrichtigungen:**
-
-1. **Tägliche Reflexion** - Optionale Erinnerung zur Selbstreflexion (Standard: 20:00 Uhr)
-
-2. **Entscheidungs-Erinnerungen** - Erinnerungen für offene Entscheidungen
-
-3. **Review-Erinnerungen** - Follow-up nach 7 Tagen zur Bewertung deiner Entscheidung
-
-
-
-Du kannst jederzeit in den Einstellungen festlegen, welche Benachrichtigungen du erhalten möchtest.
-
-**Rechtsgrundlage**: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
-
-
-
-### 3.5 Technische Daten
-
-Die App benötigt folgende Berechtigungen:
-
-- **Internet** - Nur für Login/Registrierung und Passwort-Reset (per E-Mail)
-
-- **Speicher** - Zum lokalen Speichern deiner Daten auf dem Gerät
-
-- **Benachrichtigungen** (Optional) - Für Erinnerungen und Reflexions-Prompts
-
-
-
-**Keine weiteren Berechtigungen erforderlich**.
-
- 
-
-## 4. Wie werden Daten gespeichert?
-
- 
-
-### 4.1 Lokale Speicherung (On-Device)
-
-**Alle deine Daten bleiben auf deinem Gerät**:
-
- 
-
-**AsyncStorage** (React Native):
-
-- Entscheidungen: `user_[EMAIL]_decisions`
-
-- Einstellungen: `user_[EMAIL]_settings`
-
-- Board-Karten: Zustand im Zustand-Store (zustand) mit AsyncStorage-Persistenz
-
-- Entscheidungsdaten: `user_[EMAIL]_decisionData`
-
-- Onboarding-Status: `hasLaunched`, `onboardingData`
-
- 
-
-**SecureStore** (Expo):
-
-- Auth-Token (verschlüsselt): `authToken`
-
-- Passwort-Hashes (verschlüsselt)
-
-- Session-Informationen (verschlüsselt)
-
- 
-
-**Technologie**:
-
-- iOS: Keychain (hardwarebasierte Verschlüsselung)
-
-- Android: EncryptedSharedPreferences (AES-256)
-
- 
-
-### 4.2 User-Scoped Isolation
-
-Jeder Account hat **vollständig isolierte Daten**:
-
-- Storage-Keys enthalten User-E-Mail: `user_samantha@example.com_decisions`
-
-- Keine Datenvermischung zwischen Accounts
-
-- Beim Logout werden keine Daten gelöscht (bleiben auf dem Gerät)
-
-- Beim Account-Wechsel werden nur die jeweiligen User-Daten geladen
-
- 
-
-### 4.3 Keine Cloud-Speicherung
-
-**WICHTIG**: Wir betreiben **KEINE** Server oder Cloud-Speicher für deine Inhalte.
-
- 
-
-**Vorteile**:
-
-- ✅ **Maximaler Datenschutz** - Niemand außer dir hat Zugriff auf deine Daten
-
-- ✅ **Keine Datenlecks** möglich - Daten verlassen niemals dein Gerät
-
-- ✅ **Offline-Nutzung** - App funktioniert ohne Internet (außer Login/Registrierung)
-
-- ✅ **DSGVO-konform** - Minimale Datenverarbeitung
-
- 
-
-**Nachteile**:
-
-- ❌ **Keine Geräte-Synchronisation** - Daten sind nur auf einem Gerät verfügbar
-
-- ❌ **Datenverlust bei App-Deinstallation** - Alle Daten werden gelöscht
-
-- ❌ **Kein automatisches Backup** - Bei Geräteverlust sind Daten unwiederbringlich weg
-
-- ❌ **Keine Wiederherstellung** möglich, wenn du dein Passwort vergisst UND die App deinstallierst
-
- 
-
-**Empfehlung**: Exportiere regelmäßig deine Daten über "Einstellungen → Daten exportieren"
-
- 
-
-### 4.4 Geplante Features (zukünftig)
-
-**Optional** werden wir in Zukunft anbieten:
-
-- ☑️ Verschlüsseltes Cloud-Backup (nur mit expliziter Zustimmung)
-
-- ☑️ End-to-End verschlüsselte Geräte-Synchronisation
-
-- ☑️ Exportfunktion (JSON, CSV)
-
- 
-
-**Diese Features sind derzeit NICHT aktiv.**
-
- 
-
-## 5. Wofür werden Daten verwendet?
-
- 
-
-Wir verwenden deine Daten **ausschließlich** für folgende Zwecke:
-
- 
-
-### 5.1 App-Funktionalität
-
-- **Entscheidungsanalyse** - Berechnung von Empfehlungen basierend auf deinen Antworten
-
-- **Kanban-Board** - Verwaltung deiner Aufgaben und Ideen
-
-- **Tracker/Kalender** - Visualisierung deiner Entscheidungshistorie
-
-- **Fortschritts-Tracking** - Berechnung von Streaks und Statistiken
-
- 
-
-### 5.2 Account-Verwaltung
-
-- **Login/Logout** - Authentifizierung und Session-Verwaltung
-
-- **Passwort-Reset** - E-Mail-Versand mit Passwort-Reset-Link
-
-- **Account-Löschung** - Unwiderrufliche Löschung aller Daten
-
-- **Name-Anzeige** - Personalisierung der Begrüßung
-
- 
-
-### 5.3 Personalisierung
-
-- **Einstellungen** - Dark Mode, Benachrichtigungen, Analytics-Präferenzen
-
-- **Onboarding** - Einmalige Anzeige der App-Einführung
-
- 
-
-### 5.4 KEINE Verwendung für:
-
-- ❌ **Werbung** - Wir zeigen keine Werbung
-
-- ❌ **Profiling** - Keine Verhaltensanalyse
-
-- ❌ **Marketing** - Keine Newsletter (außer du bittest darum)
-
-- ❌ **Verkauf von Daten** - Niemals
-
-- ❌ **Drittanbieter-Weitergabe** - Niemals
-
-- ❌ **KI-Training** - Deine Daten trainieren keine KI-Modelle
-
-- ❌ **Analytics** - Keine Nutzungsstatistiken (außer du aktivierst es explizit)
-
- 
-
-## 6. Werden Daten an Dritte weitergegeben?
-
- 
-
-**Nein. Wir geben KEINE Daten an Dritte weiter.**
-
- 
-
-### 6.1 Keine Drittanbieter-Dienste
-
-Die App nutzt **keine** externen Dienste für:
-
-- Analytics (kein Google Analytics, Facebook Pixel, etc.)
-
-- Crash-Reporting (kein Sentry, Bugsnag, etc.)
-
-- Werbenetzwerke (kein AdMob, etc.)
-
-- Cloud-Speicher (kein AWS, Google Cloud, etc.)
-
-- Push-Benachrichtigungen (derzeit keine implementiert)
-
- 
-
-### 6.2 Ausnahme: E-Mail-Dienst (nur für Passwort-Reset)
-
-**Einziger externer Dienst**: E-Mail-Provider für Passwort-Reset-E-Mails
-
-- **Anbieter**: [E-MAIL PROVIDER - z.B. Firebase Auth, SendGrid, oder dein eigener Server]
-
-- **Daten**: Nur deine E-Mail-Adresse wird an den E-Mail-Dienst übertragen
-
-- **Zweck**: Versand des Passwort-Reset-Links
-
-- **Rechtsgrundlage**: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)
-
-- **Datenschutz**: [LINK ZUR DATENSCHUTZERKLÄRUNG DES E-MAIL-PROVIDERS]
-
- 
-
-### 6.3 Keine Weitergabe in Drittländer
-
-Da alle Daten lokal auf deinem Gerät bleiben, erfolgt **keine Übermittlung in Drittländer** außerhalb der EU/EWR.
-
- 
-
-### 6.4 Gesetzliche Verpflichtungen
-
-Wir behalten uns vor, Daten offenzulegen, wenn wir gesetzlich dazu verpflichtet sind (z.B. bei richterlicher Anordnung). Da wir jedoch **keinen Zugriff** auf deine Inhalte haben (sie sind nur lokal gespeichert), können wir nur Account-Daten (E-Mail, Name) offenlegen, nicht jedoch deine Entscheidungen oder Board-Inhalte.
-
- 
-
-## 7. Wie werden Daten geschützt?
-
- 
-
-### 7.1 Verschlüsselung
-
-**Passwörter**:
-
-- Niemals im Klartext gespeichert
-
-- Crypto-Hashing mit modernen Algorithmen (z.B. PBKDF2, bcrypt)
-
-- Salt und Pepper für zusätzliche Sicherheit
-
- 
-
-**Session-Token**:
-
-- Verschlüsselt mit expo-secure-store
-
-- Hardware-basierte Verschlüsselung (iOS Keychain, Android EncryptedSharedPreferences)
-
-- Automatischer Ablauf nach 365 Tagen
-
- 
-
-**Sensible Daten**:
-
-- Auth-Token werden nie im Klartext gespeichert
-
-- Secure Storage für alle authentifizierungsbezogenen Daten
-
- 
-
-### 7.2 Multi-User Isolation
-
-- Jeder Account hat **vollständig isolierte Daten**
-
-- Storage-Keys sind user-scoped: `user_[EMAIL]_data`
-
-- Keine Cross-Account-Zugriffe möglich
-
-- Beim Account-Wechsel werden nur die jeweiligen User-Daten geladen
-
- 
-
-### 7.3 Keine Netzwerk-Übertragung
-
-- **Entscheidungen, Board-Karten, Journal-Einträge** werden niemals über das Netzwerk übertragen
-
-- Nur Login/Registrierung/Passwort-Reset benötigen Internet
-
-- Alle Berechnungen erfolgen lokal auf dem Gerät
-
- 
-
-### 7.4 App-Sicherheit
-
-- Regelmäßige Sicherheitsupdates
-
-- Verwendung von aktuellen React Native und Expo SDKs
-
-- Keine unsicheren Bibliotheken
-
-- Code-Review vor jedem Release
-
- 
-
-### 7.5 Device Security
-
-**Du bist verantwortlich für**:
-
-- ✅ Gerätesperre (PIN, Passwort, Biometrie)
-
-- ✅ Aktuelles Betriebssystem
-
-- ✅ Keine Root/Jailbreak (schwächt Sicherheit)
-
-- ✅ Vertrauenswürdige App-Quelle (App Store, Google Play)
-
- 
-
-## 8. Wie lange werden Daten gespeichert?
-
- 
-
-### 8.1 Account-Daten
-
-- **Solange du dein Konto hast** - keine automatische Löschung
-
-- **Nach Account-Löschung** - sofortige und unwiderrufliche Löschung
-
- 
-
-### 8.2 Nutzungsdaten
-
-- **Unbegrenzt auf deinem Gerät** - solange du die App nicht deinstallierst
-
-- **Keine automatische Löschung** - du hast volle Kontrolle
-
- 
-
-### 8.3 Session-Daten
-
-- **365 Tage Gültigkeit** - danach erneutes Login erforderlich
-
-- **Nach Logout** - Session wird gelöscht
-
- 
-
-### 8.4 Löschung
-
-Du kannst jederzeit alle Daten löschen:
-
-- **Einzelne Entscheidungen** - Swipe zum Löschen (im Tracker)
-
-- **Alle Daten** - Einstellungen → "Alle Daten löschen"
-
-- **Account inkl. Daten** - Einstellungen → Konto-Einstellungen → "Konto löschen"
-
- 
-
-## 9. Deine Rechte (EU-DSGVO)
-
- 
-
-### 9.1 Auskunftsrecht (Art. 15 DSGVO)
-
-Du hast das Recht, **jederzeit kostenlos Auskunft** über die über dich gespeicherten Daten zu erhalten.
-
- 
-
-**So funktioniert's**:
-
-- In der App: Einstellungen → Konto-Einstellungen → "Account-Info"
-
-- Per E-Mail: vayze.app@gmail.com (Antwort innerhalb von 30 Tagen)
-
- 
-
-**Was du erfährst**:
-
-- Welche Daten wir über dich speichern
-
-- Woher diese Daten stammen
-
-- Wofür sie verwendet werden
-
-- Wer darauf Zugriff hat (nur du)
-
- 
-
-### 9.2 Recht auf Berichtigung (Art. 16 DSGVO)
-
-Du kannst **jederzeit deine Daten korrigieren**.
-
- 
-
-**So funktioniert's**:
-
-- **Name ändern**: Einstellungen → Konto-Einstellungen → Namen bearbeiten
-
-- **E-Mail ändern**: Derzeit nicht möglich (Feature in Planung)
-
-- **Passwort ändern**: Einstellungen → Konto-Einstellungen → Passwort ändern
-
-- **Entscheidungen bearbeiten**: Im Tracker auf Entscheidung tippen → Bearbeiten (Feature in Planung)
-
- 
-
-### 9.3 Recht auf Löschung (Art. 17 DSGVO)
-
-Du kannst **jederzeit die vollständige Löschung** deiner Daten verlangen.
-
- 
-
-**So funktioniert's**:
-
-1. Öffne: Einstellungen → Konto-Einstellungen
-
-2. Tippe auf: "Konto löschen"
-
-3. Bestätige: Tippe "LÖSCHEN" ein
-
-4. **Alle Daten werden unwiderruflich gelöscht**:
-
-   - Account-Credentials (E-Mail, Name, Passwort)
-
-   - Alle Entscheidungen
-
-   - Alle Board-Karten
-
-   - Alle Einstellungen
-
-   - Session-Daten
-
-   - Onboarding-Status
-
- 
-
-**Wichtig**: Dieser Vorgang ist **unwiderruflich**. Erstelle vorher ein Backup über "Daten exportieren".
-
- 
-
-### 9.4 Recht auf Datenübertragbarkeit (Art. 20 DSGVO)
-
-Du hast das Recht, deine Daten in einem **strukturierten, maschinenlesbaren Format** zu erhalten.
-
- 
-
-**So funktioniert's**:
-
-- In der App: Einstellungen → "Daten exportieren"
-
-- Export-Format: JSON (strukturiert und maschinenlesbar)
-
-- Enthält: Alle Entscheidungen, Board-Karten, Einstellungen
-
- 
-
-**Status**: Feature derzeit in Entwicklung. Kontaktiere vayze.app@gmail.com für manuelle Datenauskünfte.
-
- 
-
-### 9.5 Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)
-
-Du kannst die Verarbeitung deiner Daten **einschränken**.
-
- 
-
-**So funktioniert's**:
-
-- Da alle Daten lokal gespeichert sind, kannst du die Verarbeitung jederzeit stoppen:
-
-  - **Analytics deaktivieren**: Einstellungen → Analytics ausschalten
-
-  - **Benachrichtigungen deaktivieren**: Einstellungen → Benachrichtigungen ausschalten
-
-  - **App nicht mehr nutzen**: Keine Verarbeitung erfolgt
-
- 
-
-### 9.6 Widerspruchsrecht (Art. 21 DSGVO)
-
-Du kannst der Verarbeitung deiner Daten **widersprechen**.
-
- 
-
-**Wichtig**: Da wir keine Verarbeitung für Werbung, Profiling oder berechtigte Interessen Dritter durchführen, ist dieses Recht derzeit **nicht relevant**.
-
- 
-
-**Falls du trotzdem widersprechen möchtest**:
-
-- Lösche deinen Account (siehe 9.3)
-
-- Oder kontaktiere uns: vayze.app@gmail.com
-
- 
-
-### 9.7 Recht auf Beschwerde (Art. 77 DSGVO)
-
-Du hast das Recht, **Beschwerde bei einer Aufsichtsbehörde** einzureichen.
-
- 
-
-**Zuständige Behörden**:
-
- 
-
-**Deutschland**:
-
-Bundesbeauftragter für den Datenschutz und die Informationsfreiheit (BfDI)
-
-Graurheindorfer Str. 153, 53117 Bonn
-
-Telefon: +49 228 99 7799-0
-
-E-Mail: poststelle@bfdi.bund.de
-
-Web: https://www.bfdi.bund.de
-
- 
-
-**Österreich**:
-
-Österreichische Datenschutzbehörde
-
-Barichgasse 40-42, 1030 Wien
-
-Telefon: +43 1 52 152-0
-
-E-Mail: dsb@dsb.gv.at
-
-Web: https://www.dsb.gv.at
-
- 
-
-**Schweiz**:
-
-Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (EDÖB)
-
-Feldeggweg 1, 3003 Bern
-
-Telefon: +41 58 462 43 95
-
-E-Mail: info@edoeb.admin.ch
-
-Web: https://www.edoeb.admin.ch
-
- 
-
-## 10. Cookies & Tracking
-
- 
-
-### 10.1 Keine Cookies
-
-Die App verwendet **keine Cookies**, da es sich um eine native mobile App handelt.
-
- 
-
-### 10.2 Kein Tracking
-
-Wir verwenden **KEINE** Tracking-Technologien:
-
-- ❌ Google Analytics
-
-- ❌ Facebook Pixel
-
-- ❌ Mixpanel, Amplitude, etc.
-
-- ❌ Crash-Reporting (Sentry, Bugsnag)
-
-- ❌ Heatmaps (Hotjar, etc.)
-
-- ❌ A/B-Testing-Tools
-
-- ❌ Werbe-IDs (IDFA, AAID)
-
-- ❌ Fingerprinting
-
- 
-
-### 10.3 Analytics-Einstellung
-
-Die App hat eine **Analytics-Einstellung** (Einstellungen → Analytics), die derzeit **keine Funktion** hat, da keine Analytics implementiert sind. Sie ist als Platzhalter für zukünftige Features vorgesehen.
-
- 
-
-**Falls wir in Zukunft Analytics einführen**:
-
-- ☑️ Nur mit deiner expliziten Zustimmung
-
-- ☑️ Opt-in (nicht automatisch aktiviert)
-
-- ☑️ Anonymisiert und aggregiert
-
-- ☑️ Keine personenbezogenen Daten
-
- 
-
-### 10.4 Offline-App
-
-Die App funktioniert **komplett offline** und benötigt keine Internetverbindung außer für:
-
-- Login/Registrierung
-
-- Passwort-Reset
-
- 
-
-## 11. Kinder und Jugendliche
-
- 
-
-### 11.1 Altersfreigabe
-
-Die App ist für **Nutzer ab 13 Jahren** geeignet (Altersfreigabe: USK 0 / PEGI 3).
-
- 
-
-### 11.2 Schutz Minderjähriger
-
-Wir erheben **wissentlich keine Daten von Kindern unter 13 Jahren**.
-
- 
-
-**Falls wir erfahren**, dass ein Kind unter 13 Jahren einen Account erstellt hat:
-
-- Wir werden den Account **umgehend löschen**
-
-- Alle zugehörigen Daten werden gelöscht
-
-- Die Eltern werden informiert (falls Kontaktdaten vorhanden)
-
- 
-
-### 11.3 Elterliche Aufsicht
-
-**Empfehlung für Eltern**:
-
-- Überwachen Sie die Nutzung der App bei Kindern unter 16 Jahren
-
-- Sprechen Sie mit Ihrem Kind über verantwortungsvollen Umgang mit Entscheidungen
-
-- Die App ersetzt keine professionelle Beratung (Psychologe, Therapeut)
-
- 
-
-## 12. Internationale Nutzer & Datentransfers
-
- 
-
-### 12.1 Keine Datentransfers
-
-Da alle Daten **lokal auf deinem Gerät** gespeichert werden, erfolgen **keine internationalen Datentransfers**.
-
- 
-
-### 12.2 EU/EWR-Nutzer
-
-Die App ist DSGVO-konform und respektiert alle Rechte von EU/EWR-Nutzern.
-
- 
-
-### 12.3 Nutzer außerhalb der EU
-
-**Für Nutzer in**:
-
-- 🇺🇸 **USA**: Wir halten uns an CCPA (California Consumer Privacy Act) Prinzipien
-
-- 🇬🇧 **UK**: Wir halten uns an UK GDPR
-
-- 🇨🇦 **Kanada**: Wir halten uns an PIPEDA
-
-- 🇦🇺 **Australien**: Wir halten uns an Privacy Act 1988
-
- 
-
-**Deine Rechte bleiben gleich**, unabhängig von deinem Standort.
-
- 
-
-## 13. Änderungen der Datenschutzerklärung
-
- 
-
-### 13.1 Aktualisierungen
-
-Wir behalten uns vor, diese Datenschutzerklärung **anzupassen**, um sie an geänderte Rechtslage oder App-Funktionen anzupassen.
-
- 
-
-**Gründe für Änderungen**:
-
-- Neue Features (z.B. Cloud-Backup, Export-Funktion)
-
-- Gesetzliche Anforderungen
-
-- Verbesserung der Transparenz
-
- 
-
-### 13.2 Benachrichtigung
-
-**Bei wesentlichen Änderungen**:
-
-- ✅ In-App-Benachrichtigung beim nächsten Start
-
-- ✅ Neue Version wird in der App angezeigt
-
-- ✅ Stand-Datum wird aktualisiert
-
-- ✅ Option, Änderungen abzulehnen (→ Account-Löschung)
-
- 
-
-### 13.3 Änderungshistorie
-
-**Version 1.4.0** (21. Dezember 2025):
-
-- Hinzugefügt: Push-Benachrichtigungen (Section 3.4)
-
-- Aktualisiert: Technische Daten (Section 3.5)
-
-- Klarstellung: Benachrichtigungen sind optional und nur mit Einwilligung
-
-
-
-**Version 1.3.0** (18. Dezember 2025):
-
-- Initiale Version
-
-- Beschreibung aller Features: Entscheidungsassistent, Board, Tracker
-
-- Lokale Speicherung, keine Cloud
-
-- DSGVO-konforme Rechte
-
-
-
-**Zukünftige Änderungen werden hier dokumentiert.**
-
- 
-
-## 14. Haftungsausschluss
-
- 
-
-### 14.1 Keine professionelle Beratung
-
-Die App dient als **Entscheidungshilfe** und ersetzt **KEINE**:
-
-- ❌ Psychologische Beratung
-
-- ❌ Medizinische Diagnose oder Behandlung
-
-- ❌ Rechtsberatung
-
-- ❌ Finanzberatung
-
-- ❌ Therapeutische Intervention
-
- 
-
-**Bei ernsthaften Problemen** kontaktiere bitte einen Fachmann.
-
- 
-
-### 14.2 Algorithmus
-
-Der Entscheidungsalgorithmus basiert auf **wissenschaftlich fundierten Methoden**, ist jedoch **keine Garantie** für die richtige Entscheidung. Die Verantwortung liegt bei dir.
-
- 
-
-### 14.3 Datenverlust
-
-Wir haften **nicht** für Datenverlust durch:
-
-- App-Deinstallation
-
-- Geräteverlust
-
-- Betriebssystem-Updates
-
-- Technische Fehler
-
- 
-
-**Empfehlung**: Erstelle regelmäßig Backups über "Daten exportieren".
-
- 
-
-## 15. Kontakt & Support
-
- 
-
-### 15.1 Datenschutz-Anfragen
-
-Bei Fragen zum Datenschutz:
-
- 
-
-**E-Mail**: vayze.app@gmail.com
-
-**Betreff**: "Datenschutz - [Dein Anliegen]"
-
-**Antwortzeit**: Innerhalb von 30 Tagen (gesetzliche Frist)
-
- 
-
-### 15.2 Support
-
-Bei technischen Problemen:
-
- 
-
-**E-Mail**: vayze.app@gmail.com
-
-**Betreff**: "Support - [Dein Problem]"
-
- 
-
-**In der App**: Einstellungen → Support kontaktieren
-
- 
-
-### 15.3 Feedback
-
-Wir freuen uns über dein Feedback:
-
- 
-
-**E-Mail**: vayze.app@gmail.com
-
-**Betreff**: "Feedback - [Dein Feedback]"
-
- 
-
-## 16. Rechtsgrundlagen (Zusammenfassung)
-
- 
-
-**Art. 6 Abs. 1 lit. b DSGVO** (Vertragserfüllung):
-
-- Account-Verwaltung (Login, Registrierung)
-
-- App-Funktionalität (Entscheidungsanalyse, Board, Tracker)
-
-- Passwort-Reset
-
- 
-
-**Art. 6 Abs. 1 lit. f DSGVO** (berechtigtes Interesse):
-
-- Sicherheit der App
-
-- Verhinderung von Missbrauch
-
- 
-
-**Art. 6 Abs. 1 lit. a DSGVO** (Einwilligung):
-
-- Zukünftige Analytics (nur mit Opt-in)
-
-- Zukünftige Cloud-Backups (nur mit Opt-in)
-
- 
-
-## 17. Definitionen
-
- 
-
-**Personenbezogene Daten**: Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen (z.B. E-Mail, Name).
-
- 
-
-**Verarbeitung**: Jeder Vorgang im Zusammenhang mit personenbezogenen Daten (Erhebung, Speicherung, Veränderung, Löschung).
-
- 
-
-**Verantwortlicher**: Die Person oder Stelle, die über die Zwecke und Mittel der Verarbeitung entscheidet (in diesem Fall: [DEIN NAME/FIRMENNAME]).
-
- 
-
-**Dritter**: Jede natürliche oder juristische Person außer dir, dem Verantwortlichen und den Auftragsverarbeitern.
-
- 
-
-**Einwilligung**: Freiwillige, informierte und eindeutige Willensbekundung zur Datenverarbeitung.
-
- 
+# Datenschutzerklärung
+
+**Vayze App – Entscheidungshilfe für iOS und Android**
+
+**Version:** 2.0.1  
+**Stand:** 7. Februar 2025  
+**Anbieter:** Vayze Apps  
+**Adresse:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Deutschland  
+**E-Mail:** vayze.app@gmail.com
 
 ---
 
- 
+## Präambel
 
-## Zuletzt aktualisiert: 21. Dezember 2025
+Wir nehmen den Schutz deiner personenbezogenen Daten ernst. Diese Datenschutzerklärung informiert dich umfassend darüber, welche Daten bei der Nutzung der Vayze App erhoben, verarbeitet und gespeichert werden. Die Verarbeitung erfolgt im Einklang mit der Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz (BDSG).
 
+**Wichtige Änderung gegenüber früheren Versionen:** Diese Version korrigiert und vervollständigt die Offenlegung der tatsächlich eingesetzten Drittanbieter-Dienste, Datenverarbeitungen und technischen Funktionen der App.
 
+---
 
-**Version**: 1.4.0
+## 1. Verantwortlicher
 
-**Gültig ab**: 21. Dezember 2025
+Verantwortlich für die Datenverarbeitung im Sinne der DSGVO:
+
+**Samuel Stöberl / Vayze Apps**  
+Josef-Schwab-Straße 7  
+94559 Niederwinkling  
+Deutschland  
+E-Mail: vayze.app@gmail.com
+
+---
+
+## 2. Allgemeine Informationen zur Datenverarbeitung
+
+### 2.1 Grundprinzip: Privacy First mit Cloud-Komponenten
+
+Vayze wurde mit dem Grundsatz "Privacy First" entwickelt. Deine **Entscheidungsinhalte** (Boards, Karten, Bewertungen, Journal-Einträge mit Texten, Fotos und Sprachnotizen) werden ausschließlich lokal auf deinem Gerät gespeichert und niemals an unsere Server oder Dritte übertragen.
+
+Für die Bereitstellung bestimmter Funktionen (Account-Verwaltung, Push-Benachrichtigungen) nutzen wir jedoch Cloud-Dienste von Google (Firebase). Dabei werden **Account-bezogene Daten** und **technische Metadaten** verarbeitet, wie in dieser Erklärung detailliert beschrieben.
+
+### 2.2 Zweck der Datenverarbeitung
+
+Wir verarbeiten personenbezogene Daten zu folgenden Zwecken:
+
+- Bereitstellung und Betrieb der App-Funktionen
+- Account-Verwaltung (Registrierung, Login, Passwort-Reset)
+- Versand von Push-Benachrichtigungen (Erinnerungen, Streak-Warnungen, Re-Engagement)
+- Technische Sicherheit und Betrugsprävention
+- Nutzungsstatistiken (nur mit deiner ausdrücklichen Einwilligung via Analytics-Einstellung)
+
+### 2.3 Rechtsgrundlagen
+
+Die Verarbeitung deiner Daten erfolgt auf folgenden Rechtsgrundlagen:
+
+- **Art. 6 Abs. 1 lit. a DSGVO** (Einwilligung): Analytics-Erfassung, Push-Benachrichtigungen
+- **Art. 6 Abs. 1 lit. b DSGVO** (Vertragserfüllung): Account-Verwaltung, Bereitstellung der App-Funktionen
+- **Art. 6 Abs. 1 lit. f DSGVO** (berechtigtes Interesse): IT-Sicherheit, Betrugsprävention, technische Stabilität
+
+---
+
+## 3. Erhobene Daten und Speicherorte
+
+### 3.1 Account-Daten (Cloud-Speicherung)
+
+Bei der Registrierung und Nutzung deines Accounts werden folgende Daten in der Cloud gespeichert:
+
+| Datentyp | Zweck | Speicherort | Rechtsgrundlage |
+|----------|-------|-------------|------------------|
+| E-Mail-Adresse | Account-Identifikation, Login, Passwort-Reset | Firebase Authentication (Google LLC, USA) | Art. 6 Abs. 1 lit. b DSGVO |
+| Passwort (verschlüsselt) | Account-Sicherheit | Firebase Authentication (Google LLC, USA) | Art. 6 Abs. 1 lit. b DSGVO |
+| Anzeigename | Personalisierung | Firebase Authentication (Google LLC, USA) | Art. 6 Abs. 1 lit. b DSGVO |
+| Benutzer-ID (UUID) | Interne Identifikation | Firebase Firestore (Google LLC, USA) | Art. 6 Abs. 1 lit. b DSGVO |
+| Account-Erstellungsdatum | Verwaltung, Support | Firebase Authentication (Google LLC, USA) | Art. 6 Abs. 1 lit. b DSGVO |
+
+**Verschlüsselung:** Dein Passwort wird vor der Übertragung mit einem iterativen SHA-256-Verfahren (10.000 Runden) mit zufälligem Salt gehasht. Firebase speichert zusätzlich eine eigene verschlüsselte Version.
+
+### 3.2 Push-Benachrichtigungs-Daten (Cloud-Speicherung)
+
+Für den Versand von Push-Benachrichtigungen werden folgende Daten in der Cloud gespeichert:
+
+| Datentyp | Zweck | Speicherort | Rechtsgrundlage |
+|----------|-------|-------------|------------------|
+| Expo Push Token | Eindeutige Identifikation deines Geräts für Push-Zustellung | Firebase Firestore unter `users/{email}/tokens/{token}` | Art. 6 Abs. 1 lit. a DSGVO |
+| Plattform (iOS/Android) | Plattformspezifische Zustellung | Firebase Firestore | Art. 6 Abs. 1 lit. a DSGVO |
+| App-Version | Kompatibilitätsprüfung | Firebase Firestore | Art. 6 Abs. 1 lit. a DSGVO |
+| Registrierungszeitpunkt | Token-Verwaltung | Firebase Firestore | Art. 6 Abs. 1 lit. a DSGVO |
+| Benachrichtigungs-Protokoll | Nachvollziehbarkeit gesendeter Push-Benachrichtigungen | Firebase Firestore unter `users/{email}/notificationLog` | Art. 6 Abs. 1 lit. a DSGVO |
+
+**Wichtiger Hinweis:** Deine E-Mail-Adresse wird als Firestore-Dokument-ID verwendet (Pfad: `users/{email}`). Dies bedeutet, dass die E-Mail-Adresse in der Firestore-Datenbankstruktur sichtbar ist.
+
+**Benachrichtigungs-Protokoll:** Jede an dich gesendete Push-Benachrichtigung wird in Firestore protokolliert mit:
+- Titel der Benachrichtigung
+- Benachrichtigungstext (body)
+- Payload-Daten (z.B. Typ, Ziel-Screen, Streak-Anzahl)
+- Server-Zeitstempel (wann gesendet)
+- Status (ob geöffnet)
+
+**Topic-Subscription:** Dein Gerät wird automatisch zum Firebase Cloud Messaging Topic `all_users` hinzugefügt, um Broadcast-Benachrichtigungen zu ermöglichen.
+
+### 3.3 Aktivitätsdaten für Benachrichtigungslogik (Cloud-Verarbeitung)
+
+Um personalisierte Push-Benachrichtigungen zu versenden (z.B. Streak-Warnungen, Re-Engagement), verarbeiten unsere Cloud Functions folgende Daten:
+
+| Datentyp | Zweck | Verarbeitungsort | Rechtsgrundlage |
+|----------|-------|------------------|------------------|
+| **Entscheidungs-Zeitstempel** | | | |
+| `createdAt` (aus `decisions`-Subcollection) | Zeitpunkt der Entscheidungserstellung | Firebase Cloud Functions (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+| `completedAt` (aus `decisions`-Subcollection) | Zeitpunkt des Entscheidungsabschlusses | Firebase Cloud Functions (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+| **Aktivitäts-Tracking** | | | |
+| `activity.lastDecisionAt` | Zeitstempel der letzten Entscheidung | Firebase Firestore (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+| `activity.currentStreak` | Anzahl aufeinanderfolgender Tage mit Entscheidungen | Firebase Firestore (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+| `activity.longestStreak` | Längster erreichter Streak | Firebase Firestore (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+| `activity.lastReEngagementAt` | Zeitstempel der letzten Re-Engagement-Benachrichtigung | Firebase Firestore (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+| `activity.lastSyncedAt` | Zeitstempel der letzten Streak-Synchronisation | Firebase Firestore (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+| **Rate-Limiting** | | | |
+| `notificationSettings.rateLimits.lastSentAt` | ISO-Zeitstempel der letzten gesendeten Benachrichtigung | Firebase Firestore (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+| `notificationSettings.rateLimits.sentToday` | Zähler der heute gesendeten Benachrichtigungen | Firebase Firestore (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+| **Benutzer-Identifikation** | | | |
+| E-Mail-Adresse (als Dokument-ID) | Zuordnung der Aktivitätsdaten zum Benutzer | Firebase Firestore (Google LLC, USA) | Art. 6 Abs. 1 lit. a DSGVO |
+
+**Verarbeitung:** Unsere Cloud Functions führen täglich um 20:00 UTC (Streak-Warnung) und 10:00 UTC (Re-Engagement) automatisierte Prüfungen durch. Dabei werden ALLE registrierten Benutzer-Dokumente in Firestore durchlaufen und anhand der Aktivitätsdaten analysiert.
+
+**Zugriff auf Entscheidungs-Zeitstempel:** Die Cloud Functions greifen auf die Subcollection `users/{email}/decisions` zu und lesen die Felder `createdAt` und `completedAt` aller abgeschlossenen Entscheidungen, um Streaks und Inaktivität zu berechnen. **Wichtig:** Es werden nur Zeitstempel gelesen, keine Entscheidungsinhalte (Titel, Beschreibungen, Bewertungen etc.).
+
+### 3.4 Entscheidungsinhalte (lokale Speicherung)
+
+Alle deine persönlichen Inhalte werden ausschließlich lokal auf deinem Gerät gespeichert:
+
+- **Boards und Karten:** Titel, Beschreibungen, Kategorien, Gewichtungen, Bewertungen, Tags, Priorisierungen
+- **Entscheidungs-Empfehlungen:** Berechnete Scores, Empfehlungen, Zeitstempel
+- **Journal-Einträge:** Texte, Reflexionen, Entscheidungskontext, zusätzliche Notizen (Freitext)
+- **Foto-Anhänge:** Bis zu 5 Fotos pro Journal-Eintrag (lokale Dateipfade)
+- **Sprachnotizen:** Audio-Aufnahmen mit Dauer (lokale Dateien)
+- **Kommentare:** Texte auf Board-Karten mit Zeitstempel
+- **Checklisten:** Aufgaben mit Erledigt-Status auf Board-Karten
+- **Onboarding-Daten:** Entscheidungskontext, bevorzugter Entscheidungsstil (z.B. Analytisch, Impulsiv, Überdenker), gewünschte Ergebnisse
+
+**Diese Daten verlassen niemals dein Gerät** und werden nicht an uns oder Dritte übertragen.
+
+**Journal-Limit im kostenlosen Tarif:** Die Erstellung von Journal-Einträgen unterliegt im kostenlosen Nutzungstarif einem Limit von 3 Einträgen pro Monat. Diese Beschränkung wird lokal auf deinem Gerät geprüft.
+
+### 3.5 Verhaltens-Profiling (lokale Verarbeitung)
+
+Die App führt eine lokale Analyse deines Entscheidungsverhaltens durch, um dir personalisierte Einblicke zu bieten:
+
+| Was analysiert wird | Zweck | Verarbeitung | Rechtsgrundlage |
+|---------------------|-------|--------------|------------------|
+| Nutzer-Archetyp (z.B. "Der Sichere Entscheider", "Der Vorsichtige Analytiker") | Personalisierte Rückmeldung | Ausschließlich lokal auf deinem Gerät | Art. 6 Abs. 1 lit. b DSGVO |
+| Entscheidungsmuster, Stärken, Wachstumsbereiche | Selbstreflexion und Verbesserung | Ausschließlich lokal auf deinem Gerät | Art. 6 Abs. 1 lit. b DSGVO |
+| Bias-Erkennung und Trend-Analyse | Personalisierte Empfehlungen | Ausschließlich lokal auf deinem Gerät | Art. 6 Abs. 1 lit. b DSGVO |
+
+**Wichtig:** Dieses Profiling geschieht vollständig auf deinem Gerät. Es wird kein Machine Learning eingesetzt, sondern regelbasierte Algorithmen. Die Profiling-Ergebnisse werden niemals an Server übertragen.
+
+### 3.6 Geräte-Fingerprinting (lokale Speicherung)
+
+Zur Verbesserung der Account-Sicherheit erstellt die App einen Geräte-Fingerprint:
+
+**Für den Fingerprint-Hash verwendete Attribute (7):**
+- Gerätename (`deviceName`)
+- Hersteller (`brand`)
+- Marke (`manufacturer`)
+- Modellname (`modelName`)
+- Betriebssystem (`osName`)
+- OS-Version (`osVersion`)
+- OS-Build-ID (`osBuildId`)
+
+**Zusätzlich erfasste Gerätedaten (nicht im Hash, nur in Sicherheits-Logs):**
+- Platform API Level (`platformApiLevel`, nur Android)
+- Geschätztes Geräte-Baujahr (`deviceYearClass`)
+
+**Verarbeitung:**
+1. Die 7 oben genannten Attribute werden zu einem SHA-256-Hash kombiniert
+2. Der Hash wird lokal unter dem Schlüssel `decisio_device_id` gespeichert (AsyncStorage)
+3. Bei Sicherheitsereignissen (z.B. Login, Account-Änderungen) werden alle 9 Gerätedaten (einschließlich Platform API Level und Geräte-Baujahr) zusammen mit dem Event protokolliert
+
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Betrugsprävention und Account-Sicherheit)
+
+### 3.7 Sicherheits-Protokollierung (lokale Speicherung)
+
+Die App protokolliert Sicherheitsereignisse lokal auf deinem Gerät:
+
+**Protokollierte Events (bis zu 100):**
+- `signup_attempt`, `login_attempt`, `login_success`, `login_failed`
+- `logout`, `suspicious_activity_detected`, `email_verified`
+- `account_unlocked`, `password_reset_requested`
+- `account_deletion_requested`, `account_deleted`
+
+**Gespeicherte Informationen pro Event:**
+- Event-Typ
+- E-Mail-Adresse (wird bei Account-Löschung zu `[deleted]` anonymisiert)
+- Zeitstempel
+- Vollständige Geräteinformationen (siehe 3.6)
+
+**Zweck:** Nachvollziehbarkeit von Sicherheitsvorfällen und Schutz vor unbefugtem Zugriff  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an IT-Sicherheit)
+
+### 3.8 Analytics-Daten (optional, Cloud-Übertragung)
+
+Die App verfügt über eine Analytics-Infrastruktur, die **derzeit de facto inaktiv** ist, da das benötigte Firebase Analytics Modul nicht in der App-Konfiguration aktiviert ist.
+
+**Status:** Die Analytics-Einstellung in der App ist vorhanden, hat aber derzeit keine Funktion, da das Tracking-Modul fehlt.
+
+**Falls die Analytics-Funktion in zukünftigen Versionen aktiviert wird**, würden bei aktivierter Analytics-Einstellung folgende Event-Daten an Google Firebase Analytics (USA) übertragen:
+
+| Event | Übertragene Parameter | Zweck |
+|-------|----------------------|-------|
+| `decision_started` | Entscheidungsmodus, Kategorie, Gewichtungs-Preset | Verständnis der App-Nutzung |
+| `decision_completed` | Modus, Kategorie, ob Empfehlung angenommen, Score, Preset | Erfolgsanalyse |
+| `journal_entry_created` | Decision-ID (keine Inhalte), Wortanzahl, ob Fotos/Audio vorhanden | Journal-Nutzung |
+| `journal_entry_deleted` | Journal-ID | Löschverhalten |
+| `tab_changed` | Tab-Name, Tab-Index | Navigation |
+
+**Rechtsgrundlage (falls aktiviert):** Art. 6 Abs. 1 lit. a DSGVO (Einwilligung via Analytics-Einstellung)
+
+**Du kannst Analytics jederzeit in den App-Einstellungen deaktivieren.**
+
+### 3.9 Technische Metadaten
+
+Bei jeder Verbindung zu unseren Cloud-Diensten werden automatisch folgende technische Daten übertragen:
+
+- **IP-Adresse:** Wird von Firebase für die Verbindungsherstellung verarbeitet, aber nicht von uns gespeichert oder ausgewertet
+- **Zeitstempel der Anfragen**
+- **App-Version**
+- **Betriebssystem und Version**
+
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. f DSGVO (technisch erforderlich für die Bereitstellung der Dienste)
+
+---
+
+## 4. Eingesetzte Drittanbieter-Dienste
+
+**Wichtige Korrektur:** Entgegen früherer Versionen dieser Datenschutzerklärung nutzt Vayze mehrere Cloud-Dienste von Google LLC (USA) und Expo Inc. (USA). Alle diese Dienste agieren als **Auftragsverarbeiter** im Sinne von Art. 28 DSGVO.
+
+### 4.1 Firebase Authentication
+
+**Anbieter:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA  
+**Zweck:** Account-Registrierung, Login, Passwort-Reset, Account-Verwaltung  
+**Übertragene Daten:** E-Mail-Adresse, Passwort (verschlüsselt), Anzeigename, Benutzer-ID, IP-Adresse (automatisch)  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. b DSGVO  
+**Datenschutzerklärung:** https://firebase.google.com/support/privacy  
+**Datenübertragung in Drittland:** USA, auf Basis der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO)
+
+### 4.2 Firebase Firestore
+
+**Anbieter:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA  
+**Zweck:** Speicherung von Push-Tokens, Aktivitätszeitstempeln, Benachrichtigungs-Logs  
+**Übertragene Daten:** Benutzer-ID, Expo Push Token, Plattform (iOS/Android), App-Version, Zeitstempel der letzten Entscheidung, Streak-Anzahl  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO (Push-Benachrichtigungen), Art. 6 Abs. 1 lit. b DSGVO (Account-Verwaltung)  
+**Datenschutzerklärung:** https://firebase.google.com/support/privacy  
+**Datenübertragung in Drittland:** USA, auf Basis der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO)
+
+### 4.3 Firebase Cloud Functions
+
+**Anbieter:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA  
+**Zweck:** Serverlose Logik für Push-Benachrichtigungen (Streak-Warnungen, Re-Engagement, Broadcast, Meilensteine)  
+**Verarbeitete Daten:** Benutzer-ID, Aktivitätsdaten, Entscheidungs-Zeitstempel, Streaks  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO  
+**Datenschutzerklärung:** https://firebase.google.com/support/privacy  
+**Datenübertragung in Drittland:** USA, auf Basis der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO)
+
+**Ausgeführte Cloud Functions:**
+- `streakWarningDaily` (täglich 20:00 UTC): Iteriert alle Benutzer, prüft Streak-Status, sendet Warnungen
+- `reEngagementDaily` (täglich 10:00 UTC): Findet inaktive Benutzer (7+ Tage ohne Entscheidung), sendet Re-Engagement-Push
+- `sendBroadcast` (manuell ausgelöst): Ermöglicht Broadcast-Benachrichtigungen an alle Benutzer
+- `onStreakMilestone` (automatisch bei neuen Entscheidungen): Sendet Glückwunsch-Benachrichtigungen bei Streak-Meilensteinen
+- `syncStreak` (manuell durch App ausgelöst): Synchronisiert Streak-Daten (aktueller Streak, längster Streak, letzter Sync-Zeitstempel) zwischen App und Firestore
+
+### 4.4 Expo Push Notification Service
+
+**Anbieter:** Expo Inc., 650 Alabama St, San Francisco, CA 94110, USA  
+**Zweck:** Technische Zustellung von Push-Benachrichtigungen an iOS- und Android-Geräte  
+**Übertragene Daten:** Expo Push Token, Projekt-ID, Benachrichtigungsinhalt (Titel, Text)  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO  
+**Datenschutzerklärung:** https://expo.dev/privacy  
+**Datenübertragung in Drittland:** USA, auf Basis der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO)
+
+### 4.5 Firebase Analytics (optional, derzeit inaktiv)
+
+**Anbieter:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA  
+**Zweck:** Nutzungsstatistiken (nur bei aktivierter Analytics-Einstellung)  
+**Übertragene Daten:** Event-Namen, Event-Parameter (siehe 3.8), IP-Adresse (automatisch anonymisiert)  
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO (Einwilligung via Analytics-Einstellung)  
+**Datenschutzerklärung:** https://firebase.google.com/support/privacy  
+**Datenübertragung in Drittland:** USA, auf Basis der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO)  
+**Status:** Derzeit nicht aktiv, da das Modul nicht in der App-Konfiguration enthalten ist
+
+---
+
+## 5. Datenübertragung in Drittländer
+
+Alle eingesetzten Cloud-Dienste (Firebase, Expo) werden von Anbietern mit Sitz in den USA betrieben. Die Datenübertragung in die USA erfolgt auf Grundlage der **EU-Standardvertragsklauseln** gemäß Art. 46 Abs. 2 lit. c DSGVO.
+
+Google LLC und Expo Inc. haben entsprechende Standardvertragsklauseln mit uns abgeschlossen und setzen zusätzliche technische und organisatorische Maßnahmen um, um ein angemessenes Datenschutzniveau zu gewährleisten.
+
+**Hinweis:** Die USA verfügen derzeit nicht über ein von der EU-Kommission anerkanntes angemessenes Datenschutzniveau. Es besteht das Risiko, dass US-Behörden unter bestimmten Umständen auf deine Daten zugreifen können.
+
+---
+
+## 6. App-Berechtigungen
+
+Die App benötigt folgende Geräte-Berechtigungen:
+
+### 6.1 Pflichtberechtigungen (automatisch erteilt)
+
+- **INTERNET:** Netzwerkzugriff für Account-Verwaltung und Push-Benachrichtigungen
+- **RECEIVE_BOOT_COMPLETED:** Neuregistrierung von Benachrichtigungen nach Geräte-Neustart
+- **VIBRATE:** Vibration bei eingehenden Benachrichtigungen
+- **SCHEDULE_EXACT_ALARM:** Zeitgenaue Zustellung von geplanten Benachrichtigungen
+- **MODIFY_AUDIO_SETTINGS:** Anpassung der Audio-Einstellungen für Sprachnotizen
+
+### 6.2 Runtime-Berechtigungen (erfordern deine Zustimmung)
+
+- **Kamera:** Aufnahme von Fotos für Journal-Einträge
+- **Fotobibliothek (READ_EXTERNAL_STORAGE, iOS: Foto-Zugriff):** Auswahl vorhandener Fotos aus deiner Galerie
+- **Mikrofon (RECORD_AUDIO):** Aufnahme von Sprachnotizen für Journal-Einträge
+- **Speicher (WRITE_EXTERNAL_STORAGE, Android < 13):** Speicherung von Foto- und Audio-Dateien
+- **Push-Benachrichtigungen:** Empfang von Erinnerungen und Streak-Warnungen
+
+**Du kannst alle Runtime-Berechtigungen jederzeit in den Geräte-Einstellungen widerrufen.** Die App funktioniert auch ohne Kamera-, Foto- und Mikrofon-Zugriff; in diesem Fall stehen dir lediglich die Anhang-Funktionen im Journal nicht zur Verfügung.
+
+### 6.3 Entwickler-Berechtigungen (nur in Debug-Builds)
+
+- **SYSTEM_ALERT_WINDOW:** Anzeige von Entwickler-Tools über anderen Apps (nur für Testzwecke)
+
+---
+
+## 7. Speicherdauer
+
+| Datentyp | Speicherdauer |
+|----------|---------------|
+| Account-Daten (Firebase Authentication) | Bis zur Account-Löschung |
+| Push-Tokens (Firebase Firestore) | Bis zur Account-Löschung oder Token-Ablauf |
+| Aktivitätsdaten für Benachrichtigungslogik | Bis zur Account-Löschung |
+| Lokale Entscheidungsinhalte | Bis zur App-Deinstallation oder manuellen Löschung |
+| Sicherheits-Protokoll (lokal) | Bis zu 100 Events, danach werden die ältesten überschrieben; bei Account-Löschung werden E-Mail-Adressen anonymisiert, aber Events bleiben erhalten |
+| Analytics-Daten (falls aktiviert) | Bis zu 14 Monate (Google Firebase Analytics Standard) |
+| Session-Daten (lokal) | Sessions laufen nach 365 Tagen automatisch ab. Ein separater Inaktivitäts-Timeout ist derzeit nicht implementiert. |
+
+---
+
+## 8. Datensicherheit
+
+Wir setzen folgende Sicherheitsmaßnahmen ein:
+
+### 8.1 Verschlüsselung
+
+- **Passwörter:** Iteratives SHA-256-Hashing (10.000 Runden) mit zufälligem Salt vor der Übertragung
+- **Datenübertragung:** TLS/SSL-Verschlüsselung für alle Verbindungen zu Firebase und Expo
+- **Lokale Daten:** Verschlüsselte Speicherung sensibler Daten im Expo SecureStore (iOS: Keychain, Android: EncryptedSharedPreferences)
+- **Session-Verschlüsselung:** Session-Token werden mit einem XOR-Cipher verschlüsselt gespeichert
+
+**Hinweis zu HTTP-Verkehr:** Die App erlaubt aus technischen Gründen unverschlüsselten HTTP-Verkehr (`android:usesCleartextTraffic="true"`). Alle bewusst implementierten Datenübertragungen an Firebase und Expo nutzen HTTPS-Verschlüsselung. Es kann jedoch nicht vollständig ausgeschlossen werden, dass einzelne Bibliotheken unverschlüsselte Verbindungen aufbauen.
+
+### 8.2 Zugriffskontrolle
+
+- Zugriff auf Cloud-Daten nur über authentifizierte API-Anfragen
+- Firebase Security Rules schränken Datenzugriff auf den jeweiligen Benutzer ein
+- Geräte-Fingerprinting zur Erkennung verdächtiger Login-Versuche
+
+### 8.3 Android-Backup
+
+Die App erlaubt Android-System-Backups (`android:allowBackup="true"`). Das bedeutet, dass deine lokal gespeicherten App-Daten (Entscheidungen, Journal-Einträge, Fotos, Sprachnotizen) in Android-Cloud-Backups (Google Drive) enthalten sein können, sofern du diese Funktion auf deinem Gerät aktiviert hast.
+
+**Wenn du dies nicht möchtest, kannst du Android-Backups für Vayze in den Android-Einstellungen unter "Google > Sicherung" deaktivieren.**
+
+---
+
+## 9. Deine Rechte gemäß DSGVO
+
+Du hast folgende Rechte bezüglich deiner personenbezogenen Daten:
+
+### 9.1 Auskunftsrecht (Art. 15 DSGVO)
+
+Du kannst jederzeit Auskunft über die von uns verarbeiteten personenbezogenen Daten verlangen.
+
+### 9.2 Recht auf Berichtigung (Art. 16 DSGVO)
+
+Du kannst die Berichtigung unrichtiger Daten verlangen. Dies ist direkt in der App unter "Einstellungen > Profil" möglich.
+
+### 9.3 Recht auf Löschung (Art. 17 DSGVO)
+
+Du kannst die Löschung deiner personenbezogenen Daten verlangen. Dies ist direkt in der App unter "Einstellungen > Account löschen" möglich.
+
+**Wichtiger Hinweis zur Account-Löschung:**
+- Alle Account-Daten in Firebase (E-Mail, Anzeigename, Push-Tokens, Aktivitätsdaten) werden unwiderruflich gelöscht
+- Alle lokalen Daten (Entscheidungen, Boards, Journal-Einträge) werden vom Gerät entfernt
+- **Sicherheits-Protokoll:** Die lokal gespeicherten Sicherheitsereignisse werden NICHT vollständig gelöscht, sondern anonymisiert. Die E-Mail-Adresse in den Events wird durch `[deleted]` ersetzt, aber die Geräteinformationen und Zeitstempel bleiben aus Sicherheitsgründen erhalten (Betrugsprävention, Nachvollziehbarkeit von Sicherheitsvorfällen)
+
+### 9.4 Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)
+
+Du kannst verlangen, dass die Verarbeitung deiner Daten eingeschränkt wird.
+
+### 9.5 Recht auf Datenübertragbarkeit (Art. 20 DSGVO)
+
+Du kannst verlangen, dass wir dir deine Daten in einem strukturierten, gängigen und maschinenlesbaren Format zur Verfügung stellen. Die Export-Funktion steht dir direkt in der App unter "Einstellungen > Daten exportieren" zur Verfügung.
+
+### 9.6 Widerspruchsrecht (Art. 21 DSGVO)
+
+Du kannst der Verarbeitung deiner Daten widersprechen, soweit diese auf Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) beruht.
+
+### 9.7 Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)
+
+Du kannst erteilte Einwilligungen (z.B. für Push-Benachrichtigungen oder Analytics) jederzeit in den App-Einstellungen widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.
+
+### 9.8 Beschwerderecht (Art. 77 DSGVO)
+
+Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren:
+
+**Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)**  
+Promenade 18  
+91522 Ansbach  
+Deutschland  
+Telefon: +49 (0) 981 180093-0  
+E-Mail: poststelle@lda.bayern.de  
+Web: https://www.lda.bayern.de
+
+---
+
+## 10. Änderungen dieser Datenschutzerklärung
+
+Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an geänderte Rechtsverhältnisse oder bei Änderungen der App und deren Datenverarbeitung anzupassen.
+
+Die jeweils aktuelle Version ist in der App unter "Einstellungen > Rechtliches > Datenschutzerklärung" und auf unserer Website abrufbar.
+
+Bei wesentlichen Änderungen informieren wir dich über die App oder per E-Mail (sofern du uns deine E-Mail-Adresse mitgeteilt hast).
+
+---
+
+## 11. Kontakt
+
+Bei Fragen zum Datenschutz kannst du uns jederzeit kontaktieren:
+
+**Samuel Stöberl / Vayze Apps**  
+Josef-Schwab-Straße 7  
+94559 Niederwinkling  
+Deutschland  
+E-Mail: vayze.app@gmail.com
+
+---
+
+## Änderungshistorie
+
+### Version 2.0.1 (7. Februar 2025) – Technische Präzisierung nach Code-Detailanalyse
+
+**Korrekturen:**
+1. **§3.6 Geräte-Fingerprinting:** Präzisierung, dass nur 7 Attribute in den SHA-256-Hash einfließen (nicht 9); Platform API Level und Geräte-Baujahr werden separat nur in Sicherheits-Logs gespeichert
+2. **§3.2 Firestore-Pfade:** Korrektur von `users/{userId}` zu `users/{email}` – E-Mail-Adresse wird als Firestore-Dokument-ID verwendet
+3. **§3.2 Benachrichtigungs-Protokoll:** Ergänzung der `notificationLog`-Subcollection mit gespeicherten Daten (Titel, Text, Payload, Zeitstempel, Status)
+4. **§3.3 Aktivitätsdaten:** Vollständige Auflistung aller Firestore-Felder (Rate-Limiting, Aktivitäts-Tracking, Streak-Sync) und Offenlegung des Zugriffs auf `decisions`-Subcollection (Zeitstempel `createdAt` und `completedAt`)
+5. **§3.4 Journal-Einträge:** Ergänzung des Felds `additionalNotes` (zusätzliche Notizen) und Hinweis auf Free-Tier-Limit (3 Einträge/Monat)
+6. **§4.3 Cloud Functions:** Ergänzung der 5. Function `syncStreak` (manuelle Streak-Synchronisation)
+7. **§7 Speicherdauer:** Entfernung des nicht implementierten Idle-Timeouts (999 Tage) – Sessions laufen nach 365 Tagen ab
+8. **§8.1 Verschlüsselung:** Neutralere Formulierung zu Cleartext-Traffic – Einschränkung, dass unverschlüsselte Verbindungen durch Drittbibliotheken nicht vollständig ausgeschlossen werden können
+
+**Hinweis zu Lücke 3 (enhancedAuthService):** Das Modul `enhancedAuthService` wurde analysiert und stellt lediglich eine Abstraktionsschicht über `firebaseAuthService` dar. Es führt keine zusätzlichen Datenverarbeitungen durch, die über die bereits dokumentierten Firebase Authentication-Funktionen hinausgehen.
+
+### Version 2.0.0 (7. Februar 2025) – Vollständige Überarbeitung nach Legal-Technical-Audit
+
+**Kritische Korrekturen:**
+- **Drittanbieter-Dienste offengelegt:** Firebase Authentication, Firebase Firestore, Firebase Cloud Functions, Expo Push Notification Service, Firebase Analytics (optional, derzeit inaktiv) – vollständige Beschreibung aller eingesetzten Cloud-Dienste
+- **Datenübertragung in die USA:** Offenlegung der Datenübertragung in Drittländer auf Basis der EU-Standardvertragsklauseln
+- **Push-Benachrichtigungen:** Vollständige Beschreibung der implementierten Push-Funktionen (Streak-Warnungen, Re-Engagement, Broadcast, Meilensteine) und der dafür verarbeiteten Daten
+- **Geräte-Fingerprinting:** Offenlegung der Erfassung und Verarbeitung von Gerätedaten für Sicherheitszwecke
+- **Kamera/Mikrofon/Fotos:** Offenlegung der Berechtigungen und Verwendung für Journal-Anhänge (Fotos, Sprachnotizen)
+- **Verhaltens-Profiling:** Beschreibung der lokalen Analyse (Archetypen, Musteranalyse, Empfehlungen)
+- **Sicherheits-Protokollierung:** Offenlegung der lokalen Sicherheits-Logs mit bis zu 100 Events
+- **Analytics:** Korrektur des Status (Infrastruktur vorhanden, derzeit de facto inaktiv) und Beschreibung der potenziell erfassten Daten
+- **Verschlüsselung:** Korrekte Beschreibung der tatsächlich eingesetzten Verfahren (iteratives SHA-256, XOR-Cipher für Sessions)
+- **Account-Löschung:** Offenlegung, dass Sicherheitsereignisse anonymisiert aber nicht vollständig gelöscht werden
+- **Vollständige Berechtigungsliste:** Alle tatsächlich genutzten Android- und iOS-Berechtigungen aufgeführt
+
+**Neue Abschnitte:**
+- Detaillierte Tabellen zu allen Datentypen mit Zweck, Speicherort und Rechtsgrundlage
+- Beschreibung der Cloud Functions und ihrer Cron-Jobs
+- Technische Metadaten (IP-Adresse, automatische Übertragung)
+- Android-Backup-Hinweis
+
+**Entfernte Falschaussagen:**
+- "Keine Drittanbieter-Dienste"
+- "Keine Cloud-Speicherung"
+- "Keine Geräte-ID"
+- "Kein Fingerprinting"
+- "Keine Fotos oder Mediendateien"
+- "Keine Kamera oder Mikrofon"
+- "Push-Benachrichtigungen derzeit nicht implementiert"
+- "Keine Übermittlung in Drittländer"
+- "Kein Profiling"
+- "Analytics-Einstellung hat keine Funktion" (korrigiert zu: derzeit inaktiv, aber Infrastruktur vorhanden)
+
+### Version 1.3.0 (vorherige Version)
+
+- Initiale öffentliche Version (enthielt die oben genannten Ungenauigkeiten und Auslassungen)
+
+---
+
+**Stand:** 7. Februar 2025  
+**Version:** 2.0.1
