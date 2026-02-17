@@ -399,8 +399,9 @@
         const currentLang = getLang();
         applyLang(currentLang);
 
-        // Load and render Markdown
-        fetch('Nutzungsbedingungen')
+        // Load and render Markdown (language-specific file)
+        const fileMap = { de: 'Nutzungsbedingungen.md', en: 'Nutzungsbedingungen.en', zh: 'Nutzungsbedingungen.zh', id: 'Nutzungsbedingungen.id' };
+        fetch(fileMap[currentLang] || 'Nutzungsbedingungen.md')
             .then(res => res.text())
             .then(md => {
                 const content = document.getElementById('content');

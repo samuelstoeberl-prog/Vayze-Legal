@@ -399,8 +399,9 @@
         const currentLang = getLang();
         applyLang(currentLang);
 
-        // Load and render Markdown
-        fetch('Datenschutzerklärung')
+        // Load and render Markdown (language-specific file)
+        const fileMap = { de: 'Datenschutzerklärung.md', en: 'Datenschutzerklärung.en', zh: 'Datenschutzerklärung.zh', id: 'Datenschutzerklärung.id' };
+        fetch(fileMap[currentLang] || 'Datenschutzerklärung.md')
             .then(res => res.text())
             .then(md => {
                 const content = document.getElementById('content');
