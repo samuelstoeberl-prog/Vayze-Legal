@@ -2,8 +2,8 @@
 
 **Vayze App – Entscheidungshilfe für iOS und Android**
 
-**Version:** 2.0.1  
-**Stand:** 7. Februar 2026
+**Version:** 2.0.1
+**Stand:** 7. Februar 2025
 **Anbieter:** Samuel Stöberl / Vayze Apps  
 **Adresse:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Deutschland  
 **E-Mail:** vayze.app@gmail.com

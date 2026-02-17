@@ -1,268 +1,410 @@
-Privacy Policy
-Vayze App – Decision Support for iOS and Android
-Version: 2.0.1
-Date: February 7, 2026
-Provider: Samuel Stöberl / Vayze Apps
-Address: Josef-Schwab-Straße 7, 94559 Niederwinkling, Germany
-Email: vayze.app@gmail.com
+# Privacy Policy
 
-Preamble
-We take the protection of your personal data seriously. This Privacy Policy comprehensively informs you about which data is collected, processed, and stored when you use the Vayze App. Processing is carried out in accordance with the General Data Protection Regulation (GDPR) and the German Federal Data Protection Act (BDSG).
-Important change compared to previous versions: This version corrects and completes the disclosure of third-party services, data processing activities, and technical functions actually used by the App.
+**Vayze App – Decision Support for iOS and Android**
 
-1. Controller
+**Version:** 2.0.1
+**Date:** February 7, 2025
+**Provider:** Samuel Stöberl / Vayze Apps
+**Address:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Germany
+**Email:** vayze.app@gmail.com
+
+---
+
+## Preamble
+
+We take the protection of your personal data seriously. This Privacy Policy comprehensively informs you about which data is collected, processed, and stored when you use the Vayze App. Processing is carried out in accordance with the DSGVO (GDPR – General Data Protection Regulation) and the BDSG (German Federal Data Protection Act).
+
+**Important change compared to previous versions:** This version corrects and completes the disclosure of third-party services, data processing activities, and technical functions actually used by the App.
+
+**Language note:** In case of discrepancies between language versions, the German version shall prevail.
+
+---
+
+## 1. Controller
+
 The controller for data processing within the meaning of the GDPR:
-Samuel Stöberl / Vayze Apps
+
+**Samuel Stöberl / Vayze Apps**
 Josef-Schwab-Straße 7
 94559 Niederwinkling
 Germany
 Email: vayze.app@gmail.com
 
-2. General Information on Data Processing
-2.1 Core Principle: Privacy First with Cloud Components
-Vayze was developed with a "Privacy First" principle. Your decision content (boards, cards, ratings, journal entries including text, photos, and voice notes) is stored exclusively locally on your device and is never transmitted to our servers or third parties.
-For the provision of certain features (account management, push notifications), we use Google's Firebase cloud services. In doing so, account-related data and technical metadata are processed, as described in detail in this policy.
-2.2 Purpose of Data Processing
+---
+
+## 2. General Information on Data Processing
+
+### 2.1 Core Principle: Privacy First with Cloud Components
+
+Vayze was developed with a "Privacy First" principle. Your **decision content** (boards, cards, ratings, journal entries including text, photos, and voice notes) is stored exclusively locally on your device and is never transmitted to our servers or third parties.
+
+For the provision of certain features (account management, push notifications), we use Google's Firebase cloud services. In doing so, **account-related data** and **technical metadata** are processed, as described in detail in this policy.
+
+### 2.2 Purpose of Data Processing
+
 We process personal data for the following purposes:
 
-Provision and operation of App features
-Account management (registration, login, password reset)
-Sending push notifications (reminders, streak warnings, re-engagement)
-Technical security and fraud prevention
-Usage statistics (only with your explicit consent via the analytics setting)
+- Provision and operation of App features
+- Account management (registration, login, password reset)
+- Sending push notifications (reminders, streak warnings, re-engagement)
+- Technical security and fraud prevention
+- Usage statistics (only with your explicit consent via the analytics setting)
 
-2.3 Legal Bases
+### 2.3 Legal Bases
+
 The processing of your data is based on the following legal bases:
 
-Art. 6(1)(a) GDPR (Consent): Analytics collection, push notifications
-Art. 6(1)(b) GDPR (Contract performance): Account management, provision of App features
-Art. 6(1)(f) GDPR (Legitimate interests): IT security, fraud prevention, technical stability
+- **Art. 6(1)(a) GDPR** (Consent): Analytics collection, push notifications
+- **Art. 6(1)(b) GDPR** (Contract performance): Account management, provision of App features
+- **Art. 6(1)(f) GDPR** (Legitimate interests): IT security, fraud prevention, technical stability
 
+---
 
-3. Data Collected and Storage Locations
-3.1 Account Data (Cloud Storage)
+## 3. Data Collected and Storage Locations
+
+### 3.1 Account Data (Cloud Storage)
+
 When registering and using your account, the following data is stored in the cloud:
-Data TypePurposeStorage LocationLegal BasisEmail addressAccount identification, login, password resetFirebase Authentication (Google LLC, USA)Art. 6(1)(b) GDPRPassword (encrypted)Account securityFirebase Authentication (Google LLC, USA)Art. 6(1)(b) GDPRDisplay namePersonalizationFirebase Authentication (Google LLC, USA)Art. 6(1)(b) GDPRUser ID (UUID)Internal identificationFirebase Firestore (Google LLC, USA)Art. 6(1)(b) GDPRAccount creation dateManagement, supportFirebase Authentication (Google LLC, USA)Art. 6(1)(b) GDPR
-Encryption: Your password is hashed before transmission using an iterative SHA-256 process (10,000 rounds) with a random salt. Firebase additionally stores its own encrypted version.
-3.2 Push Notification Data (Cloud Storage)
+
+| Data Type | Purpose | Storage Location | Legal Basis |
+|-----------|---------|-----------------|-------------|
+| Email address | Account identification, login, password reset | Firebase Authentication (Google LLC, USA) | Art. 6(1)(b) GDPR |
+| Password (encrypted) | Account security | Firebase Authentication (Google LLC, USA) | Art. 6(1)(b) GDPR |
+| Display name | Personalization | Firebase Authentication (Google LLC, USA) | Art. 6(1)(b) GDPR |
+| User ID (UUID) | Internal identification | Firebase Firestore (Google LLC, USA) | Art. 6(1)(b) GDPR |
+| Account creation date | Management, support | Firebase Authentication (Google LLC, USA) | Art. 6(1)(b) GDPR |
+
+**Encryption:** Your password is hashed before transmission using an iterative SHA-256 process (10,000 rounds) with a random salt. Firebase additionally stores its own encrypted version.
+
+### 3.2 Push Notification Data (Cloud Storage)
+
 For sending push notifications, the following data is stored in the cloud:
-Data TypePurposeStorage LocationLegal BasisExpo Push TokenUnique identification of your device for push deliveryFirebase Firestore under users/{email}/tokens/{token}Art. 6(1)(a) GDPRPlatform (iOS/Android)Platform-specific deliveryFirebase FirestoreArt. 6(1)(a) GDPRApp versionCompatibility checkFirebase FirestoreArt. 6(1)(a) GDPRRegistration timestampToken managementFirebase FirestoreArt. 6(1)(a) GDPRNotification logTraceability of sent push notificationsFirebase Firestore under users/{email}/notificationLogArt. 6(1)(a) GDPR
-Important note: Your email address is used as the Firestore document ID (path: users/{email}). This means the email address is visible in the Firestore database structure.
-Notification Log: Each push notification sent to you is logged in Firestore with:
 
-Notification title
-Notification text (body)
-Payload data (e.g., type, target screen, streak count)
-Server timestamp (when sent)
-Status (whether opened)
+| Data Type | Purpose | Storage Location | Legal Basis |
+|-----------|---------|-----------------|-------------|
+| Expo Push Token | Unique identification of your device for push delivery | Firebase Firestore under `users/{email}/tokens/{token}` | Art. 6(1)(a) GDPR |
+| Platform (iOS/Android) | Platform-specific delivery | Firebase Firestore | Art. 6(1)(a) GDPR |
+| App version | Compatibility check | Firebase Firestore | Art. 6(1)(a) GDPR |
+| Registration timestamp | Token management | Firebase Firestore | Art. 6(1)(a) GDPR |
+| Notification log | Traceability of sent push notifications | Firebase Firestore under `users/{email}/notificationLog` | Art. 6(1)(a) GDPR |
 
-Topic Subscription: Your device is automatically added to the Firebase Cloud Messaging topic all_users to enable broadcast notifications.
-3.3 Activity Data for Notification Logic (Cloud Processing)
+**Important note:** Your email address is used as the Firestore document ID (path: `users/{email}`). This means the email address is visible in the Firestore database structure.
+
+**Notification Log:** Each push notification sent to you is logged in Firestore with:
+- Notification title
+- Notification text (body)
+- Payload data (e.g., type, target screen, streak count)
+- Server timestamp (when sent)
+- Status (whether opened)
+
+**Topic Subscription:** Your device is automatically added to the Firebase Cloud Messaging topic `all_users` to enable broadcast notifications.
+
+### 3.3 Activity Data for Notification Logic (Cloud Processing)
+
 To send personalized push notifications (e.g., streak warnings, re-engagement), our Cloud Functions process the following data:
-Data TypePurposeProcessing LocationLegal BasiscreatedAt (from decisions subcollection)Time of decision creationFirebase Cloud Functions (Google LLC, USA)Art. 6(1)(a) GDPRcompletedAt (from decisions subcollection)Time of decision completionFirebase Cloud Functions (Google LLC, USA)Art. 6(1)(a) GDPRactivity.lastDecisionAtTimestamp of last decisionFirebase Firestore (Google LLC, USA)Art. 6(1)(a) GDPRactivity.currentStreakNumber of consecutive days with decisionsFirebase Firestore (Google LLC, USA)Art. 6(1)(a) GDPRactivity.longestStreakLongest streak achievedFirebase Firestore (Google LLC, USA)Art. 6(1)(a) GDPRactivity.lastReEngagementAtTimestamp of last re-engagement notificationFirebase Firestore (Google LLC, USA)Art. 6(1)(a) GDPRactivity.lastSyncedAtTimestamp of last streak syncFirebase Firestore (Google LLC, USA)Art. 6(1)(a) GDPRnotificationSettings.rateLimits.lastSentAtISO timestamp of last sent notificationFirebase Firestore (Google LLC, USA)Art. 6(1)(a) GDPRnotificationSettings.rateLimits.sentTodayCounter of notifications sent todayFirebase Firestore (Google LLC, USA)Art. 6(1)(a) GDPREmail address (as document ID)Assignment of activity data to userFirebase Firestore (Google LLC, USA)Art. 6(1)(a) GDPR
-Processing: Our Cloud Functions perform automated checks daily at 20:00 UTC (streak warning) and 10:00 UTC (re-engagement). All registered user documents in Firestore are iterated and analyzed based on the activity data.
-Access to decision timestamps: The Cloud Functions access the subcollection users/{email}/decisions and read the fields createdAt and completedAt of all completed decisions to calculate streaks and inactivity. Important: Only timestamps are read, not decision content (titles, descriptions, ratings, etc.).
-3.4 Decision Content (Local Storage)
+
+| Data Type | Purpose | Processing Location | Legal Basis |
+|-----------|---------|-------------------|-------------|
+| `createdAt` (from `decisions` subcollection) | Time of decision creation | Firebase Cloud Functions (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| `completedAt` (from `decisions` subcollection) | Time of decision completion | Firebase Cloud Functions (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| `activity.lastDecisionAt` | Timestamp of last decision | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| `activity.currentStreak` | Number of consecutive days with decisions | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| `activity.longestStreak` | Longest streak achieved | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| `activity.lastReEngagementAt` | Timestamp of last re-engagement notification | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| `activity.lastSyncedAt` | Timestamp of last streak sync | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| `notificationSettings.rateLimits.lastSentAt` | ISO timestamp of last sent notification | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| `notificationSettings.rateLimits.sentToday` | Counter of notifications sent today | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| Email address (as document ID) | Assignment of activity data to user | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+
+**Processing:** Our Cloud Functions perform automated checks daily at 20:00 UTC (streak warning) and 10:00 UTC (re-engagement). All registered user documents in Firestore are iterated and analyzed based on the activity data.
+
+**Access to decision timestamps:** The Cloud Functions access the subcollection `users/{email}/decisions` and read the fields `createdAt` and `completedAt` of all completed decisions to calculate streaks and inactivity. **Important:** Only timestamps are read, not decision content (titles, descriptions, ratings, etc.).
+
+### 3.4 Decision Content (Local Storage)
+
 All your personal content is stored exclusively locally on your device:
 
-Boards and cards: Titles, descriptions, categories, weights, ratings, tags, prioritizations
-Decision recommendations: Calculated scores, recommendations, timestamps
-Journal entries: Texts, reflections, decision context, additional notes (free text)
-Photo attachments: Up to 5 photos per journal entry (local file paths)
-Voice notes: Audio recordings with duration (local files)
-Comments: Text on board cards with timestamps
-Checklists: Tasks with completion status on board cards
-Onboarding data: Decision context, preferred decision style (e.g., Analytical, Impulsive, Overthinker), desired outcomes
+- **Boards and cards:** Titles, descriptions, categories, weights, ratings, tags, prioritizations
+- **Decision recommendations:** Calculated scores, recommendations, timestamps
+- **Journal entries:** Texts, reflections, decision context, additional notes (free text)
+- **Photo attachments:** Up to 5 photos per journal entry (local file paths)
+- **Voice notes:** Audio recordings with duration (local files)
+- **Comments:** Text on board cards with timestamps
+- **Checklists:** Tasks with completion status on board cards
+- **Onboarding data:** Decision context, preferred decision style (e.g., Analytical, Impulsive, Overthinker), desired outcomes
 
-This data never leaves your device and is not transmitted to us or third parties.
-Journal limit in free tier: The creation of journal entries is limited to 3 entries per month in the free usage tier. This restriction is checked locally on your device.
-3.5 Behavioral Profiling (Local Processing)
+**This data never leaves your device** and is not transmitted to us or third parties.
+
+**Journal limit in free tier:** The creation of journal entries is limited to 3 entries per month in the free usage tier. This restriction is checked locally on your device.
+
+### 3.5 Behavioral Profiling (Local Processing)
+
 The App performs a local analysis of your decision-making behavior to provide personalized insights:
-What is analyzedPurposeProcessingLegal BasisUser archetype (e.g., "The Confident Decision-Maker", "The Cautious Analyst")Personalized feedbackExclusively locally on your deviceArt. 6(1)(b) GDPRDecision patterns, strengths, growth areasSelf-reflection and improvementExclusively locally on your deviceArt. 6(1)(b) GDPRBias detection and trend analysisPersonalized recommendationsExclusively locally on your deviceArt. 6(1)(b) GDPR
-Important: This profiling happens entirely on your device. No machine learning is used, only rule-based algorithms. The profiling results are never transmitted to servers.
-3.6 Device Fingerprinting (Local Storage)
+
+| What is analyzed | Purpose | Processing | Legal Basis |
+|-----------------|---------|-----------|-------------|
+| User archetype (e.g., "The Confident Decision-Maker", "The Cautious Analyst") | Personalized feedback | Exclusively locally on your device | Art. 6(1)(b) GDPR |
+| Decision patterns, strengths, growth areas | Self-reflection and improvement | Exclusively locally on your device | Art. 6(1)(b) GDPR |
+| Bias detection and trend analysis | Personalized recommendations | Exclusively locally on your device | Art. 6(1)(b) GDPR |
+
+**Important:** This profiling happens entirely on your device. No machine learning is used, only rule-based algorithms. The profiling results are never transmitted to servers.
+
+### 3.6 Device Fingerprinting (Local Storage)
+
 To improve account security, the App creates a device fingerprint:
-Attributes used for the fingerprint hash (7):
 
-Device name (deviceName)
-Brand (brand)
-Manufacturer (manufacturer)
-Model name (modelName)
-Operating system (osName)
-OS version (osVersion)
-OS build ID (osBuildId)
+**Attributes used for the fingerprint hash (7):**
+- Device name (`deviceName`)
+- Brand (`brand`)
+- Manufacturer (`manufacturer`)
+- Model name (`modelName`)
+- Operating system (`osName`)
+- OS version (`osVersion`)
+- OS build ID (`osBuildId`)
 
-Additionally collected device data (not in hash, only in security logs):
+**Additionally collected device data (not in hash, only in security logs):**
+- Platform API level (`platformApiLevel`, Android only)
+- Estimated device year class (`deviceYearClass`)
 
-Platform API level (platformApiLevel, Android only)
-Estimated device year class (deviceYearClass)
+**Processing:**
+1. The 7 attributes above are combined into a SHA-256 hash
+2. The hash is stored locally under the key `decisio_device_id` (AsyncStorage)
+3. During security events (e.g., login, account changes), all 9 device data points are logged together with the event
 
-Processing:
+**Legal basis:** Art. 6(1)(f) GDPR (legitimate interest in fraud prevention and account security)
 
-The 7 attributes above are combined into a SHA-256 hash
-The hash is stored locally under the key decisio_device_id (AsyncStorage)
-During security events (e.g., login, account changes), all 9 device data points are logged together with the event
+### 3.7 Security Logging (Local Storage)
 
-Legal basis: Art. 6(1)(f) GDPR (legitimate interest in fraud prevention and account security)
-3.7 Security Logging (Local Storage)
 The App logs security events locally on your device:
-Logged events (up to 100):
 
-signup_attempt, login_attempt, login_success, login_failed
-logout, suspicious_activity_detected, email_verified
-account_unlocked, password_reset_requested
-account_deletion_requested, account_deleted
+**Logged events (up to 100):**
+- `signup_attempt`, `login_attempt`, `login_success`, `login_failed`
+- `logout`, `suspicious_activity_detected`, `email_verified`
+- `account_unlocked`, `password_reset_requested`
+- `account_deletion_requested`, `account_deleted`
 
-Information stored per event:
+**Information stored per event:**
+- Event type
+- Email address (anonymized to `[deleted]` upon account deletion)
+- Timestamp
+- Full device information (see 3.6)
 
-Event type
-Email address (anonymized to [deleted] upon account deletion)
-Timestamp
-Full device information (see 3.6)
+**Purpose:** Traceability of security incidents and protection against unauthorized access
+**Legal basis:** Art. 6(1)(f) GDPR (legitimate interest in IT security)
 
-Purpose: Traceability of security incidents and protection against unauthorized access
-Legal basis: Art. 6(1)(f) GDPR (legitimate interest in IT security)
-3.8 Analytics Data (Optional, Cloud Transmission)
-The App has an analytics infrastructure that is currently de facto inactive because the required Firebase Analytics module is not enabled in the App configuration.
-Status: The analytics setting in the App exists but currently has no function because the tracking module is missing.
-If the analytics function is activated in future versions, the following event data would be transmitted to Google Firebase Analytics (USA) when the analytics setting is enabled:
-EventTransmitted ParametersPurposedecision_startedDecision mode, category, weighting presetUnderstanding App usagedecision_completedMode, category, whether recommendation accepted, score, presetSuccess analysisjournal_entry_createdDecision ID (no content), word count, whether photos/audio presentJournal usagejournal_entry_deletedJournal IDDeletion behaviortab_changedTab name, tab indexNavigation
-Legal basis (if activated): Art. 6(1)(a) GDPR (consent via analytics setting)
-You can disable analytics at any time in the App settings.
-3.9 Technical Metadata
+### 3.8 Analytics Data (Optional, Cloud Transmission)
+
+The App has an analytics infrastructure that is **currently de facto inactive** because the required Firebase Analytics module is not enabled in the App configuration.
+
+**Status:** The analytics setting in the App exists but currently has no function because the tracking module is missing.
+
+**If the analytics function is activated in future versions**, the following event data would be transmitted to Google Firebase Analytics (USA) when the analytics setting is enabled:
+
+| Event | Transmitted Parameters | Purpose |
+|-------|----------------------|---------|
+| `decision_started` | Decision mode, category, weighting preset | Understanding App usage |
+| `decision_completed` | Mode, category, whether recommendation accepted, score, preset | Success analysis |
+| `journal_entry_created` | Decision ID (no content), word count, whether photos/audio present | Journal usage |
+| `journal_entry_deleted` | Journal ID | Deletion behavior |
+| `tab_changed` | Tab name, tab index | Navigation |
+
+**Legal basis (if activated):** Art. 6(1)(a) GDPR (consent via analytics setting)
+
+**You can disable analytics at any time in the App settings.**
+
+### 3.9 Technical Metadata
+
 With every connection to our cloud services, the following technical data is automatically transmitted:
 
-IP address: Processed by Firebase for connection establishment, but not stored or evaluated by us
-Timestamps of requests
-App version
-Operating system and version
+- **IP address:** Processed by Firebase for connection establishment, but not stored or evaluated by us
+- **Timestamps of requests**
+- **App version**
+- **Operating system and version**
 
-Legal basis: Art. 6(1)(f) GDPR (technically required for the provision of services)
+**Legal basis:** Art. 6(1)(f) GDPR (technically required for the provision of services)
 
-4. Third-Party Services Used
-Important correction: Contrary to earlier versions of this Privacy Policy, Vayze uses several cloud services from Google LLC (USA) and Expo Inc. (USA). All these services act as processors within the meaning of Art. 28 GDPR.
-4.1 Firebase Authentication
-Provider: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
-Purpose: Account registration, login, password reset, account management
-Data transmitted: Email address, password (encrypted), display name, user ID, IP address (automatic)
-Legal basis: Art. 6(1)(b) GDPR
-Privacy policy: https://firebase.google.com/support/privacy
-Data transfer to third country: USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
-4.2 Firebase Firestore
-Provider: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
-Purpose: Storage of push tokens, activity timestamps, notification logs
-Data transmitted: User ID, Expo push token, platform (iOS/Android), app version, timestamp of last decision, streak count
-Legal basis: Art. 6(1)(a) GDPR (push notifications), Art. 6(1)(b) GDPR (account management)
-Privacy policy: https://firebase.google.com/support/privacy
-Data transfer to third country: USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
-4.3 Firebase Cloud Functions
-Provider: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
-Purpose: Serverless logic for push notifications (streak warnings, re-engagement, broadcast, milestones)
-Data processed: User ID, activity data, decision timestamps, streaks
-Legal basis: Art. 6(1)(a) GDPR
-Privacy policy: https://firebase.google.com/support/privacy
-Data transfer to third country: USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
-Cloud Functions executed:
+---
 
-streakWarningDaily (daily 20:00 UTC): Iterates all users, checks streak status, sends warnings
-reEngagementDaily (daily 10:00 UTC): Finds inactive users (7+ days without decision), sends re-engagement push
-sendBroadcast (manually triggered): Enables broadcast notifications to all users
-onStreakMilestone (automatically on new decisions): Sends congratulatory notifications at streak milestones
-syncStreak (manually triggered by App): Synchronizes streak data between App and Firestore
+## 4. Third-Party Services Used
 
-4.4 Expo Push Notification Service
-Provider: Expo Inc., 650 Alabama St, San Francisco, CA 94110, USA
-Purpose: Technical delivery of push notifications to iOS and Android devices
-Data transmitted: Expo push token, project ID, notification content (title, text)
-Legal basis: Art. 6(1)(a) GDPR
-Privacy policy: https://expo.dev/privacy
-Data transfer to third country: USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
-4.5 Firebase Analytics (Optional, Currently Inactive)
-Provider: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
-Purpose: Usage statistics (only when analytics setting is enabled)
-Data transmitted: Event names, event parameters (see 3.8), IP address (automatically anonymized)
-Legal basis: Art. 6(1)(a) GDPR (consent via analytics setting)
-Privacy policy: https://firebase.google.com/support/privacy
-Data transfer to third country: USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
-Status: Currently not active, as the module is not included in the App configuration
+**Important correction:** Contrary to earlier versions of this Privacy Policy, Vayze uses several cloud services from Google LLC (USA) and Expo Inc. (USA). All these services act as **processors** within the meaning of Art. 28 GDPR.
 
-5. Data Transfers to Third Countries
-All cloud services used (Firebase, Expo) are operated by providers based in the USA. Data transfer to the USA is based on EU Standard Contractual Clauses pursuant to Art. 46(2)(c) GDPR.
+### 4.1 Firebase Authentication
+
+**Provider:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+**Purpose:** Account registration, login, password reset, account management
+**Data transmitted:** Email address, password (encrypted), display name, user ID, IP address (automatic)
+**Legal basis:** Art. 6(1)(b) GDPR
+**Privacy policy:** https://firebase.google.com/support/privacy
+**Data transfer to third country:** USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
+
+### 4.2 Firebase Firestore
+
+**Provider:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+**Purpose:** Storage of push tokens, activity timestamps, notification logs
+**Data transmitted:** User ID, Expo Push Token, platform (iOS/Android), app version, timestamp of last decision, streak count
+**Legal basis:** Art. 6(1)(a) GDPR (push notifications), Art. 6(1)(b) GDPR (account management)
+**Privacy policy:** https://firebase.google.com/support/privacy
+**Data transfer to third country:** USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
+
+### 4.3 Firebase Cloud Functions
+
+**Provider:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+**Purpose:** Serverless logic for push notifications (streak warnings, re-engagement, broadcast, milestones)
+**Data processed:** User ID, activity data, decision timestamps, streaks
+**Legal basis:** Art. 6(1)(a) GDPR
+**Privacy policy:** https://firebase.google.com/support/privacy
+**Data transfer to third country:** USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
+
+**Cloud Functions executed:**
+- `streakWarningDaily` (daily 20:00 UTC): Iterates all users, checks streak status, sends warnings
+- `reEngagementDaily` (daily 10:00 UTC): Finds inactive users (7+ days without decision), sends re-engagement push
+- `sendBroadcast` (manually triggered): Enables broadcast notifications to all users
+- `onStreakMilestone` (automatically on new decisions): Sends congratulatory notifications at streak milestones
+- `syncStreak` (manually triggered by App): Synchronizes streak data (current streak, longest streak, last sync timestamp) between App and Firestore
+
+### 4.4 Expo Push Notification Service
+
+**Provider:** Expo Inc., 650 Alabama St, San Francisco, CA 94110, USA
+**Purpose:** Technical delivery of push notifications to iOS and Android devices
+**Data transmitted:** Expo Push Token, project ID, notification content (title, text)
+**Legal basis:** Art. 6(1)(a) GDPR
+**Privacy policy:** https://expo.dev/privacy
+**Data transfer to third country:** USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
+
+### 4.5 Firebase Analytics (Optional, Currently Inactive)
+
+**Provider:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+**Purpose:** Usage statistics (only when analytics setting is enabled)
+**Data transmitted:** Event names, event parameters (see 3.8), IP address (automatically anonymized)
+**Legal basis:** Art. 6(1)(a) GDPR (consent via analytics setting)
+**Privacy policy:** https://firebase.google.com/support/privacy
+**Data transfer to third country:** USA, based on EU Standard Contractual Clauses (Art. 46(2)(c) GDPR)
+**Status:** Currently not active, as the module is not included in the App configuration
+
+---
+
+## 5. Data Transfers to Third Countries
+
+All cloud services used (Firebase, Expo) are operated by providers based in the USA. Data transfer to the USA is based on **EU Standard Contractual Clauses** pursuant to Art. 46(2)(c) GDPR.
+
 Google LLC and Expo Inc. have concluded appropriate Standard Contractual Clauses with us and implement additional technical and organizational measures to ensure an adequate level of data protection.
-Note: The USA currently does not have an adequacy decision recognized by the EU Commission. There is a risk that US authorities may access your data under certain circumstances.
 
-6. App Permissions
+**Note:** The USA currently does not have an adequacy decision recognized by the EU Commission. There is a risk that US authorities may access your data under certain circumstances.
+
+---
+
+## 6. App Permissions
+
 The App requires the following device permissions:
-6.1 Mandatory Permissions (Automatically Granted)
 
-INTERNET: Network access for account management and push notifications
-RECEIVE_BOOT_COMPLETED: Re-registration of notifications after device restart
-VIBRATE: Vibration for incoming notifications
-SCHEDULE_EXACT_ALARM: Time-accurate delivery of scheduled notifications
-MODIFY_AUDIO_SETTINGS: Audio settings adjustment for voice notes
+### 6.1 Mandatory Permissions (Automatically Granted)
 
-6.2 Runtime Permissions (Require Your Consent)
+- **INTERNET:** Network access for account management and push notifications
+- **RECEIVE_BOOT_COMPLETED:** Re-registration of notifications after device restart
+- **VIBRATE:** Vibration for incoming notifications
+- **SCHEDULE_EXACT_ALARM:** Time-accurate delivery of scheduled notifications
+- **MODIFY_AUDIO_SETTINGS:** Audio settings adjustment for voice notes
 
-Camera: Taking photos for journal entries
-Photo library (READ_EXTERNAL_STORAGE, iOS: photo access): Selecting existing photos from your gallery
-Microphone (RECORD_AUDIO): Recording voice notes for journal entries
-Storage (WRITE_EXTERNAL_STORAGE, Android < 13): Saving photo and audio files
-Push Notifications: Receiving reminders and streak warnings
+### 6.2 Runtime Permissions (Require Your Consent)
 
-You can revoke all runtime permissions at any time in your device settings. The App also works without camera, photo, and microphone access; in that case, only the attachment features in the journal will not be available to you.
-6.3 Developer Permissions (Debug Builds Only)
+- **Camera:** Taking photos for journal entries
+- **Photo library (READ_EXTERNAL_STORAGE, iOS: photo access):** Selecting existing photos from your gallery
+- **Microphone (RECORD_AUDIO):** Recording voice notes for journal entries
+- **Storage (WRITE_EXTERNAL_STORAGE, Android < 13):** Saving photo and audio files
+- **Push Notifications:** Receiving reminders and streak warnings
 
-SYSTEM_ALERT_WINDOW: Display of developer tools over other apps (for testing purposes only)
+**You can revoke all runtime permissions at any time in your device settings.** The App also works without camera, photo, and microphone access; in that case, only the attachment features in the journal will not be available to you.
 
+### 6.3 Developer Permissions (Debug Builds Only)
 
-7. Retention Periods
-Data TypeRetention PeriodAccount data (Firebase Authentication)Until account deletionPush tokens (Firebase Firestore)Until account deletion or token expiryActivity data for notification logicUntil account deletionLocal decision contentUntil App uninstallation or manual deletionSecurity log (local)Up to 100 events, after which the oldest are overwritten; upon account deletion, email addresses are anonymized but events are retainedAnalytics data (if activated)Up to 14 months (Google Firebase Analytics standard)Session data (local)Sessions expire automatically after 365 days. A separate inactivity timeout is not currently implemented.
+- **SYSTEM_ALERT_WINDOW:** Display of developer tools over other apps (for testing purposes only)
 
-8. Data Security
+---
+
+## 7. Retention Periods
+
+| Data Type | Retention Period |
+|-----------|----------------|
+| Account data (Firebase Authentication) | Until account deletion |
+| Push tokens (Firebase Firestore) | Until account deletion or token expiry |
+| Activity data for notification logic | Until account deletion |
+| Local decision content | Until App uninstallation or manual deletion |
+| Security log (local) | Up to 100 events, after which the oldest are overwritten; upon account deletion, email addresses are anonymized but events are retained |
+| Analytics data (if activated) | Up to 14 months (Google Firebase Analytics standard) |
+| Session data (local) | Sessions expire automatically after 365 days. A separate inactivity timeout is not currently implemented. |
+
+---
+
+## 8. Data Security
+
 We implement the following security measures:
-8.1 Encryption
 
-Passwords: Iterative SHA-256 hashing (10,000 rounds) with random salt before transmission
-Data transmission: TLS/SSL encryption for all connections to Firebase and Expo
-Local data: Encrypted storage of sensitive data in Expo SecureStore (iOS: Keychain, Android: EncryptedSharedPreferences)
-Session encryption: Session tokens are stored with XOR cipher encryption
+### 8.1 Encryption
 
-Note on HTTP traffic: The App allows unencrypted HTTP traffic for technical reasons (android:usesCleartextTraffic="true"). All deliberately implemented data transmissions to Firebase and Expo use HTTPS encryption. However, it cannot be fully excluded that individual libraries may establish unencrypted connections.
-8.2 Access Control
+- **Passwords:** Iterative SHA-256 hashing (10,000 rounds) with random salt before transmission
+- **Data transmission:** TLS/SSL encryption for all connections to Firebase and Expo
+- **Local data:** Encrypted storage of sensitive data in Expo SecureStore (iOS: Keychain, Android: EncryptedSharedPreferences)
+- **Session encryption:** Session tokens are stored with XOR cipher encryption
 
-Access to cloud data only via authenticated API requests
-Firebase Security Rules restrict data access to the respective user
-Device fingerprinting to detect suspicious login attempts
+**Note on HTTP traffic:** The App allows unencrypted HTTP traffic for technical reasons (`android:usesCleartextTraffic="true"`). All deliberately implemented data transmissions to Firebase and Expo use HTTPS encryption. However, it cannot be fully excluded that individual libraries may establish unencrypted connections.
 
-8.3 Android Backup
-The App allows Android system backups (android:allowBackup="true"). This means that your locally stored App data (decisions, journal entries, photos, voice notes) may be included in Android cloud backups (Google Drive) if you have enabled this feature on your device.
-If you do not want this, you can disable Android backups for Vayze in Android settings under "Google > Backup."
+### 8.2 Access Control
 
-9. Your Rights under GDPR
+- Access to cloud data only via authenticated API requests
+- Firebase Security Rules restrict data access to the respective user
+- Device fingerprinting to detect suspicious login attempts
+
+### 8.3 Android Backup
+
+The App allows Android system backups (`android:allowBackup="true"`). This means that your locally stored App data (decisions, journal entries, photos, voice notes) may be included in Android cloud backups (Google Drive) if you have enabled this feature on your device.
+
+**If you do not want this, you can disable Android backups for Vayze in Android settings under "Google > Backup."**
+
+---
+
+## 9. Your Rights under GDPR
+
 You have the following rights regarding your personal data:
-9.1 Right of Access (Art. 15 GDPR)
+
+### 9.1 Right of Access (Art. 15 GDPR)
+
 You can request information about the personal data we process at any time.
-9.2 Right to Rectification (Art. 16 GDPR)
+
+### 9.2 Right to Rectification (Art. 16 GDPR)
+
 You can request the correction of inaccurate data. This is possible directly in the App under "Settings > Profile."
-9.3 Right to Erasure (Art. 17 GDPR)
+
+### 9.3 Right to Erasure (Art. 17 GDPR)
+
 You can request the deletion of your personal data. This is possible directly in the App under "Settings > Delete Account."
-Important note on account deletion:
 
-All account data in Firebase (email, display name, push tokens, activity data) is permanently deleted
-All local data (decisions, boards, journal entries) is removed from the device
-Security log: The locally stored security events are NOT completely deleted but anonymized. The email address in events is replaced by [deleted], but device information and timestamps are retained for security reasons (fraud prevention, traceability of security incidents)
+**Important note on account deletion:**
+- All account data in Firebase (email, display name, push tokens, activity data) is permanently deleted
+- All local data (decisions, boards, journal entries) is removed from the device
+- **Security log:** The locally stored security events are NOT completely deleted but anonymized. The email address in events is replaced by `[deleted]`, but device information and timestamps are retained for security reasons (fraud prevention, traceability of security incidents)
 
-9.4 Right to Restriction of Processing (Art. 18 GDPR)
+### 9.4 Right to Restriction of Processing (Art. 18 GDPR)
+
 You can request that the processing of your data be restricted.
-9.5 Right to Data Portability (Art. 20 GDPR)
+
+### 9.5 Right to Data Portability (Art. 20 GDPR)
+
 You can request that we provide your data in a structured, commonly used, and machine-readable format. The export function is available directly in the App under "Settings > Export Data."
-9.6 Right to Object (Art. 21 GDPR)
+
+### 9.6 Right to Object (Art. 21 GDPR)
+
 You can object to the processing of your data insofar as it is based on Art. 6(1)(f) GDPR (legitimate interest).
-9.7 Right to Withdraw Consent (Art. 7(3) GDPR)
+
+### 9.7 Right to Withdraw Consent (Art. 7(3) GDPR)
+
 You can withdraw given consents (e.g., for push notifications or analytics) at any time in the App settings. Withdrawal does not affect the lawfulness of processing carried out until that point.
-9.8 Right to Lodge a Complaint (Art. 77 GDPR)
+
+### 9.8 Right to Lodge a Complaint (Art. 77 GDPR)
+
 You have the right to lodge a complaint with a data protection supervisory authority:
-Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)
+
+**Bayerisches Landesamt für Datenschutzaufsicht (BayLDA – Bavarian State Office for Data Protection Supervision)**
 Promenade 18
 91522 Ansbach
 Germany
@@ -270,18 +412,29 @@ Phone: +49 (0) 981 180093-0
 Email: poststelle@lda.bayern.de
 Web: https://www.lda.bayern.de
 
-10. Changes to This Privacy Policy
+---
+
+## 10. Changes to This Privacy Policy
+
 We reserve the right to adapt this Privacy Policy as needed to reflect changes in legal requirements or changes to the App and its data processing.
+
 The current version is available in the App under "Settings > Legal > Privacy Policy" and on our website.
+
 For significant changes, we will inform you via the App or by email (if you have provided us with your email address).
 
-11. Contact
+---
+
+## 11. Contact
+
 If you have questions about data protection, you can contact us at any time:
-Samuel Stöberl / Vayze Apps
+
+**Samuel Stöberl / Vayze Apps**
 Josef-Schwab-Straße 7
 94559 Niederwinkling
 Germany
 Email: vayze.app@gmail.com
 
-Date: February 7, 2026
-Version: 2.0.1
+---
+
+**Date:** February 7, 2025
+**Version:** 2.0.1
