@@ -1,0 +1,438 @@
+# 隐私政策
+
+**Vayze App – iOS 和 Android 决策辅助工具**
+
+**版本：** 2.0.1
+**日期：** 2026年2月7日
+**提供方：** Samuel Stöberl / Vayze Apps
+**地址：** Josef-Schwab-Straße 7, 94559 Niederwinkling, 德国
+**电子邮箱：** vayze.app@gmail.com
+
+---
+
+## 前言
+
+我们认真对待您个人数据的保护。本隐私政策全面告知您在使用 Vayze App 时收集、处理和存储哪些数据。数据处理符合《通用数据保护条例》（GDPR）和《德国联邦数据保护法》（BDSG）的规定。
+
+**与旧版本的重要变更：** 本版本更正并补充了实际使用的第三方服务、数据处理活动和应用技术功能的披露内容。
+
+---
+
+## 1. 数据控制方
+
+GDPR 意义上的数据处理控制方：
+
+**Samuel Stöberl / Vayze Apps**
+Josef-Schwab-Straße 7
+94559 Niederwinkling
+德国
+电子邮箱：vayze.app@gmail.com
+
+---
+
+## 2. 数据处理的一般信息
+
+### 2.1 核心原则：隐私优先与云组件
+
+Vayze 秉承"隐私优先"原则开发。您的**决策内容**（决策板、卡片、评分、日记条目，包含文字、照片和语音备忘录）仅存储在您的设备本地，绝不会传输至我们的服务器或第三方。
+
+为提供特定功能（账户管理、推送通知），我们使用 Google 的 Firebase 云服务。在此过程中，将按本政策详细说明处理**账户相关数据**和**技术元数据**。
+
+### 2.2 数据处理目的
+
+我们出于以下目的处理个人数据：
+
+- 提供和运营应用功能
+- 账户管理（注册、登录、密码重置）
+- 发送推送通知（提醒、打卡警告、重新激活）
+- 技术安全和欺诈预防
+- 使用统计（仅在您通过分析设置明确同意后）
+
+### 2.3 法律依据
+
+数据处理基于以下法律依据：
+
+- **GDPR 第 6(1)(a) 条**（同意）：分析数据收集、推送通知
+- **GDPR 第 6(1)(b) 条**（合同履行）：账户管理、提供应用功能
+- **GDPR 第 6(1)(f) 条**（合法利益）：IT 安全、欺诈预防、技术稳定性
+
+---
+
+## 3. 收集的数据及存储位置
+
+### 3.1 账户数据（云端存储）
+
+注册和使用账户时，以下数据存储在云端：
+
+| 数据类型 | 目的 | 存储位置 | 法律依据 |
+|---------|------|---------|---------|
+| 电子邮箱地址 | 账户识别、登录、密码重置 | Firebase Authentication（Google LLC，美国） | GDPR 第 6(1)(b) 条 |
+| 密码（加密） | 账户安全 | Firebase Authentication（Google LLC，美国） | GDPR 第 6(1)(b) 条 |
+| 显示名称 | 个性化 | Firebase Authentication（Google LLC，美国） | GDPR 第 6(1)(b) 条 |
+| 用户 ID（UUID） | 内部标识 | Firebase Firestore（Google LLC，美国） | GDPR 第 6(1)(b) 条 |
+| 账户创建日期 | 管理、支持 | Firebase Authentication（Google LLC，美国） | GDPR 第 6(1)(b) 条 |
+
+**加密：** 您的密码在传输前使用带随机盐值的迭代 SHA-256 方法（10,000 轮）进行哈希处理。Firebase 还额外存储其自身的加密版本。
+
+### 3.2 推送通知数据（云端存储）
+
+为发送推送通知，以下数据存储在云端：
+
+| 数据类型 | 目的 | 存储位置 | 法律依据 |
+|---------|------|---------|---------|
+| Expo Push Token | 唯一标识您的设备用于推送投递 | Firebase Firestore `users/{email}/tokens/{token}` | GDPR 第 6(1)(a) 条 |
+| 平台（iOS/Android） | 平台特定投递 | Firebase Firestore | GDPR 第 6(1)(a) 条 |
+| 应用版本 | 兼容性检查 | Firebase Firestore | GDPR 第 6(1)(a) 条 |
+| 注册时间戳 | 令牌管理 | Firebase Firestore | GDPR 第 6(1)(a) 条 |
+| 通知日志 | 已发送推送通知的可追溯性 | Firebase Firestore `users/{email}/notificationLog` | GDPR 第 6(1)(a) 条 |
+
+**重要说明：** 您的电子邮箱地址用作 Firestore 文档 ID（路径：`users/{email}`），因此电子邮箱地址在 Firestore 数据库结构中可见。
+
+**通知日志：** 每条发送给您的推送通知均记录在 Firestore 中，包含：
+- 通知标题
+- 通知正文（body）
+- 载荷数据（如类型、目标页面、打卡次数）
+- 服务器时间戳（发送时间）
+- 状态（是否已打开）
+
+**主题订阅：** 您的设备将自动添加到 Firebase Cloud Messaging 主题 `all_users`，以启用广播通知。
+
+### 3.3 通知逻辑的活动数据（云端处理）
+
+为发送个性化推送通知（如打卡警告、重新激活），我们的 Cloud Functions 处理以下数据：
+
+| 数据类型 | 目的 | 处理位置 | 法律依据 |
+|---------|------|---------|---------|
+| `createdAt`（来自 `decisions` 子集合） | 决策创建时间 | Firebase Cloud Functions（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+| `completedAt`（来自 `decisions` 子集合） | 决策完成时间 | Firebase Cloud Functions（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+| `activity.lastDecisionAt` | 上次决策时间戳 | Firebase Firestore（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+| `activity.currentStreak` | 连续决策天数 | Firebase Firestore（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+| `activity.longestStreak` | 最长打卡记录 | Firebase Firestore（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+| `activity.lastReEngagementAt` | 上次重新激活通知时间戳 | Firebase Firestore（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+| `activity.lastSyncedAt` | 上次打卡同步时间戳 | Firebase Firestore（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+| `notificationSettings.rateLimits.lastSentAt` | 上次发送通知的 ISO 时间戳 | Firebase Firestore（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+| `notificationSettings.rateLimits.sentToday` | 今日已发送通知计数 | Firebase Firestore（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+| 电子邮箱地址（作为文档 ID） | 将活动数据关联至用户 | Firebase Firestore（Google LLC，美国） | GDPR 第 6(1)(a) 条 |
+
+**处理：** 我们的 Cloud Functions 每日在 20:00 UTC（打卡警告）和 10:00 UTC（重新激活）执行自动化检查，遍历 Firestore 中所有已注册用户文档并根据活动数据进行分析。
+
+**访问决策时间戳：** Cloud Functions 访问子集合 `users/{email}/decisions`，读取所有已完成决策的 `createdAt` 和 `completedAt` 字段，以计算打卡和不活跃情况。**重要：** 仅读取时间戳，不读取决策内容（标题、描述、评分等）。
+
+### 3.4 决策内容（本地存储）
+
+您所有的个人内容仅存储在您的设备本地：
+
+- **决策板和卡片：** 标题、描述、类别、权重、评分、标签、优先级
+- **决策建议：** 计算得分、建议、时间戳
+- **日记条目：** 文字、反思、决策背景、附加笔记（自由文本）
+- **照片附件：** 每个日记条目最多 5 张照片（本地文件路径）
+- **语音备忘录：** 带时长的音频录音（本地文件）
+- **评论：** 决策板卡片上的文字，带时间戳
+- **清单：** 决策板卡片上带完成状态的任务
+- **引导数据：** 决策背景、偏好决策风格（如分析型、冲动型、过度思考型）、期望结果
+
+**这些数据绝不会离开您的设备**，不会传输至我们或第三方。
+
+**免费版日记限制：** 在免费使用层级中，每月最多可创建 3 条日记条目。此限制在您的设备本地检查。
+
+### 3.5 行为分析（本地处理）
+
+应用在本地分析您的决策行为，为您提供个性化洞察：
+
+| 分析内容 | 目的 | 处理方式 | 法律依据 |
+|---------|------|---------|---------|
+| 用户原型（如"自信型决策者"、"谨慎型分析者"） | 个性化反馈 | 仅在您的设备本地 | GDPR 第 6(1)(b) 条 |
+| 决策模式、优势、成长领域 | 自我反思和改进 | 仅在您的设备本地 | GDPR 第 6(1)(b) 条 |
+| 偏见识别和趋势分析 | 个性化建议 | 仅在您的设备本地 | GDPR 第 6(1)(b) 条 |
+
+**重要：** 此分析完全在您的设备上进行，使用基于规则的算法，不使用机器学习。分析结果绝不会传输至服务器。
+
+### 3.6 设备指纹（本地存储）
+
+为提升账户安全性，应用创建设备指纹：
+
+**用于指纹哈希的属性（7 个）：**
+- 设备名称（`deviceName`）
+- 品牌（`brand`）
+- 制造商（`manufacturer`）
+- 型号名称（`modelName`）
+- 操作系统（`osName`）
+- 操作系统版本（`osVersion`）
+- 操作系统构建 ID（`osBuildId`）
+
+**额外收集的设备数据（不在哈希中，仅在安全日志中）：**
+- 平台 API 级别（`platformApiLevel`，仅 Android）
+- 设备年份（`deviceYearClass`）
+
+**处理方式：**
+1. 上述 7 个属性组合生成 SHA-256 哈希
+2. 哈希以键 `decisio_device_id` 本地存储（AsyncStorage）
+3. 发生安全事件时（如登录、账户更改），所有 9 个设备数据与事件一同记录
+
+**法律依据：** GDPR 第 6(1)(f) 条（欺诈预防和账户安全的合法利益）
+
+### 3.7 安全日志记录（本地存储）
+
+应用在您的设备本地记录安全事件：
+
+**记录的事件（最多 100 条）：**
+- `signup_attempt`、`login_attempt`、`login_success`、`login_failed`
+- `logout`、`suspicious_activity_detected`、`email_verified`
+- `account_unlocked`、`password_reset_requested`
+- `account_deletion_requested`、`account_deleted`
+
+**每个事件存储的信息：**
+- 事件类型
+- 电子邮箱地址（账户删除时匿名化为 `[deleted]`）
+- 时间戳
+- 完整设备信息（见 3.6）
+
+**目的：** 安全事件的可追溯性及防止未授权访问
+**法律依据：** GDPR 第 6(1)(f) 条（IT 安全的合法利益）
+
+### 3.8 分析数据（可选，云端传输）
+
+应用具备分析基础设施，但由于所需的 Firebase Analytics 模块未在应用配置中启用，**目前实际上处于非活跃状态**。
+
+**状态：** 应用中的分析设置存在，但目前因缺少追踪模块而无实际功能。
+
+**若在未来版本中启用分析功能**，在启用分析设置时，以下事件数据将传输至 Google Firebase Analytics（美国）：
+
+| 事件 | 传输参数 | 目的 |
+|-----|---------|------|
+| `decision_started` | 决策模式、类别、权重预设 | 了解应用使用情况 |
+| `decision_completed` | 模式、类别、是否采纳建议、得分、预设 | 成功分析 |
+| `journal_entry_created` | 决策 ID（无内容）、字数、是否有照片/音频 | 日记使用情况 |
+| `journal_entry_deleted` | 日记 ID | 删除行为 |
+| `tab_changed` | 选项卡名称、选项卡索引 | 导航 |
+
+**法律依据（如启用）：** GDPR 第 6(1)(a) 条（通过分析设置同意）
+
+**您可随时在应用设置中停用分析功能。**
+
+### 3.9 技术元数据
+
+每次连接到我们的云服务时，以下技术数据会自动传输：
+
+- **IP 地址：** 由 Firebase 处理用于建立连接，但我们不存储或分析
+- **请求时间戳**
+- **应用版本**
+- **操作系统及版本**
+
+**法律依据：** GDPR 第 6(1)(f) 条（提供服务所需的技术要求）
+
+---
+
+## 4. 使用的第三方服务
+
+**重要更正：** 与本隐私政策早期版本不同，Vayze 使用 Google LLC（美国）和 Expo Inc.（美国）的多项云服务。所有这些服务均作为 GDPR 第 28 条意义上的**数据处理方**运作。
+
+### 4.1 Firebase Authentication
+
+**提供方：** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, 美国
+**目的：** 账户注册、登录、密码重置、账户管理
+**传输数据：** 电子邮箱地址、密码（加密）、显示名称、用户 ID、IP 地址（自动）
+**法律依据：** GDPR 第 6(1)(b) 条
+**隐私政策：** https://firebase.google.com/support/privacy
+**向第三国传输数据：** 美国，基于欧盟标准合同条款（GDPR 第 46(2)(c) 条）
+
+### 4.2 Firebase Firestore
+
+**提供方：** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, 美国
+**目的：** 存储推送令牌、活动时间戳、通知日志
+**传输数据：** 用户 ID、Expo Push Token、平台（iOS/Android）、应用版本、上次决策时间戳、打卡次数
+**法律依据：** GDPR 第 6(1)(a) 条（推送通知）、GDPR 第 6(1)(b) 条（账户管理）
+**隐私政策：** https://firebase.google.com/support/privacy
+**向第三国传输数据：** 美国，基于欧盟标准合同条款（GDPR 第 46(2)(c) 条）
+
+### 4.3 Firebase Cloud Functions
+
+**提供方：** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, 美国
+**目的：** 推送通知的无服务器逻辑（打卡警告、重新激活、广播、里程碑）
+**处理数据：** 用户 ID、活动数据、决策时间戳、打卡数据
+**法律依据：** GDPR 第 6(1)(a) 条
+**隐私政策：** https://firebase.google.com/support/privacy
+**向第三国传输数据：** 美国，基于欧盟标准合同条款（GDPR 第 46(2)(c) 条）
+
+**执行的 Cloud Functions：**
+- `streakWarningDaily`（每日 20:00 UTC）：遍历所有用户，检查打卡状态，发送警告
+- `reEngagementDaily`（每日 10:00 UTC）：查找不活跃用户（7天以上无决策），发送重新激活推送
+- `sendBroadcast`（手动触发）：向所有用户发送广播通知
+- `onStreakMilestone`（新决策时自动触发）：达到打卡里程碑时发送祝贺通知
+- `syncStreak`（应用手动触发）：同步应用与 Firestore 之间的打卡数据
+
+### 4.4 Expo 推送通知服务
+
+**提供方：** Expo Inc., 650 Alabama St, San Francisco, CA 94110, 美国
+**目的：** 向 iOS 和 Android 设备技术性投递推送通知
+**传输数据：** Expo Push Token、项目 ID、通知内容（标题、正文）
+**法律依据：** GDPR 第 6(1)(a) 条
+**隐私政策：** https://expo.dev/privacy
+**向第三国传输数据：** 美国，基于欧盟标准合同条款（GDPR 第 46(2)(c) 条）
+
+### 4.5 Firebase Analytics（可选，目前未启用）
+
+**提供方：** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, 美国
+**目的：** 使用统计（仅在启用分析设置时）
+**传输数据：** 事件名称、事件参数（见 3.8）、IP 地址（自动匿名化）
+**法律依据：** GDPR 第 6(1)(a) 条（通过分析设置同意）
+**隐私政策：** https://firebase.google.com/support/privacy
+**向第三国传输数据：** 美国，基于欧盟标准合同条款（GDPR 第 46(2)(c) 条）
+**状态：** 目前未激活，因为该模块未包含在应用配置中
+
+---
+
+## 5. 向第三国传输数据
+
+所有使用的云服务（Firebase、Expo）均由位于美国的提供方运营。向美国的数据传输基于 GDPR 第 46(2)(c) 条规定的**欧盟标准合同条款**。
+
+Google LLC 和 Expo Inc. 已与我们签订相应的标准合同条款，并实施额外的技术和组织措施，以确保适当的数据保护水平。
+
+**注意：** 美国目前尚未获得欧盟委员会认可的充分性认定。在某些情况下，美国当局可能访问您的数据，存在相关风险。
+
+---
+
+## 6. 应用权限
+
+应用需要以下设备权限：
+
+### 6.1 必要权限（自动授予）
+
+- **INTERNET：** 账户管理和推送通知的网络访问
+- **RECEIVE_BOOT_COMPLETED：** 设备重启后重新注册通知
+- **VIBRATE：** 来通通知的振动
+- **SCHEDULE_EXACT_ALARM：** 精确的计划通知投递
+- **MODIFY_AUDIO_SETTINGS：** 语音备忘录的音频设置调整
+
+### 6.2 运行时权限（需要您同意）
+
+- **相机：** 为日记条目拍照
+- **照片库（READ_EXTERNAL_STORAGE，iOS：照片访问）：** 从图库选择照片
+- **麦克风（RECORD_AUDIO）：** 录制日记条目的语音备忘录
+- **存储（WRITE_EXTERNAL_STORAGE，Android < 13）：** 保存照片和音频文件
+- **推送通知：** 接收提醒和打卡警告
+
+**您可随时在设备设置中撤销所有运行时权限。** 应用在没有相机、照片和麦克风访问权限的情况下也能正常运行；在这种情况下，日记中的附件功能将不可用。
+
+### 6.3 开发者权限（仅调试版本）
+
+- **SYSTEM_ALERT_WINDOW：** 在其他应用上方显示开发者工具（仅用于测试目的）
+
+---
+
+## 7. 存储期限
+
+| 数据类型 | 存储期限 |
+|---------|---------|
+| 账户数据（Firebase Authentication） | 直至账户删除 |
+| 推送令牌（Firebase Firestore） | 直至账户删除或令牌过期 |
+| 通知逻辑的活动数据 | 直至账户删除 |
+| 本地决策内容 | 直至应用卸载或手动删除 |
+| 安全日志（本地） | 最多 100 条事件，之后最旧的被覆盖；账户删除时电子邮箱地址匿名化，但事件保留 |
+| 分析数据（如启用） | 最多 14 个月（Google Firebase Analytics 标准） |
+| 会话数据（本地） | 会话在 365 天后自动过期。目前未实现单独的不活跃超时。 |
+
+---
+
+## 8. 数据安全
+
+我们实施以下安全措施：
+
+### 8.1 加密
+
+- **密码：** 传输前使用带随机盐值的迭代 SHA-256 哈希（10,000 轮）
+- **数据传输：** 所有连接到 Firebase 和 Expo 的数据使用 TLS/SSL 加密
+- **本地数据：** 敏感数据在 Expo SecureStore 中加密存储（iOS：Keychain，Android：EncryptedSharedPreferences）
+- **会话加密：** 会话令牌使用 XOR 加密存储
+
+**HTTP 流量注意事项：** 应用出于技术原因允许未加密的 HTTP 流量（`android:usesCleartextTraffic="true"`）。所有有意实现的向 Firebase 和 Expo 的数据传输均使用 HTTPS 加密。但无法完全排除个别库建立未加密连接的可能性。
+
+### 8.2 访问控制
+
+- 仅通过经过身份验证的 API 请求访问云数据
+- Firebase 安全规则将数据访问限制在各自用户范围内
+- 设备指纹用于检测可疑登录尝试
+
+### 8.3 Android 备份
+
+应用允许 Android 系统备份（`android:allowBackup="true"`）。这意味着您本地存储的应用数据（决策、日记条目、照片、语音备忘录）可能包含在 Android 云备份（Google Drive）中，如果您在设备上启用了此功能。
+
+**如果您不希望这样，可在 Android 设置的"Google > 备份"中停用 Vayze 的 Android 备份。**
+
+---
+
+## 9. 您在 GDPR 下的权利
+
+您对个人数据享有以下权利：
+
+### 9.1 查阅权（GDPR 第 15 条）
+
+您可随时要求查阅我们处理的个人数据。
+
+### 9.2 更正权（GDPR 第 16 条）
+
+您可要求更正不准确的数据。可直接在应用的"设置 > 个人资料"中操作。
+
+### 9.3 删除权（GDPR 第 17 条）
+
+您可要求删除您的个人数据。可直接在应用的"设置 > 删除账户"中操作。
+
+**账户删除重要说明：**
+- Firebase 中的所有账户数据（电子邮箱、显示名称、推送令牌、活动数据）将被永久删除
+- 所有本地数据（决策、决策板、日记条目）将从设备中移除
+- **安全日志：** 本地存储的安全事件不会完全删除，而是匿名化处理。事件中的电子邮箱地址将替换为 `[deleted]`，但设备信息和时间戳因安全原因保留（欺诈预防、安全事件可追溯性）
+
+### 9.4 限制处理权（GDPR 第 18 条）
+
+您可要求限制对您数据的处理。
+
+### 9.5 数据可携带权（GDPR 第 20 条）
+
+您可要求我们以结构化、通用且机器可读的格式提供您的数据。导出功能可直接在应用的"设置 > 导出数据"中使用。
+
+### 9.6 反对权（GDPR 第 21 条）
+
+在数据处理基于 GDPR 第 6(1)(f) 条（合法利益）的情况下，您可反对对您数据的处理。
+
+### 9.7 撤回同意权（GDPR 第 7(3) 条）
+
+您可随时在应用设置中撤回已给予的同意（如推送通知或分析的同意）。撤回不影响撤回前处理的合法性。
+
+### 9.8 投诉权（GDPR 第 77 条）
+
+您有权向数据保护监督机构投诉：
+
+**巴伐利亚州数据保护监督局（BayLDA）**
+Promenade 18
+91522 Ansbach
+德国
+电话：+49 (0) 981 180093-0
+电子邮箱：poststelle@lda.bayern.de
+网站：https://www.lda.bayern.de
+
+---
+
+## 10. 本隐私政策的变更
+
+我们保留根据需要调整本隐私政策的权利，以适应法律关系的变化或应用及其数据处理的更改。
+
+当前版本可在应用的"设置 > 法律 > 隐私政策"和我们的网站上查阅。
+
+对于重大变更，我们将通过应用或电子邮件通知您（如果您已向我们提供电子邮箱地址）。
+
+---
+
+## 11. 联系方式
+
+如有数据保护方面的问题，请随时联系我们：
+
+**Samuel Stöberl / Vayze Apps**
+Josef-Schwab-Straße 7
+94559 Niederwinkling
+德国
+电子邮箱：vayze.app@gmail.com
+
+---
+
+**日期：** 2026年2月7日
+**版本：** 2.0.1
