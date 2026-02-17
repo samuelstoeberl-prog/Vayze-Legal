@@ -1,0 +1,438 @@
+# Kebijakan Privasi
+
+**Vayze App – Alat Bantu Pengambilan Keputusan untuk iOS dan Android**
+
+**Versi:** 2.0.1
+**Tanggal:** 7 Februari 2026
+**Penyedia:** Samuel Stöberl / Vayze Apps
+**Alamat:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Jerman
+**Email:** vayze.app@gmail.com
+
+---
+
+## Pendahuluan
+
+Kami serius dalam melindungi data pribadi Anda. Kebijakan Privasi ini secara komprehensif menginformasikan Anda tentang data apa yang dikumpulkan, diproses, dan disimpan saat menggunakan Vayze App. Pemrosesan dilakukan sesuai dengan Peraturan Perlindungan Data Umum (GDPR) dan Undang-Undang Perlindungan Data Federal Jerman (BDSG).
+
+**Perubahan penting dibanding versi sebelumnya:** Versi ini memperbaiki dan melengkapi pengungkapan layanan pihak ketiga, aktivitas pemrosesan data, dan fungsi teknis yang benar-benar digunakan oleh Aplikasi.
+
+---
+
+## 1. Pengendali Data
+
+Pengendali untuk pemrosesan data dalam arti GDPR:
+
+**Samuel Stöberl / Vayze Apps**
+Josef-Schwab-Straße 7
+94559 Niederwinkling
+Jerman
+Email: vayze.app@gmail.com
+
+---
+
+## 2. Informasi Umum tentang Pemrosesan Data
+
+### 2.1 Prinsip Utama: Privacy First dengan Komponen Cloud
+
+Vayze dikembangkan dengan prinsip "Privacy First". **Konten keputusan** Anda (board, kartu, penilaian, entri jurnal termasuk teks, foto, dan catatan suara) disimpan secara eksklusif di perangkat Anda dan tidak pernah dikirimkan ke server kami atau pihak ketiga.
+
+Untuk penyediaan fitur tertentu (manajemen akun, notifikasi push), kami menggunakan layanan cloud Firebase dari Google. Dalam hal ini, **data terkait akun** dan **metadata teknis** diproses, sebagaimana dijelaskan secara rinci dalam kebijakan ini.
+
+### 2.2 Tujuan Pemrosesan Data
+
+Kami memproses data pribadi untuk tujuan berikut:
+
+- Penyediaan dan pengoperasian fitur Aplikasi
+- Manajemen akun (registrasi, login, reset kata sandi)
+- Pengiriman notifikasi push (pengingat, peringatan streak, re-engagement)
+- Keamanan teknis dan pencegahan penipuan
+- Statistik penggunaan (hanya dengan persetujuan eksplisit Anda melalui pengaturan analitik)
+
+### 2.3 Dasar Hukum
+
+Pemrosesan data Anda didasarkan pada dasar hukum berikut:
+
+- **Pasal 6(1)(a) GDPR** (Persetujuan): Pengumpulan analitik, notifikasi push
+- **Pasal 6(1)(b) GDPR** (Pelaksanaan kontrak): Manajemen akun, penyediaan fitur Aplikasi
+- **Pasal 6(1)(f) GDPR** (Kepentingan sah): Keamanan IT, pencegahan penipuan, stabilitas teknis
+
+---
+
+## 3. Data yang Dikumpulkan dan Lokasi Penyimpanan
+
+### 3.1 Data Akun (Penyimpanan Cloud)
+
+Saat mendaftar dan menggunakan akun Anda, data berikut disimpan di cloud:
+
+| Jenis Data | Tujuan | Lokasi Penyimpanan | Dasar Hukum |
+|-----------|-------|-------------------|-------------|
+| Alamat email | Identifikasi akun, login, reset kata sandi | Firebase Authentication (Google LLC, AS) | Pasal 6(1)(b) GDPR |
+| Kata sandi (terenkripsi) | Keamanan akun | Firebase Authentication (Google LLC, AS) | Pasal 6(1)(b) GDPR |
+| Nama tampilan | Personalisasi | Firebase Authentication (Google LLC, AS) | Pasal 6(1)(b) GDPR |
+| ID Pengguna (UUID) | Identifikasi internal | Firebase Firestore (Google LLC, AS) | Pasal 6(1)(b) GDPR |
+| Tanggal pembuatan akun | Manajemen, dukungan | Firebase Authentication (Google LLC, AS) | Pasal 6(1)(b) GDPR |
+
+**Enkripsi:** Kata sandi Anda di-hash sebelum transmisi menggunakan proses SHA-256 iteratif (10.000 putaran) dengan salt acak. Firebase juga menyimpan versi enkripsinya sendiri.
+
+### 3.2 Data Notifikasi Push (Penyimpanan Cloud)
+
+Untuk pengiriman notifikasi push, data berikut disimpan di cloud:
+
+| Jenis Data | Tujuan | Lokasi Penyimpanan | Dasar Hukum |
+|-----------|-------|-------------------|-------------|
+| Expo Push Token | Identifikasi unik perangkat Anda untuk pengiriman push | Firebase Firestore `users/{email}/tokens/{token}` | Pasal 6(1)(a) GDPR |
+| Platform (iOS/Android) | Pengiriman spesifik platform | Firebase Firestore | Pasal 6(1)(a) GDPR |
+| Versi aplikasi | Pemeriksaan kompatibilitas | Firebase Firestore | Pasal 6(1)(a) GDPR |
+| Stempel waktu pendaftaran | Manajemen token | Firebase Firestore | Pasal 6(1)(a) GDPR |
+| Log notifikasi | Keterlacakan notifikasi push yang dikirim | Firebase Firestore `users/{email}/notificationLog` | Pasal 6(1)(a) GDPR |
+
+**Catatan penting:** Alamat email Anda digunakan sebagai ID dokumen Firestore (jalur: `users/{email}`). Ini berarti alamat email terlihat dalam struktur database Firestore.
+
+**Log Notifikasi:** Setiap notifikasi push yang dikirim kepada Anda dicatat di Firestore dengan:
+- Judul notifikasi
+- Teks notifikasi (body)
+- Data payload (misalnya tipe, layar target, jumlah streak)
+- Stempel waktu server (kapan dikirim)
+- Status (apakah dibuka)
+
+**Langganan Topik:** Perangkat Anda secara otomatis ditambahkan ke topik Firebase Cloud Messaging `all_users` untuk memungkinkan notifikasi siaran.
+
+### 3.3 Data Aktivitas untuk Logika Notifikasi (Pemrosesan Cloud)
+
+Untuk mengirim notifikasi push yang dipersonalisasi (misalnya peringatan streak, re-engagement), Cloud Functions kami memproses data berikut:
+
+| Jenis Data | Tujuan | Lokasi Pemrosesan | Dasar Hukum |
+|-----------|-------|-------------------|-------------|
+| `createdAt` (dari subkoleksi `decisions`) | Waktu pembuatan keputusan | Firebase Cloud Functions (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+| `completedAt` (dari subkoleksi `decisions`) | Waktu penyelesaian keputusan | Firebase Cloud Functions (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+| `activity.lastDecisionAt` | Stempel waktu keputusan terakhir | Firebase Firestore (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+| `activity.currentStreak` | Jumlah hari berturut-turut dengan keputusan | Firebase Firestore (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+| `activity.longestStreak` | Streak terpanjang yang dicapai | Firebase Firestore (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+| `activity.lastReEngagementAt` | Stempel waktu notifikasi re-engagement terakhir | Firebase Firestore (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+| `activity.lastSyncedAt` | Stempel waktu sinkronisasi streak terakhir | Firebase Firestore (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+| `notificationSettings.rateLimits.lastSentAt` | Stempel waktu ISO notifikasi terakhir yang dikirim | Firebase Firestore (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+| `notificationSettings.rateLimits.sentToday` | Penghitung notifikasi yang dikirim hari ini | Firebase Firestore (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+| Alamat email (sebagai ID dokumen) | Pengaitan data aktivitas ke pengguna | Firebase Firestore (Google LLC, AS) | Pasal 6(1)(a) GDPR |
+
+**Pemrosesan:** Cloud Functions kami melakukan pemeriksaan otomatis setiap hari pada 20:00 UTC (peringatan streak) dan 10:00 UTC (re-engagement). Semua dokumen pengguna terdaftar di Firestore diiterasi dan dianalisis berdasarkan data aktivitas.
+
+**Akses ke stempel waktu keputusan:** Cloud Functions mengakses subkoleksi `users/{email}/decisions` dan membaca field `createdAt` dan `completedAt` dari semua keputusan yang diselesaikan untuk menghitung streak dan ketidakaktifan. **Penting:** Hanya stempel waktu yang dibaca, bukan konten keputusan (judul, deskripsi, penilaian, dll.).
+
+### 3.4 Konten Keputusan (Penyimpanan Lokal)
+
+Semua konten pribadi Anda disimpan secara eksklusif di perangkat Anda:
+
+- **Board dan kartu:** Judul, deskripsi, kategori, bobot, penilaian, tag, prioritas
+- **Rekomendasi keputusan:** Skor yang dihitung, rekomendasi, stempel waktu
+- **Entri jurnal:** Teks, refleksi, konteks keputusan, catatan tambahan (teks bebas)
+- **Lampiran foto:** Hingga 5 foto per entri jurnal (jalur file lokal)
+- **Catatan suara:** Rekaman audio dengan durasi (file lokal)
+- **Komentar:** Teks pada kartu board dengan stempel waktu
+- **Checklist:** Tugas dengan status penyelesaian pada kartu board
+- **Data onboarding:** Konteks keputusan, gaya keputusan yang disukai (misalnya Analitis, Impulsif, Pemikir Berlebihan), hasil yang diinginkan
+
+**Data ini tidak pernah meninggalkan perangkat Anda** dan tidak dikirimkan kepada kami atau pihak ketiga.
+
+**Batas jurnal di tingkat gratis:** Pembuatan entri jurnal dibatasi 3 entri per bulan di tingkat penggunaan gratis. Pembatasan ini diperiksa secara lokal di perangkat Anda.
+
+### 3.5 Profiling Perilaku (Pemrosesan Lokal)
+
+Aplikasi melakukan analisis lokal terhadap perilaku pengambilan keputusan Anda untuk memberikan wawasan yang dipersonalisasi:
+
+| Yang Dianalisis | Tujuan | Pemrosesan | Dasar Hukum |
+|----------------|-------|-----------|-------------|
+| Arketipe pengguna (misalnya "Pengambil Keputusan Percaya Diri", "Analis Hati-Hati") | Umpan balik yang dipersonalisasi | Secara eksklusif lokal di perangkat Anda | Pasal 6(1)(b) GDPR |
+| Pola keputusan, kekuatan, area pertumbuhan | Refleksi diri dan peningkatan | Secara eksklusif lokal di perangkat Anda | Pasal 6(1)(b) GDPR |
+| Deteksi bias dan analisis tren | Rekomendasi yang dipersonalisasi | Secara eksklusif lokal di perangkat Anda | Pasal 6(1)(b) GDPR |
+
+**Penting:** Profiling ini terjadi sepenuhnya di perangkat Anda menggunakan algoritma berbasis aturan. Tidak ada machine learning yang digunakan. Hasil profiling tidak pernah dikirimkan ke server.
+
+### 3.6 Device Fingerprinting (Penyimpanan Lokal)
+
+Untuk meningkatkan keamanan akun, Aplikasi membuat sidik jari perangkat:
+
+**Atribut yang digunakan untuk hash sidik jari (7):**
+- Nama perangkat (`deviceName`)
+- Merek (`brand`)
+- Produsen (`manufacturer`)
+- Nama model (`modelName`)
+- Sistem operasi (`osName`)
+- Versi OS (`osVersion`)
+- ID build OS (`osBuildId`)
+
+**Data perangkat tambahan yang dikumpulkan (tidak dalam hash, hanya dalam log keamanan):**
+- Level API platform (`platformApiLevel`, hanya Android)
+- Perkiraan tahun perangkat (`deviceYearClass`)
+
+**Pemrosesan:**
+1. 7 atribut di atas dikombinasikan menjadi hash SHA-256
+2. Hash disimpan secara lokal dengan kunci `decisio_device_id` (AsyncStorage)
+3. Saat terjadi kejadian keamanan (misalnya login, perubahan akun), semua 9 data perangkat dicatat bersama dengan kejadian tersebut
+
+**Dasar hukum:** Pasal 6(1)(f) GDPR (kepentingan sah dalam pencegahan penipuan dan keamanan akun)
+
+### 3.7 Pencatatan Keamanan (Penyimpanan Lokal)
+
+Aplikasi mencatat kejadian keamanan secara lokal di perangkat Anda:
+
+**Kejadian yang dicatat (hingga 100):**
+- `signup_attempt`, `login_attempt`, `login_success`, `login_failed`
+- `logout`, `suspicious_activity_detected`, `email_verified`
+- `account_unlocked`, `password_reset_requested`
+- `account_deletion_requested`, `account_deleted`
+
+**Informasi yang disimpan per kejadian:**
+- Jenis kejadian
+- Alamat email (dianonimkan menjadi `[deleted]` saat penghapusan akun)
+- Stempel waktu
+- Informasi perangkat lengkap (lihat 3.6)
+
+**Tujuan:** Keterlacakan insiden keamanan dan perlindungan terhadap akses tidak sah
+**Dasar hukum:** Pasal 6(1)(f) GDPR (kepentingan sah dalam keamanan IT)
+
+### 3.8 Data Analitik (Opsional, Transmisi Cloud)
+
+Aplikasi memiliki infrastruktur analitik yang **saat ini secara de facto tidak aktif** karena modul Firebase Analytics yang diperlukan tidak diaktifkan dalam konfigurasi Aplikasi.
+
+**Status:** Pengaturan analitik di Aplikasi ada tetapi saat ini tidak berfungsi karena modul pelacakan tidak ada.
+
+**Jika fungsi analitik diaktifkan di versi mendatang**, data kejadian berikut akan dikirimkan ke Google Firebase Analytics (AS) ketika pengaturan analitik diaktifkan:
+
+| Kejadian | Parameter yang Dikirim | Tujuan |
+|---------|----------------------|-------|
+| `decision_started` | Mode keputusan, kategori, preset pembobotan | Memahami penggunaan Aplikasi |
+| `decision_completed` | Mode, kategori, apakah rekomendasi diterima, skor, preset | Analisis keberhasilan |
+| `journal_entry_created` | ID keputusan (tanpa konten), jumlah kata, apakah ada foto/audio | Penggunaan jurnal |
+| `journal_entry_deleted` | ID jurnal | Perilaku penghapusan |
+| `tab_changed` | Nama tab, indeks tab | Navigasi |
+
+**Dasar hukum (jika diaktifkan):** Pasal 6(1)(a) GDPR (persetujuan melalui pengaturan analitik)
+
+**Anda dapat menonaktifkan analitik kapan saja di pengaturan Aplikasi.**
+
+### 3.9 Metadata Teknis
+
+Dengan setiap koneksi ke layanan cloud kami, data teknis berikut secara otomatis dikirimkan:
+
+- **Alamat IP:** Diproses oleh Firebase untuk pembentukan koneksi, tetapi tidak disimpan atau dievaluasi oleh kami
+- **Stempel waktu permintaan**
+- **Versi aplikasi**
+- **Sistem operasi dan versi**
+
+**Dasar hukum:** Pasal 6(1)(f) GDPR (diperlukan secara teknis untuk penyediaan layanan)
+
+---
+
+## 4. Layanan Pihak Ketiga yang Digunakan
+
+**Koreksi penting:** Bertentangan dengan versi sebelumnya dari Kebijakan Privasi ini, Vayze menggunakan beberapa layanan cloud dari Google LLC (AS) dan Expo Inc. (AS). Semua layanan ini bertindak sebagai **pemroses** dalam arti Pasal 28 GDPR.
+
+### 4.1 Firebase Authentication
+
+**Penyedia:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, AS
+**Tujuan:** Registrasi akun, login, reset kata sandi, manajemen akun
+**Data yang dikirim:** Alamat email, kata sandi (terenkripsi), nama tampilan, ID pengguna, alamat IP (otomatis)
+**Dasar hukum:** Pasal 6(1)(b) GDPR
+**Kebijakan privasi:** https://firebase.google.com/support/privacy
+**Transfer data ke negara ketiga:** AS, berdasarkan Klausul Kontrak Standar UE (Pasal 46(2)(c) GDPR)
+
+### 4.2 Firebase Firestore
+
+**Penyedia:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, AS
+**Tujuan:** Penyimpanan token push, stempel waktu aktivitas, log notifikasi
+**Data yang dikirim:** ID pengguna, Expo Push Token, platform (iOS/Android), versi aplikasi, stempel waktu keputusan terakhir, jumlah streak
+**Dasar hukum:** Pasal 6(1)(a) GDPR (notifikasi push), Pasal 6(1)(b) GDPR (manajemen akun)
+**Kebijakan privasi:** https://firebase.google.com/support/privacy
+**Transfer data ke negara ketiga:** AS, berdasarkan Klausul Kontrak Standar UE (Pasal 46(2)(c) GDPR)
+
+### 4.3 Firebase Cloud Functions
+
+**Penyedia:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, AS
+**Tujuan:** Logika tanpa server untuk notifikasi push (peringatan streak, re-engagement, siaran, tonggak pencapaian)
+**Data yang diproses:** ID pengguna, data aktivitas, stempel waktu keputusan, streak
+**Dasar hukum:** Pasal 6(1)(a) GDPR
+**Kebijakan privasi:** https://firebase.google.com/support/privacy
+**Transfer data ke negara ketiga:** AS, berdasarkan Klausul Kontrak Standar UE (Pasal 46(2)(c) GDPR)
+
+**Cloud Functions yang dijalankan:**
+- `streakWarningDaily` (harian 20:00 UTC): Mengiterasi semua pengguna, memeriksa status streak, mengirim peringatan
+- `reEngagementDaily` (harian 10:00 UTC): Menemukan pengguna tidak aktif (7+ hari tanpa keputusan), mengirim push re-engagement
+- `sendBroadcast` (dipicu secara manual): Memungkinkan notifikasi siaran ke semua pengguna
+- `onStreakMilestone` (otomatis saat keputusan baru): Mengirim notifikasi ucapan selamat pada tonggak pencapaian streak
+- `syncStreak` (dipicu manual oleh Aplikasi): Menyinkronkan data streak antara Aplikasi dan Firestore
+
+### 4.4 Expo Push Notification Service
+
+**Penyedia:** Expo Inc., 650 Alabama St, San Francisco, CA 94110, AS
+**Tujuan:** Pengiriman teknis notifikasi push ke perangkat iOS dan Android
+**Data yang dikirim:** Expo Push Token, ID proyek, konten notifikasi (judul, teks)
+**Dasar hukum:** Pasal 6(1)(a) GDPR
+**Kebijakan privasi:** https://expo.dev/privacy
+**Transfer data ke negara ketiga:** AS, berdasarkan Klausul Kontrak Standar UE (Pasal 46(2)(c) GDPR)
+
+### 4.5 Firebase Analytics (Opsional, Saat Ini Tidak Aktif)
+
+**Penyedia:** Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, AS
+**Tujuan:** Statistik penggunaan (hanya ketika pengaturan analitik diaktifkan)
+**Data yang dikirim:** Nama kejadian, parameter kejadian (lihat 3.8), alamat IP (dianonimkan secara otomatis)
+**Dasar hukum:** Pasal 6(1)(a) GDPR (persetujuan melalui pengaturan analitik)
+**Kebijakan privasi:** https://firebase.google.com/support/privacy
+**Transfer data ke negara ketiga:** AS, berdasarkan Klausul Kontrak Standar UE (Pasal 46(2)(c) GDPR)
+**Status:** Saat ini tidak aktif, karena modul tidak disertakan dalam konfigurasi Aplikasi
+
+---
+
+## 5. Transfer Data ke Negara Ketiga
+
+Semua layanan cloud yang digunakan (Firebase, Expo) dioperasikan oleh penyedia yang berbasis di AS. Transfer data ke AS didasarkan pada **Klausul Kontrak Standar UE** sesuai Pasal 46(2)(c) GDPR.
+
+Google LLC dan Expo Inc. telah menyimpulkan Klausul Kontrak Standar yang sesuai dengan kami dan menerapkan langkah teknis dan organisasi tambahan untuk memastikan tingkat perlindungan data yang memadai.
+
+**Catatan:** AS saat ini tidak memiliki keputusan kecukupan yang diakui oleh Komisi UE. Ada risiko bahwa otoritas AS dapat mengakses data Anda dalam keadaan tertentu.
+
+---
+
+## 6. Izin Aplikasi
+
+Aplikasi memerlukan izin perangkat berikut:
+
+### 6.1 Izin Wajib (Diberikan Secara Otomatis)
+
+- **INTERNET:** Akses jaringan untuk manajemen akun dan notifikasi push
+- **RECEIVE_BOOT_COMPLETED:** Pendaftaran ulang notifikasi setelah restart perangkat
+- **VIBRATE:** Getaran untuk notifikasi masuk
+- **SCHEDULE_EXACT_ALARM:** Pengiriman notifikasi terjadwal yang tepat waktu
+- **MODIFY_AUDIO_SETTINGS:** Penyesuaian pengaturan audio untuk catatan suara
+
+### 6.2 Izin Runtime (Memerlukan Persetujuan Anda)
+
+- **Kamera:** Mengambil foto untuk entri jurnal
+- **Perpustakaan foto (READ_EXTERNAL_STORAGE, iOS: akses foto):** Memilih foto yang ada dari galeri Anda
+- **Mikrofon (RECORD_AUDIO):** Merekam catatan suara untuk entri jurnal
+- **Penyimpanan (WRITE_EXTERNAL_STORAGE, Android < 13):** Menyimpan file foto dan audio
+- **Notifikasi Push:** Menerima pengingat dan peringatan streak
+
+**Anda dapat mencabut semua izin runtime kapan saja di pengaturan perangkat.** Aplikasi juga berfungsi tanpa akses kamera, foto, dan mikrofon; dalam hal itu, fitur lampiran di jurnal tidak akan tersedia.
+
+### 6.3 Izin Pengembang (Hanya Build Debug)
+
+- **SYSTEM_ALERT_WINDOW:** Tampilan alat pengembang di atas aplikasi lain (hanya untuk tujuan pengujian)
+
+---
+
+## 7. Periode Penyimpanan
+
+| Jenis Data | Periode Penyimpanan |
+|-----------|---------------------|
+| Data akun (Firebase Authentication) | Hingga penghapusan akun |
+| Token push (Firebase Firestore) | Hingga penghapusan akun atau kedaluwarsa token |
+| Data aktivitas untuk logika notifikasi | Hingga penghapusan akun |
+| Konten keputusan lokal | Hingga penghapusan Aplikasi atau penghapusan manual |
+| Log keamanan (lokal) | Hingga 100 kejadian, setelah itu yang tertua ditimpa; saat penghapusan akun, alamat email dianonimkan tetapi kejadian tetap disimpan |
+| Data analitik (jika diaktifkan) | Hingga 14 bulan (standar Google Firebase Analytics) |
+| Data sesi (lokal) | Sesi kedaluwarsa secara otomatis setelah 365 hari. Batas waktu tidak aktif terpisah saat ini tidak diimplementasikan. |
+
+---
+
+## 8. Keamanan Data
+
+Kami menerapkan langkah keamanan berikut:
+
+### 8.1 Enkripsi
+
+- **Kata sandi:** Hashing SHA-256 iteratif (10.000 putaran) dengan salt acak sebelum transmisi
+- **Transmisi data:** Enkripsi TLS/SSL untuk semua koneksi ke Firebase dan Expo
+- **Data lokal:** Penyimpanan terenkripsi data sensitif di Expo SecureStore (iOS: Keychain, Android: EncryptedSharedPreferences)
+- **Enkripsi sesi:** Token sesi disimpan dengan enkripsi XOR cipher
+
+**Catatan tentang lalu lintas HTTP:** Aplikasi mengizinkan lalu lintas HTTP yang tidak terenkripsi karena alasan teknis (`android:usesCleartextTraffic="true"`). Semua transmisi data yang sengaja diimplementasikan ke Firebase dan Expo menggunakan enkripsi HTTPS. Namun, tidak dapat sepenuhnya dikecualikan bahwa pustaka individual dapat membangun koneksi yang tidak terenkripsi.
+
+### 8.2 Kontrol Akses
+
+- Akses ke data cloud hanya melalui permintaan API yang terautentikasi
+- Aturan Keamanan Firebase membatasi akses data ke pengguna masing-masing
+- Device fingerprinting untuk mendeteksi upaya login yang mencurigakan
+
+### 8.3 Backup Android
+
+Aplikasi mengizinkan backup sistem Android (`android:allowBackup="true"`). Ini berarti data Aplikasi yang tersimpan secara lokal (keputusan, entri jurnal, foto, catatan suara) dapat disertakan dalam backup cloud Android (Google Drive) jika Anda mengaktifkan fitur ini di perangkat.
+
+**Jika Anda tidak menginginkan ini, Anda dapat menonaktifkan backup Android untuk Vayze di pengaturan Android di bawah "Google > Backup."**
+
+---
+
+## 9. Hak Anda Berdasarkan GDPR
+
+Anda memiliki hak-hak berikut terkait data pribadi Anda:
+
+### 9.1 Hak Akses (Pasal 15 GDPR)
+
+Anda dapat meminta informasi tentang data pribadi yang kami proses kapan saja.
+
+### 9.2 Hak Rektifikasi (Pasal 16 GDPR)
+
+Anda dapat meminta koreksi data yang tidak akurat. Ini dapat dilakukan langsung di Aplikasi di bawah "Pengaturan > Profil."
+
+### 9.3 Hak Penghapusan (Pasal 17 GDPR)
+
+Anda dapat meminta penghapusan data pribadi Anda. Ini dapat dilakukan langsung di Aplikasi di bawah "Pengaturan > Hapus Akun."
+
+**Catatan penting tentang penghapusan akun:**
+- Semua data akun di Firebase (email, nama tampilan, token push, data aktivitas) dihapus secara permanen
+- Semua data lokal (keputusan, board, entri jurnal) dihapus dari perangkat
+- **Log keamanan:** Kejadian keamanan yang tersimpan secara lokal TIDAK dihapus sepenuhnya tetapi dianonimkan. Alamat email dalam kejadian diganti dengan `[deleted]`, tetapi informasi perangkat dan stempel waktu dipertahankan untuk alasan keamanan (pencegahan penipuan, keterlacakan insiden keamanan)
+
+### 9.4 Hak Pembatasan Pemrosesan (Pasal 18 GDPR)
+
+Anda dapat meminta agar pemrosesan data Anda dibatasi.
+
+### 9.5 Hak Portabilitas Data (Pasal 20 GDPR)
+
+Anda dapat meminta kami menyediakan data Anda dalam format yang terstruktur, umum digunakan, dan dapat dibaca mesin. Fungsi ekspor tersedia langsung di Aplikasi di bawah "Pengaturan > Ekspor Data."
+
+### 9.6 Hak Keberatan (Pasal 21 GDPR)
+
+Anda dapat keberatan terhadap pemrosesan data Anda sejauh didasarkan pada Pasal 6(1)(f) GDPR (kepentingan sah).
+
+### 9.7 Hak Penarikan Persetujuan (Pasal 7(3) GDPR)
+
+Anda dapat menarik persetujuan yang diberikan (misalnya untuk notifikasi push atau analitik) kapan saja di pengaturan Aplikasi. Penarikan tidak mempengaruhi keabsahan pemrosesan yang dilakukan sebelumnya.
+
+### 9.8 Hak Pengaduan (Pasal 77 GDPR)
+
+Anda berhak untuk mengajukan pengaduan kepada otoritas pengawas perlindungan data:
+
+**Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)**
+Promenade 18
+91522 Ansbach
+Jerman
+Telepon: +49 (0) 981 180093-0
+Email: poststelle@lda.bayern.de
+Web: https://www.lda.bayern.de
+
+---
+
+## 10. Perubahan pada Kebijakan Privasi Ini
+
+Kami berhak menyesuaikan Kebijakan Privasi ini sesuai kebutuhan untuk mencerminkan perubahan persyaratan hukum atau perubahan pada Aplikasi dan pemrosesan datanya.
+
+Versi saat ini tersedia di Aplikasi di bawah "Pengaturan > Hukum > Kebijakan Privasi" dan di situs web kami.
+
+Untuk perubahan signifikan, kami akan memberi tahu Anda melalui Aplikasi atau email (jika Anda telah memberikan alamat email kepada kami).
+
+---
+
+## 11. Kontak
+
+Jika Anda memiliki pertanyaan tentang perlindungan data, Anda dapat menghubungi kami kapan saja:
+
+**Samuel Stöberl / Vayze Apps**
+Josef-Schwab-Straße 7
+94559 Niederwinkling
+Jerman
+Email: vayze.app@gmail.com
+
+---
+
+**Tanggal:** 7 Februari 2026
+**Versi:** 2.0.1

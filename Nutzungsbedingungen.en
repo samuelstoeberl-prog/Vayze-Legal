@@ -1,0 +1,350 @@
+# Terms of Use
+
+**Vayze App – Decision Support for iOS and Android**
+
+**Version:** 2.0.0
+**Effective as of:** February 7, 2025
+**Provider:** Samuel Stöberl / Vayze Apps
+**Address:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Germany
+**Email:** vayze.app@gmail.com
+
+---
+
+## Preamble
+
+These Terms of Use govern the use of the Vayze App ("App"). By installing and using the App, you agree to these terms.
+
+**Important change compared to previous versions:** This version corrects the description of the cloud services, third-party providers, and technical functions actually used by the App.
+
+---
+
+## §1 Provider and Contracting Party
+
+**Samuel Stöberl / Vayze Apps**
+Josef-Schwab-Straße 7
+94559 Niederwinkling
+Germany
+Email: vayze.app@gmail.com
+
+---
+
+## §2 Scope of Services
+
+### §2.1 Core Features
+
+Vayze is a mobile application for iOS and Android that supports you in making decisions. The App offers:
+
+- **Decision Boards:** Structured evaluation of options based on various criteria with weighting and score calculation
+- **Modes:** Multiple decision-making methods (e.g., PMI, Pro/Con, Weighted Criteria, 6 Thinking Hats)
+- **Journal Function:** Reflection and documentation of decisions with text, photos, and voice notes
+- **Insights:** Local analysis of your decision-making behavior with personalized insights
+- **Account System:** Optional user account for cloud-based features
+- **Push Notifications:** Reminders, streak warnings, and re-engagement messages
+
+### §2.2 Privacy-First with Cloud Components
+
+**Local Data Storage:**
+All your personal content (boards, cards, ratings, journal entries including text, photos, and voice notes) is stored exclusively locally on your device. We have no access to this data.
+
+**Cloud Features:**
+We use Google's Firebase cloud services for account management and push notifications. Only account-related data and technical metadata are processed (see Privacy Policy).
+
+### §2.3 Availability
+
+We strive to ensure the highest possible availability of the App and cloud services. However, uninterrupted availability is not guaranteed. Maintenance, technical issues, or force majeure may result in temporary outages.
+
+### §2.4 Behavioral Profiling and Personalization
+
+The App analyzes your decision-making behavior locally on your device to provide personalized insights:
+
+- **User Archetypes:** Categorization of your decision-making style (e.g., "The Confident Decision-Maker," "The Cautious Analyst")
+- **Pattern Analysis:** Identification of strengths, growth areas, and bias tendencies
+- **Personalized Recommendations:** Suggestions to improve your decision-making
+
+**Important:** This analysis is performed exclusively locally on your device using rule-based algorithms. No machine learning or artificial intelligence in the strict sense is used. The results are never transmitted to our servers or to third parties.
+
+---
+
+## §3 Account and Registration
+
+### §3.1 Account Creation
+
+The App can generally be used without an account. An account is required if you wish to use:
+
+- Push notifications
+- Cloud-based streak tracking
+- Future synchronization features (planned)
+
+Registration requires a valid email address and a secure password.
+
+### §3.2 User Obligations
+
+You agree to:
+
+- Provide truthful information during registration
+- Keep your login credentials confidential and not share them with third parties
+- Inform us immediately if you suspect misuse of your account
+- Not misuse the App or use it for unlawful purposes
+
+### §3.3 Account Security
+
+We implement technical and organizational measures to protect your account:
+
+- **Password Hashing:** Your password is hashed using an iterative SHA-256 process (10,000 rounds) with a random salt before being transmitted to Firebase
+- **Device Fingerprinting:** The App creates a SHA-256 hash from device information to detect suspicious login attempts
+- **Security Log:** The App logs security events (login attempts, account changes) locally on your device
+
+You are responsible for choosing a strong password and keeping your credentials secure.
+
+### §3.4 Account Deletion
+
+You may permanently delete your account at any time in the App settings under "Delete Account."
+
+**Consequences of account deletion:**
+- All account data in Firebase (email, display name, push tokens, activity data) is permanently deleted
+- All local data (decisions, boards, journal entries with photos and voice notes) is removed from your device
+- **Security log:** Locally stored security events are not completely deleted but anonymized. The email address in events is replaced with "[deleted]," while device information and timestamps are retained for security reasons (fraud prevention, traceability of security incidents)
+
+**Deleted data cannot be restored.**
+
+---
+
+## §4 Data Protection and Data Processing
+
+### §4.1 Applicability of the Privacy Policy
+
+Our separate Privacy Policy applies to the processing of personal data and forms an integral part of these Terms of Use.
+
+### §4.2 Local Data Storage
+
+All your decision-related content is stored exclusively locally on your device:
+
+- Boards and cards with all ratings
+- Journal entries with text, photos (up to 5 per entry), and voice notes
+- Comments and checklists on cards
+- Onboarding survey data (decision context, preferred style, desired outcomes)
+- Local profiling results (archetypes, pattern analysis)
+
+**This data never leaves your device** and is not transmitted to us or third parties.
+
+### §4.3 Cloud Storage
+
+To provide certain features, we store the following data in the cloud (Firebase / Google LLC, USA):
+
+- **Account Data:** Email address, password (encrypted), display name, user ID
+- **Push Notification Data:** Expo push token, platform (iOS/Android), app version
+- **Activity Data for Notification Logic:** Timestamp of last decision, streak count
+
+**Decision content (boards, cards, journal texts, photos, voice notes) is NOT stored in the cloud.**
+
+### §4.4 Android Backup
+
+The App allows Android system backups. This means that your locally stored App data may be included in Android cloud backups (Google Drive) if this feature is enabled on your device. You can disable Android backups for Vayze in Android settings under "Google > Backup."
+
+---
+
+## §5 Intellectual Property and Licenses
+
+### §5.1 Copyright
+
+The App, including all content, designs, graphics, texts, and software, is protected by copyright. All rights are held by Samuel Stöberl / Vayze Apps or our licensors.
+
+### §5.2 License
+
+By downloading the App, you receive a non-exclusive, non-transferable, revocable license for personal, non-commercial use of the App on your own devices.
+
+### §5.3 Prohibited Actions
+
+The following actions are prohibited:
+
+- Reverse engineering, decompiling, or disassembling the App
+- Removing or altering copyright notices
+- Commercial use without written permission
+- Distribution, sale, or rental of the App
+- Use of automated systems (bots, scrapers) to interact with the App
+
+---
+
+## §6 Push Notifications
+
+### §6.1 Functionality
+
+The App provides the following push notifications:
+
+**Implemented notification types:**
+1. **Streak Warnings:** Daily automatic check (20:00 UTC) of all users via Cloud Functions. If you have not made a decision that day and your streak is at risk, you receive a warning
+2. **Re-Engagement:** Daily automatic check (10:00 UTC). If you have been inactive for 7 or more days, you receive a reminder message
+3. **Streak Milestones:** Automatic congratulatory notification upon reaching streak milestones (triggered when creating a decision)
+4. **Broadcast Notifications:** Occasional messages to all users (e.g., important updates, new features)
+
+**Technical implementation:**
+- Use of Firebase Cloud Functions for notification logic
+- Delivery via Expo Push Notification Service
+- Automatic subscription to the Firebase Cloud Messaging topic `all_users`
+- Storage of your push token in Firebase Firestore under `users/{userId}/tokens/{token}`
+
+### §6.2 Consent and Withdrawal
+
+Push notifications require your explicit consent upon first use. You may withdraw this consent at any time:
+
+- In the App settings under "Notifications"
+- In your smartphone's device settings
+
+Withdrawal means you will no longer receive push notifications. Stored push tokens will be removed from the database during the next synchronization.
+
+---
+
+## §7 Permissions
+
+### §7.1 Required Permissions
+
+The App requires the following device permissions:
+
+**Automatically granted permissions:**
+- **INTERNET:** Network access for account management and push notifications
+- **RECEIVE_BOOT_COMPLETED:** Re-registration of notifications after device restart
+- **VIBRATE:** Vibration for incoming notifications
+- **SCHEDULE_EXACT_ALARM:** Time-accurate delivery of scheduled notifications
+- **MODIFY_AUDIO_SETTINGS:** Audio settings adjustment for voice notes
+
+**Permissions requiring runtime consent:**
+- **Camera:** Taking photos for journal entries (optional)
+- **Photo library (READ_EXTERNAL_STORAGE / iOS photo access):** Selecting existing photos from your gallery (optional)
+- **Microphone (RECORD_AUDIO):** Recording voice notes for journal entries (optional)
+- **Storage (WRITE_EXTERNAL_STORAGE, Android < 13):** Saving photo and audio files (optional)
+- **Push Notifications:** Receiving reminders and streak warnings (optional)
+
+**Developer permissions (debug builds only):**
+- **SYSTEM_ALERT_WINDOW:** Display of developer tools over other apps (for testing only)
+
+### §7.2 Optional Features
+
+The App functions without granting optional permissions. In that case, related features (photo/audio attachments, notifications) will not be available. You may revoke granted permissions at any time in your device settings.
+
+---
+
+## §8 Disclaimer
+
+### §8.1 No Professional Advice
+
+Vayze is a tool for structuring and reflecting on decisions. The App does not provide legal, financial, medical, or other professional advice. For important decisions, consult qualified professionals.
+
+### §8.2 Warranty
+
+We strive for error-free operation but cannot guarantee it. The App is provided "as is" without express or implied warranties.
+
+**We are not liable for:**
+- Data loss due to technical errors or device defects
+- Decisions made based on the use of the App
+- Incompatibilities with specific devices or OS versions
+- Damage caused by force majeure, power outages, internet outages, or third-party services
+
+### §8.3 Limitation of Liability
+
+Liability for slight negligence is excluded unless essential contractual obligations (cardinal duties) or damages resulting from injury to life, body, or health are affected. In cases of breach of essential contractual obligations due to slight negligence, liability is limited to foreseeable, contract-typical damage. Liability under the German Product Liability Act remains unaffected.
+
+---
+
+## §9 Third-Party Services
+
+### §9.1 Services Used
+
+We use the following third-party services:
+
+| Service | Provider | Purpose |
+|---------|----------|---------|
+| Firebase Authentication | Google LLC, USA | Account management, login, password reset |
+| Firebase Firestore | Google LLC, USA | Storage of push tokens, activity data |
+| Firebase Cloud Functions | Google LLC, USA | Serverless logic for push notifications |
+| Expo Push Notification Service | Expo Inc., USA | Technical delivery of push notifications |
+| Firebase Analytics (optional, currently inactive) | Google LLC, USA | Usage statistics (opt-in only) |
+
+**Third-party privacy policies:**
+- Google Firebase: https://firebase.google.com/support/privacy
+- Expo: https://expo.dev/privacy
+
+### §9.2 Data Transfer to the USA
+
+All cloud services used are operated by providers based in the USA. Data transfers are carried out on the basis of EU Standard Contractual Clauses pursuant to Art. 46(2)(c) GDPR.
+
+**Note:** The USA currently does not have an adequacy decision by the EU Commission. There is a risk that US authorities may access your data under certain circumstances.
+
+### §9.3 No Control Over Third Parties
+
+We have no control over third-party data processing practices. The respective providers are responsible for their data protection practices.
+
+### §9.4 Account Deletion at Third Parties
+
+When deleting your Vayze account, your data will also be deleted from our processors (Firebase). Security logs stored locally on your device are anonymized but not fully deleted (see §3.4).
+
+---
+
+## §10 Analytics and Tracking
+
+### §10.1 Analytics Function
+
+The App includes an analytics infrastructure (Firebase Analytics), which is **currently de facto inactive** because the required module is not enabled in the App configuration.
+
+**Status:** The analytics setting in the App is present but currently has no function.
+
+**If the analytics function is activated in future versions**, the following event data would be transmitted to Google Firebase Analytics (USA) when the analytics setting is enabled:
+- Decision events (start, completion) with mode, category, and weighting preset
+- Journal events (creation, deletion) with metadata (word count, whether photos/audio are present)
+- Navigation events (tab changes)
+
+**No content is ever transmitted to Analytics.**
+
+### §10.2 Opt-Out
+
+You can disable the analytics function at any time in the App settings. By default, analytics is disabled.
+
+### §10.3 No Tracking Outside the App
+
+We do not use tracking pixels, cookies, or similar technologies to track your behavior outside the App.
+
+---
+
+## §11 Amendments
+
+We reserve the right to amend these Terms of Use. You will be informed of significant changes in due time via the App or by email. Continued use after changes take effect constitutes acceptance.
+
+---
+
+## §12 Termination and Suspension
+
+You may stop using the App at any time by uninstalling it and deleting your account if applicable. We may suspend or delete your account if you violate these Terms, use the App unlawfully, engage in fraudulent activity, or if legally required.
+
+---
+
+## §13 Final Provisions
+
+### §13.1 Applicable Law
+
+German law applies, excluding the UN Convention on Contracts for the International Sale of Goods (CISG).
+
+### §13.2 Jurisdiction
+
+If you are a merchant or public-law entity, exclusive jurisdiction is Straubing, Germany.
+
+### §13.3 Severability
+
+If any provision is invalid, the remaining provisions remain unaffected.
+
+### §13.4 Contract Language
+
+The contract language is German.
+
+---
+
+## §14 Contact
+
+**Samuel Stöberl / Vayze Apps**
+Josef-Schwab-Straße 7
+94559 Niederwinkling
+Germany
+Email: vayze.app@gmail.com
+
+---
+
+**Version:** 2.0.0
+**Effective as of:** February 7, 2025

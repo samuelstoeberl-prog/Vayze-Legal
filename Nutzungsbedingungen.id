@@ -1,0 +1,350 @@
+# Ketentuan Penggunaan
+
+**Vayze App – Alat Bantu Pengambilan Keputusan untuk iOS dan Android**
+
+**Versi:** 2.0.0
+**Berlaku sejak:** 7 Februari 2025
+**Penyedia:** Samuel Stöberl / Vayze Apps
+**Alamat:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Jerman
+**Email:** vayze.app@gmail.com
+
+---
+
+## Pendahuluan
+
+Ketentuan Penggunaan ini mengatur penggunaan Vayze App ("Aplikasi"). Dengan menginstal dan menggunakan Aplikasi, Anda menyetujui ketentuan ini.
+
+**Perubahan penting dibanding versi sebelumnya:** Versi ini memperbaiki deskripsi mengenai layanan cloud, penyedia pihak ketiga, dan fungsi teknis yang benar-benar digunakan oleh Aplikasi.
+
+---
+
+## §1 Penyedia dan Pihak dalam Perjanjian
+
+**Samuel Stöberl / Vayze Apps**
+Josef-Schwab-Straße 7
+94559 Niederwinkling
+Jerman
+Email: vayze.app@gmail.com
+
+---
+
+## §2 Ruang Lingkup Layanan
+
+### §2.1 Fitur Utama
+
+Vayze adalah aplikasi seluler untuk iOS dan Android yang membantu Anda dalam mengambil keputusan. Aplikasi menyediakan:
+
+- **Decision Boards:** Evaluasi terstruktur atas berbagai opsi berdasarkan kriteria dengan pembobotan dan perhitungan skor
+- **Mode:** Berbagai metode pengambilan keputusan (misalnya PMI, Pro/Kontra, Kriteria Berbobot, 6 Thinking Hats)
+- **Fitur Jurnal:** Refleksi dan dokumentasi keputusan dengan teks, foto, dan catatan suara
+- **Insights:** Analisis lokal terhadap perilaku pengambilan keputusan Anda dengan wawasan yang dipersonalisasi
+- **Sistem Akun:** Akun pengguna opsional untuk fitur berbasis cloud
+- **Notifikasi Push:** Pengingat, peringatan streak, dan pesan re-engagement
+
+### §2.2 Privacy-First dengan Komponen Cloud
+
+**Penyimpanan Data Lokal:**
+Semua konten pribadi Anda (board, kartu, penilaian, entri jurnal termasuk teks, foto, dan catatan suara) disimpan secara eksklusif di perangkat Anda. Kami tidak memiliki akses ke data tersebut.
+
+**Fitur Cloud:**
+Untuk manajemen akun dan notifikasi push, kami menggunakan layanan cloud Google (Firebase). Hanya data terkait akun dan metadata teknis yang diproses (lihat Kebijakan Privasi).
+
+### §2.3 Ketersediaan
+
+Kami berupaya menjaga ketersediaan Aplikasi dan layanan cloud setinggi mungkin. Namun, kami tidak menjamin ketersediaan tanpa gangguan. Pemeliharaan, gangguan teknis, atau keadaan kahar dapat menyebabkan gangguan sementara.
+
+### §2.4 Profiling Perilaku dan Personalisasi
+
+Aplikasi menganalisis perilaku pengambilan keputusan Anda secara lokal di perangkat untuk memberikan wawasan yang dipersonalisasi:
+
+- **Arketipe Pengguna:** Kategorisasi gaya pengambilan keputusan Anda (misalnya "Pengambil Keputusan Percaya Diri", "Analis Hati-Hati")
+- **Analisis Pola:** Identifikasi kekuatan, area pengembangan, dan kecenderungan bias
+- **Rekomendasi Personalisasi:** Saran untuk meningkatkan kemampuan pengambilan keputusan Anda
+
+**Penting:** Analisis ini dilakukan sepenuhnya secara lokal menggunakan algoritma berbasis aturan. Tidak digunakan machine learning atau kecerdasan buatan dalam arti sempit. Hasilnya tidak pernah dikirim ke server kami atau ke pihak ketiga.
+
+---
+
+## §3 Akun dan Registrasi
+
+### §3.1 Pembuatan Akun
+
+Aplikasi pada dasarnya dapat digunakan tanpa akun. Akun diperlukan jika Anda ingin menggunakan:
+
+- Notifikasi push
+- Pelacakan streak berbasis cloud
+- Fitur sinkronisasi di masa depan (direncanakan)
+
+Registrasi memerlukan alamat email yang valid dan kata sandi yang aman.
+
+### §3.2 Kewajiban Pengguna
+
+Anda setuju untuk:
+
+- Memberikan informasi yang benar saat registrasi
+- Menjaga kerahasiaan kredensial akun Anda dan tidak membagikannya kepada pihak ketiga
+- Segera memberi tahu kami jika ada indikasi penyalahgunaan akun
+- Tidak menggunakan Aplikasi untuk tujuan yang melanggar hukum atau penyalahgunaan
+
+### §3.3 Keamanan Akun
+
+Kami menerapkan langkah teknis dan organisasi untuk melindungi akun Anda:
+
+- **Hashing Kata Sandi:** Kata sandi Anda di-hash menggunakan proses SHA-256 iteratif (10.000 putaran) dengan salt acak sebelum dikirim ke Firebase
+- **Device Fingerprinting:** Aplikasi membuat hash SHA-256 dari informasi perangkat untuk mendeteksi upaya login mencurigakan
+- **Log Keamanan:** Peristiwa keamanan (upaya login, perubahan akun) dicatat secara lokal di perangkat Anda
+
+Anda bertanggung jawab memilih kata sandi yang kuat dan menjaganya tetap aman.
+
+### §3.4 Penghapusan Akun
+
+Anda dapat menghapus akun secara permanen kapan saja melalui pengaturan Aplikasi pada menu "Hapus Akun."
+
+**Konsekuensi penghapusan akun:**
+- Semua data akun di Firebase (email, nama tampilan, token push, data aktivitas) dihapus secara permanen
+- Semua data lokal (keputusan, board, entri jurnal dengan foto dan catatan suara) dihapus dari perangkat
+- **Log keamanan:** Peristiwa keamanan yang tersimpan secara lokal tidak dihapus sepenuhnya, tetapi dianonimkan. Alamat email diganti dengan "[deleted]", sementara informasi perangkat dan stempel waktu tetap disimpan untuk alasan keamanan (pencegahan penipuan, keterlacakan insiden keamanan)
+
+**Data yang dihapus tidak dapat dipulihkan.**
+
+---
+
+## §4 Perlindungan dan Pemrosesan Data
+
+### §4.1 Kebijakan Privasi
+
+Kebijakan Privasi kami yang terpisah berlaku untuk pemrosesan data pribadi dan merupakan bagian integral dari Ketentuan ini.
+
+### §4.2 Penyimpanan Lokal
+
+Semua konten keputusan Anda disimpan secara eksklusif di perangkat:
+
+- Board dan kartu dengan semua penilaian
+- Entri jurnal dengan teks, hingga 5 foto per entri, dan catatan suara
+- Komentar dan checklist pada kartu
+- Data survei onboarding (konteks keputusan, gaya yang disukai, hasil yang diinginkan)
+- Hasil profiling lokal (arketipe, analisis pola)
+
+**Data ini tidak pernah meninggalkan perangkat Anda** dan tidak dikirimkan kepada kami atau pihak ketiga.
+
+### §4.3 Penyimpanan Cloud
+
+Untuk menyediakan fitur tertentu, kami menyimpan data berikut di cloud (Firebase / Google LLC, AS):
+
+- **Data akun:** Email, kata sandi (terenkripsi), nama tampilan, ID pengguna
+- **Data notifikasi push:** Expo Push Token, platform (iOS/Android), versi aplikasi
+- **Data aktivitas untuk logika notifikasi:** Waktu keputusan terakhir, jumlah streak
+
+**Konten keputusan (board, kartu, teks jurnal, foto, catatan suara) TIDAK disimpan di cloud.**
+
+### §4.4 Backup Android
+
+Aplikasi memungkinkan backup sistem Android. Jika diaktifkan, data aplikasi lokal dapat termasuk dalam backup cloud Android (Google Drive). Anda dapat menonaktifkannya di pengaturan Android di bawah "Google > Backup."
+
+---
+
+## §5 Kekayaan Intelektual dan Lisensi
+
+### §5.1 Hak Cipta
+
+Aplikasi beserta seluruh konten, desain, grafik, teks, dan perangkat lunaknya dilindungi oleh hak cipta. Semua hak dimiliki oleh Samuel Stöberl / Vayze Apps atau pemberi lisensinya.
+
+### §5.2 Lisensi
+
+Dengan mengunduh Aplikasi, Anda memperoleh lisensi non-eksklusif, tidak dapat dialihkan, dan dapat dicabut untuk penggunaan pribadi non-komersial Aplikasi pada perangkat Anda sendiri.
+
+### §5.3 Tindakan yang Dilarang
+
+Tindakan berikut dilarang:
+
+- Reverse engineering, dekompilasi, atau pembongkaran Aplikasi
+- Menghapus atau mengubah pemberitahuan hak cipta
+- Penggunaan komersial tanpa izin tertulis
+- Distribusi, penjualan, atau penyewaan Aplikasi
+- Penggunaan sistem otomatis (bot, scraper) untuk berinteraksi dengan Aplikasi
+
+---
+
+## §6 Notifikasi Push
+
+### §6.1 Fungsi
+
+Aplikasi menyediakan notifikasi push berikut:
+
+**Jenis notifikasi yang diimplementasikan:**
+1. **Peringatan Streak:** Pemeriksaan otomatis harian (20:00 UTC) semua pengguna melalui Cloud Functions. Jika Anda tidak membuat keputusan hari itu dan streak Anda berisiko terputus, Anda menerima peringatan
+2. **Re-Engagement:** Pemeriksaan otomatis harian (10:00 UTC). Jika Anda tidak aktif selama 7 hari atau lebih, Anda menerima pesan pengingat
+3. **Pencapaian Streak:** Notifikasi ucapan selamat otomatis saat mencapai tonggak streak (dipicu saat membuat keputusan)
+4. **Notifikasi Siaran:** Pesan sesekali kepada semua pengguna (misalnya pembaruan penting, fitur baru)
+
+**Implementasi teknis:**
+- Penggunaan Firebase Cloud Functions untuk logika notifikasi
+- Pengiriman melalui Expo Push Notification Service
+- Berlangganan otomatis ke topik Firebase Cloud Messaging `all_users`
+- Penyimpanan token push Anda di Firebase Firestore di bawah `users/{userId}/tokens/{token}`
+
+### §6.2 Persetujuan dan Penarikan
+
+Notifikasi push memerlukan persetujuan eksplisit Anda saat pertama kali digunakan. Anda dapat menarik persetujuan ini kapan saja:
+
+- Di pengaturan Aplikasi di bawah "Notifikasi"
+- Di pengaturan perangkat smartphone Anda
+
+Penarikan berarti Anda tidak akan lagi menerima notifikasi push. Token push yang tersimpan akan dihapus dari database saat sinkronisasi berikutnya.
+
+---
+
+## §7 Izin
+
+### §7.1 Izin yang Diperlukan
+
+Aplikasi memerlukan izin perangkat berikut:
+
+**Izin yang diberikan secara otomatis:**
+- **INTERNET:** Akses jaringan untuk manajemen akun dan notifikasi push
+- **RECEIVE_BOOT_COMPLETED:** Pendaftaran ulang notifikasi setelah restart perangkat
+- **VIBRATE:** Getaran untuk notifikasi masuk
+- **SCHEDULE_EXACT_ALARM:** Pengiriman notifikasi terjadwal yang tepat waktu
+- **MODIFY_AUDIO_SETTINGS:** Penyesuaian pengaturan audio untuk catatan suara
+
+**Izin yang memerlukan persetujuan runtime:**
+- **Kamera:** Mengambil foto untuk entri jurnal (opsional)
+- **Akses galeri foto (READ_EXTERNAL_STORAGE / akses foto iOS):** Memilih foto yang ada dari galeri Anda (opsional)
+- **Mikrofon (RECORD_AUDIO):** Merekam catatan suara untuk entri jurnal (opsional)
+- **Penyimpanan (WRITE_EXTERNAL_STORAGE, Android < 13):** Menyimpan file foto dan audio (opsional)
+- **Notifikasi Push:** Menerima pengingat dan peringatan streak (opsional)
+
+**Izin pengembang (hanya build debug):**
+- **SYSTEM_ALERT_WINDOW:** Tampilan alat pengembang di atas aplikasi lain (hanya untuk pengujian)
+
+### §7.2 Fitur Opsional
+
+Aplikasi berfungsi tanpa memberikan izin opsional. Dalam hal itu, fitur terkait (lampiran foto/audio, notifikasi) tidak akan tersedia. Anda dapat mencabut izin yang diberikan kapan saja di pengaturan perangkat.
+
+---
+
+## §8 Penafian
+
+### §8.1 Bukan Nasihat Profesional
+
+Vayze adalah alat untuk menyusun dan merefleksikan keputusan. Aplikasi tidak memberikan nasihat hukum, keuangan, medis, atau profesional lainnya. Untuk keputusan penting, konsultasikan dengan profesional yang berkualifikasi.
+
+### §8.2 Garansi
+
+Kami berupaya untuk operasi bebas kesalahan tetapi tidak dapat menjaminnya. Aplikasi disediakan "sebagaimana adanya" tanpa jaminan tersurat maupun tersirat.
+
+**Kami tidak bertanggung jawab atas:**
+- Kehilangan data akibat kesalahan teknis atau kerusakan perangkat
+- Keputusan yang dibuat berdasarkan penggunaan Aplikasi
+- Ketidakcocokan dengan perangkat atau versi OS tertentu
+- Kerusakan yang disebabkan oleh keadaan kahar, pemadaman listrik, pemadaman internet, atau layanan pihak ketiga
+
+### §8.3 Batasan Tanggung Jawab
+
+Tanggung jawab atas kelalaian ringan dikecualikan kecuali kewajiban kontraktual esensial (kewajiban utama) atau kerusakan akibat cedera pada kehidupan, tubuh, atau kesehatan. Dalam kasus pelanggaran kewajiban kontraktual esensial karena kelalaian ringan, tanggung jawab dibatasi pada kerusakan khas kontrak yang dapat diprediksi. Tanggung jawab berdasarkan Undang-Undang Tanggung Jawab Produk Jerman tidak terpengaruh.
+
+---
+
+## §9 Layanan Pihak Ketiga
+
+### §9.1 Layanan yang Digunakan
+
+Kami menggunakan layanan pihak ketiga berikut:
+
+| Layanan | Penyedia | Tujuan |
+|---------|----------|--------|
+| Firebase Authentication | Google LLC, AS | Manajemen akun, login, reset kata sandi |
+| Firebase Firestore | Google LLC, AS | Penyimpanan token push, data aktivitas |
+| Firebase Cloud Functions | Google LLC, AS | Logika tanpa server untuk notifikasi push |
+| Expo Push Notification Service | Expo Inc., AS | Pengiriman teknis notifikasi push |
+| Firebase Analytics (opsional, saat ini tidak aktif) | Google LLC, AS | Statistik penggunaan (opt-in saja) |
+
+**Kebijakan privasi pihak ketiga:**
+- Google Firebase: https://firebase.google.com/support/privacy
+- Expo: https://expo.dev/privacy
+
+### §9.2 Transfer Data ke AS
+
+Semua layanan cloud yang digunakan dioperasikan oleh penyedia yang berbasis di AS. Transfer data dilakukan berdasarkan Klausul Kontrak Standar UE sesuai Art. 46(2)(c) GDPR.
+
+**Catatan:** AS saat ini tidak memiliki keputusan kecukupan dari Komisi UE. Ada risiko bahwa otoritas AS dapat mengakses data Anda dalam keadaan tertentu.
+
+### §9.3 Tidak Ada Kontrol atas Pihak Ketiga
+
+Kami tidak memiliki kontrol atas praktik pemrosesan data pihak ketiga. Penyedia masing-masing bertanggung jawab atas praktik perlindungan data mereka.
+
+### §9.4 Penghapusan Akun di Pihak Ketiga
+
+Saat menghapus akun Vayze Anda, data Anda juga akan dihapus dari pemroses kami (Firebase). Log keamanan yang tersimpan secara lokal di perangkat Anda dianonimkan tetapi tidak sepenuhnya dihapus (lihat §3.4).
+
+---
+
+## §10 Analitik dan Pelacakan
+
+### §10.1 Fungsi Analitik
+
+Aplikasi mencakup infrastruktur analitik (Firebase Analytics), yang **saat ini secara de facto tidak aktif** karena modul yang diperlukan tidak diaktifkan dalam konfigurasi Aplikasi.
+
+**Status:** Pengaturan analitik di Aplikasi ada tetapi saat ini tidak berfungsi.
+
+**Jika fungsi analitik diaktifkan di versi mendatang**, data peristiwa berikut akan dikirim ke Google Firebase Analytics (AS) ketika pengaturan analitik diaktifkan:
+- Peristiwa keputusan (mulai, selesai) dengan mode, kategori, dan preset pembobotan
+- Peristiwa jurnal (pembuatan, penghapusan) dengan metadata (jumlah kata, apakah ada foto/audio)
+- Peristiwa navigasi (pergantian tab)
+
+**Tidak ada konten yang pernah dikirim ke Analytics.**
+
+### §10.2 Opt-Out
+
+Anda dapat menonaktifkan fungsi analitik kapan saja di pengaturan Aplikasi. Secara default, analitik dinonaktifkan.
+
+### §10.3 Tidak Ada Pelacakan di Luar Aplikasi
+
+Kami tidak menggunakan piksel pelacakan, cookie, atau teknologi serupa untuk melacak perilaku Anda di luar Aplikasi.
+
+---
+
+## §11 Perubahan
+
+Kami berhak mengubah Ketentuan Penggunaan ini. Anda akan diberitahu tentang perubahan signifikan tepat waktu melalui Aplikasi atau email. Penggunaan yang berlanjut setelah perubahan berlaku merupakan penerimaan.
+
+---
+
+## §12 Penghentian dan Penangguhan
+
+Anda dapat berhenti menggunakan Aplikasi kapan saja dengan menghapusnya dan menghapus akun jika berlaku. Kami dapat menangguhkan atau menghapus akun Anda jika Anda melanggar Ketentuan ini, menggunakan Aplikasi secara melanggar hukum, terlibat dalam aktivitas penipuan, atau jika diwajibkan secara hukum.
+
+---
+
+## §13 Ketentuan Akhir
+
+### §13.1 Hukum yang Berlaku
+
+Hukum Jerman berlaku, tidak termasuk Konvensi PBB tentang Kontrak untuk Penjualan Barang Internasional (CISG).
+
+### §13.2 Yurisdiksi
+
+Jika Anda adalah pedagang atau badan hukum publik, yurisdiksi eksklusif adalah Straubing, Jerman.
+
+### §13.3 Keterpisahan
+
+Jika ada ketentuan yang tidak sah, ketentuan yang tersisa tidak terpengaruh.
+
+### §13.4 Bahasa Kontrak
+
+Bahasa kontrak adalah Bahasa Jerman.
+
+---
+
+## §14 Kontak
+
+**Samuel Stöberl / Vayze Apps**
+Josef-Schwab-Straße 7
+94559 Niederwinkling
+Jerman
+Email: vayze.app@gmail.com
+
+---
+
+**Versi:** 2.0.0
+**Berlaku sejak:** 7 Februari 2025
