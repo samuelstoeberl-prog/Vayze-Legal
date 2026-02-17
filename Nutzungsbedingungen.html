@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutzungsbedingungen – Vayze</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #3b82f6;
+            --secondary-color: #64748b;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --border-color: #e2e8f0;
+            --accent: #3b82f6;
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background);
+            overflow-x: hidden;
+        }
+        /* Header */
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--primary-color); }
+        .nav-links a.active { color: var(--primary-color); }
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.3rem 0.4rem;
+            flex-shrink: 0;
+        }
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.3rem 0.6rem;
+            border: none;
+            background: transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            white-space: nowrap;
+            font-family: inherit;
+        }
+        .lang-btn:hover { background: var(--surface); color: var(--primary-color); }
+        .lang-btn.active { background: var(--primary-color); color: white; }
+        .lang-flag { font-size: 1rem; line-height: 1; }
+        /* Layout */
+        .layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        /* Sidebar TOC */
+        .sidebar {
+            position: sticky;
+            top: 90px;
+            background: var(--surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+        .toc-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .toc-list {
+            list-style: none;
+        }
+        .toc-list li { margin-bottom: 0.25rem; }
+        .toc-list a {
+            display: block;
+            padding: 0.3rem 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+            line-height: 1.4;
+        }
+        .toc-list a:hover { background: var(--background); color: var(--primary-color); }
+        .toc-list a.toc-active { background: rgba(37,99,235,0.08); color: var(--primary-color); font-weight: 600; }
+        .toc-sub { padding-left: 1rem; }
+        /* Main content */
+        .content {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            min-height: 600px;
+        }
+        .content h1 { font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; }
+        .content h2 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1rem;
+            padding-top: 2.5rem;
+            border-top: 2px solid var(--border-color);
+        }
+        .content h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+        .content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 1.5rem 0 0.75rem; }
+        .content h4 { font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin: 1.25rem 0 0.5rem; }
+        .content p { margin-bottom: 1rem; color: var(--text-secondary); }
+        .content ul, .content ol { margin: 0.75rem 0 1rem 1.5rem; }
+        .content li { margin-bottom: 0.4rem; color: var(--text-secondary); }
+        .content strong { color: var(--text-primary); }
+        .content a { color: var(--primary-color); text-decoration: underline; }
+        .content hr { border: none; border-top: 1px solid var(--border-color); margin: 2rem 0; }
+        .content blockquote {
+            border-left: 4px solid var(--primary-color);
+            background: rgba(37,99,235,0.05);
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+        }
+        .content code {
+            background: var(--background);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: 'SFMono-Regular', Consolas, monospace;
+        }
+        .content pre {
+            background: var(--background);
+            padding: 1.25rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid var(--border-color);
+        }
+        .content pre code { background: none; padding: 0; }
+        /* Loading */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+        }
+        .spinner {
+            width: 24px; height: 24px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 48px; height: 48px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            transform: translateY(16px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); }
+        .back-to-top:hover { background: var(--primary-dark); }
+        .back-to-top svg { width: 20px; height: 20px; }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .layout { grid-template-columns: 1fr; }
+            .sidebar { display: none; }
+        }
+        @media (max-width: 768px) {
+            .layout { padding: 1rem; }
+            .content { padding: 1.5rem; }
+            .header-content { padding: 1rem; }
+            .nav-links { display: none; }
+            .lang-btn span:not(.lang-flag) { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">Vayze</a>
+            <div class="header-right">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html" id="nav-home">Startseite</a></li>
+                        <li><a href="Nutzungsbedingungen.html" id="nav-terms" class="active">Nutzungsbedingungen</a></li>
+                        <li><a href="Datenschutzerklärung.html" id="nav-privacy">Datenschutz</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switcher">
+                    <button class="lang-btn" data-lang="de" onclick="switchLang('de')">
+                        <span class="lang-flag">🇩🇪</span><span>DE</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en" onclick="switchLang('en')">
+                        <span class="lang-flag">🇬🇧</span><span>EN</span>
+                    </button>
+                    <button class="lang-btn" data-lang="zh" onclick="switchLang('zh')">
+                        <span class="lang-flag">🇨🇳</span><span>ZH</span>
+                    </button>
+                    <button class="lang-btn" data-lang="id" onclick="switchLang('id')">
+                        <span class="lang-flag">🇮🇩</span><span>ID</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="toc-title" id="toc-title">Inhaltsverzeichnis</div>
+            <ul class="toc-list" id="toc-list"></ul>
+        </aside>
+        <main class="content" id="content">
+            <div class="loading">
+                <div class="spinner"></div>
+                <span id="loading-text">Wird geladen…</span>
+            </div>
+        </main>
+    </div>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Nach oben scrollen">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        const translations = {
+            de: {
+                pageTitle: 'Nutzungsbedingungen – Vayze',
+                lang: 'de',
+                tocTitle: 'Inhaltsverzeichnis',
+                loading: 'Wird geladen…',
+                backToTop: 'Nach oben scrollen',
+                navHome: 'Startseite',
+                navTerms: 'Nutzungsbedingungen',
+                navPrivacy: 'Datenschutz',
+                navHomeHref: 'index.html',
+                navTermsHref: 'Nutzungsbedingungen.html',
+                navPrivacyHref: 'Datenschutzerklärung.html'
+            },
+            en: {
+                pageTitle: 'Terms of Use – Vayze',
+                lang: 'en',
+                tocTitle: 'Table of Contents',
+                loading: 'Loading…',
+                backToTop: 'Back to top',
+                navHome: 'Home',
+                navTerms: 'Terms of Use',
+                navPrivacy: 'Privacy',
+                navHomeHref: 'index.html?lang=en',
+                navTermsHref: 'Nutzungsbedingungen.html?lang=en',
+                navPrivacyHref: 'Datenschutzerklärung.html?lang=en'
+            },
+            zh: {
+                pageTitle: '使用条款 – Vayze',
+                lang: 'zh',
+                tocTitle: '目录',
+                loading: '加载中…',
+                backToTop: '返回顶部',
+                navHome: '首页',
+                navTerms: '使用条款',
+                navPrivacy: '隐私政策',
+                navHomeHref: 'index.html?lang=zh',
+                navTermsHref: 'Nutzungsbedingungen.html?lang=zh',
+                navPrivacyHref: 'Datenschutzerklärung.html?lang=zh'
+            },
+            id: {
+                pageTitle: 'Ketentuan Penggunaan – Vayze',
+                lang: 'id',
+                tocTitle: 'Daftar Isi',
+                loading: 'Memuat…',
+                backToTop: 'Kembali ke atas',
+                navHome: 'Beranda',
+                navTerms: 'Ketentuan Penggunaan',
+                navPrivacy: 'Privasi',
+                navHomeHref: 'index.html?lang=id',
+                navTermsHref: 'Nutzungsbedingungen.html?lang=id',
+                navPrivacyHref: 'Datenschutzerklärung.html?lang=id'
+            }
+        };
+
+        function getLang() {
+            const params = new URLSearchParams(window.location.search);
+            const lang = params.get('lang');
+            return (lang && translations[lang]) ? lang : 'de';
+        }
+
+        function switchLang(lang) {
+            const url = new URL(window.location.href);
+            if (lang === 'de') {
+                url.searchParams.delete('lang');
+            } else {
+                url.searchParams.set('lang', lang);
+            }
+            window.location.href = url.toString();
+        }
+
+        function applyLang(lang) {
+            const t = translations[lang];
+            document.documentElement.lang = t.lang;
+            document.title = t.pageTitle;
+            document.getElementById('toc-title').textContent = t.tocTitle;
+            document.getElementById('loading-text').textContent = t.loading;
+            document.getElementById('back-to-top').setAttribute('aria-label', t.backToTop);
+            document.getElementById('nav-home').textContent = t.navHome;
+            document.getElementById('nav-home').href = t.navHomeHref;
+            document.getElementById('nav-terms').textContent = t.navTerms;
+            document.getElementById('nav-terms').href = t.navTermsHref;
+            document.getElementById('nav-privacy').textContent = t.navPrivacy;
+            document.getElementById('nav-privacy').href = t.navPrivacyHref;
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+
+        const currentLang = getLang();
+        applyLang(currentLang);
+
+        // Load and render Markdown
+        fetch('Nutzungsbedingungen')
+            .then(res => res.text())
+            .then(md => {
+                const content = document.getElementById('content');
+                content.innerHTML = marked.parse(md);
+                buildTOC();
+                initScrollSpy();
+            })
+            .catch(() => {
+                document.getElementById('content').innerHTML = '<p style="color:red">Fehler beim Laden der Datei.</p>';
+            });
+
+        function buildTOC() {
+            const headings = document.querySelectorAll('#content h2, #content h3');
+            const tocList = document.getElementById('toc-list');
+            tocList.innerHTML = '';
+            headings.forEach((h, i) => {
+                const id = 'section-' + i;
+                h.id = id;
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#' + id;
+                a.textContent = h.textContent;
+                a.dataset.id = id;
+                if (h.tagName === 'H3') li.classList.add('toc-sub');
+                li.appendChild(a);
+                tocList.appendChild(li);
+            });
+        }
+
+        function initScrollSpy() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        document.querySelectorAll('.toc-list a').forEach(a => a.classList.remove('toc-active'));
+                        const active = document.querySelector(`.toc-list a[data-id="${entry.target.id}"]`);
+                        if (active) active.classList.add('toc-active');
+                    }
+                });
+            }, { rootMargin: '-10% 0px -80% 0px' });
+            document.querySelectorAll('#content h2, #content h3').forEach(h => observer.observe(h));
+        }
+
+        // Back to top
+        const btn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        });
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+</html>
