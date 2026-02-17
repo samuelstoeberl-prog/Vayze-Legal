@@ -2,8 +2,8 @@
 
 **Vayze App – Decision Support for iOS and Android**
 
-**Version:** 2.0.1
-**Date:** February 7, 2025
+**Version:** 2.0.2
+**Date:** February 17, 2026
 **Provider:** Samuel Stöberl / Vayze Apps
 **Address:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Germany
 **Email:** vayze.app@gmail.com
@@ -105,15 +105,19 @@ To send personalized push notifications (e.g., streak warnings, re-engagement), 
 
 | Data Type | Purpose | Processing Location | Legal Basis |
 |-----------|---------|-------------------|-------------|
+| **Decision Timestamps** | | | |
 | `createdAt` (from `decisions` subcollection) | Time of decision creation | Firebase Cloud Functions (Google LLC, USA) | Art. 6(1)(a) GDPR |
 | `completedAt` (from `decisions` subcollection) | Time of decision completion | Firebase Cloud Functions (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| **Activity Tracking** | | | |
 | `activity.lastDecisionAt` | Timestamp of last decision | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
 | `activity.currentStreak` | Number of consecutive days with decisions | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
 | `activity.longestStreak` | Longest streak achieved | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
 | `activity.lastReEngagementAt` | Timestamp of last re-engagement notification | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
 | `activity.lastSyncedAt` | Timestamp of last streak sync | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| **Rate Limiting** | | | |
 | `notificationSettings.rateLimits.lastSentAt` | ISO timestamp of last sent notification | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
 | `notificationSettings.rateLimits.sentToday` | Counter of notifications sent today | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
+| **User Identification** | | | |
 | Email address (as document ID) | Assignment of activity data to user | Firebase Firestore (Google LLC, USA) | Art. 6(1)(a) GDPR |
 
 **Processing:** Our Cloud Functions perform automated checks daily at 20:00 UTC (streak warning) and 10:00 UTC (re-engagement). All registered user documents in Firestore are iterated and analyzed based on the activity data.
@@ -436,5 +440,77 @@ Email: vayze.app@gmail.com
 
 ---
 
-**Date:** February 7, 2025
-**Version:** 2.0.1
+## Change History
+
+### Version 2.0.2 (February 17, 2026) – Editorial Corrections and Translation Improvements
+
+**Corrections:**
+1. **All language versions:** Date typo corrected from "2026" to "2025" in translated versions
+2. **English version:** Complete reformat from plain text to Markdown with proper headings, bold formatting, and tables (TOC and formatting now functional)
+3. **All non-German versions:** Language supremacy clause added: "In case of discrepancies between language versions, the German version shall prevail"
+4. **All non-German versions:** BayLDA full English name added: Bavarian State Office for Data Protection Supervision
+5. **Indonesian version:** Reference to Indonesian Data Protection Act (UU PDP, No. 27/2022) added
+6. **§3.3 Table (English):** Subcategory separators restored (Decision Timestamps, Activity Tracking, Rate Limiting, User Identification)
+7. **Change history:** Added to English version (previously missing)
+
+---
+
+### Version 2.0.1 (February 7, 2025) – Technical Clarification after Code Detail Analysis
+
+**Corrections:**
+1. **§3.6 Device Fingerprinting:** Clarification that only 7 attributes are included in the SHA-256 hash (not 9); Platform API Level and device build year are stored separately only in security logs
+2. **§3.2 Firestore Paths:** Correction from `users/{userId}` to `users/{email}` – email address is used as the Firestore document ID
+3. **§3.2 Notification Log:** Addition of the `notificationLog` subcollection with stored data (title, body, payload, timestamp, status)
+4. **§3.3 Activity Data:** Complete listing of all Firestore fields (rate limiting, activity tracking, streak sync) and disclosure of access to the `decisions` subcollection (timestamps `createdAt` and `completedAt`)
+5. **§3.4 Journal Entries:** Addition of the `additionalNotes` field (additional notes) and reference to the free-tier limit (3 entries/month)
+6. **§4.3 Cloud Functions:** Addition of the 5th function `syncStreak` (manual streak synchronization)
+7. **§7 Retention Periods:** Removal of the unimplemented idle timeout (999 days) – sessions expire after 365 days
+8. **§8.1 Encryption:** More neutral wording on cleartext traffic – caveat that unencrypted connections through third-party libraries cannot be completely ruled out
+
+**Note on Gap 3 (enhancedAuthService):** The module `enhancedAuthService` was analyzed and is merely an abstraction layer over `firebaseAuthService`. It does not perform any additional data processing beyond the already documented Firebase Authentication functions.
+
+---
+
+### Version 2.0.0 (February 7, 2025) – Complete Revision after Legal-Technical Audit
+
+**Critical Corrections:**
+- **Third-party services disclosed:** Firebase Authentication, Firebase Firestore, Firebase Cloud Functions, Expo Push Notification Service, Firebase Analytics (optional, currently inactive) – complete description of all cloud services used
+- **Data transfer to the USA:** Disclosure of data transfer to third countries based on EU Standard Contractual Clauses
+- **Push notifications:** Complete description of the implemented push functions (streak warnings, re-engagement, broadcast, milestones) and the data processed for this purpose
+- **Device fingerprinting:** Disclosure of the collection and processing of device data for security purposes
+- **Camera/microphone/photos:** Disclosure of permissions and use for journal attachments (photos, voice notes)
+- **Behavioral profiling:** Description of local analysis (archetypes, pattern analysis, recommendations)
+- **Security logging:** Disclosure of local security logs with up to 100 events
+- **Analytics:** Correction of status (infrastructure available, currently de facto inactive) and description of potentially collected data
+- **Encryption:** Correct description of the methods actually used (iterative SHA-256, XOR cipher for sessions)
+- **Account deletion:** Disclosure that security events are anonymized but not completely deleted
+- **Complete permission list:** All actually used Android and iOS permissions listed
+
+**New Sections:**
+- Detailed tables for all data types with purpose, storage location, and legal basis
+- Description of Cloud Functions and their cron jobs
+- Technical metadata (IP address, automatic transmission)
+- Android backup note
+
+**Removed False Statements:**
+- "No third-party services"
+- "No cloud storage"
+- "No device ID"
+- "No fingerprinting"
+- "No photos or media files"
+- "No camera or microphone"
+- "Push notifications not yet implemented"
+- "No transfer to third countries"
+- "No profiling"
+- "Analytics setting has no function" (corrected to: currently inactive, but infrastructure available)
+
+---
+
+### Version 1.3.0 (previous version)
+
+- Initial public version (contained the above-mentioned inaccuracies and omissions)
+
+---
+
+**Date:** February 17, 2026
+**Version:** 2.0.2

@@ -2,8 +2,9 @@
 
 **Vayze App – Entscheidungshilfe für iOS und Android**
 
-**Version:** 2.0.0  
-**Stand:** 7. Februar 2025  
+**Version:** 2.0.1
+**Stand:** 17. Februar 2026
+
 **Anbieter:** Samuel Stöberl / Vayze Apps  
 **Adresse:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Deutschland  
 **E-Mail:** vayze.app@gmail.com
@@ -377,6 +378,16 @@ E-Mail: vayze.app@gmail.com
 
 ## Änderungshistorie
 
+### Version 2.0.1 (17. Februar 2026) – Redaktionelle Korrekturen und Übersetzungsverbesserungen
+
+**Korrekturen:**
+1. **§6.1 Firestore-Pfad:** Korrektur von `users/{userId}/tokens/{token}` zu `users/{email}/tokens/{token}` in der englischen Version (konsistent mit Datenschutzerklärung)
+2. **Alle nicht-deutschen Versionen:** Sprachvorrang-Klausel ergänzt in §13.4: „Bei Abweichungen zwischen den Sprachversionen gilt die deutsche Version."
+3. **Indonesische Version:** Hinweis auf indonesisches Datenschutzgesetz (UU PDP, Nr. 27/2022) in der Präambel ergänzt
+4. **Chinesische Version:** Sprachvorrang-Klausel in der Präambel und §13.4 ergänzt
+
+---
+
 ### Version 2.0.0 (7. Februar 2025) – Vollständige Überarbeitung nach Legal-Technical-Audit
 
 **Kritische Korrekturen:**
@@ -417,5 +428,5 @@ E-Mail: vayze.app@gmail.com
 
 ---
 
-**Stand:** 7. Februar 2025  
-**Version:** 2.0.0
+**Stand:** 17. Februar 2026
+**Version:** 2.0.1

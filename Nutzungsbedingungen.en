@@ -2,8 +2,8 @@
 
 **Vayze App – Decision Support for iOS and Android**
 
-**Version:** 2.0.0
-**Effective as of:** February 7, 2025
+**Version:** 2.0.1
+**Effective as of:** February 17, 2026
 **Provider:** Samuel Stöberl / Vayze Apps
 **Address:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Germany
 **Email:** vayze.app@gmail.com
@@ -181,7 +181,7 @@ The App provides the following push notifications:
 - Use of Firebase Cloud Functions for notification logic
 - Delivery via Expo Push Notification Service
 - Automatic subscription to the Firebase Cloud Messaging topic `all_users`
-- Storage of your push token in Firebase Firestore under `users/{userId}/tokens/{token}`
+- Storage of your push token in Firebase Firestore under `users/{email}/tokens/{token}`
 
 ### §6.2 Consent and Withdrawal
 
@@ -346,5 +346,5 @@ Email: vayze.app@gmail.com
 
 ---
 
-**Version:** 2.0.0
-**Effective as of:** February 7, 2025
+**Version:** 2.0.1
+**Effective as of:** February 17, 2026

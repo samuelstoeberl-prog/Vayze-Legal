@@ -2,8 +2,8 @@
 
 **Vayze App – Entscheidungshilfe für iOS und Android**
 
-**Version:** 2.0.1
-**Stand:** 7. Februar 2025
+**Version:** 2.0.2
+**Stand:** 17. Februar 2026
 **Anbieter:** Samuel Stöberl / Vayze Apps  
 **Adresse:** Josef-Schwab-Straße 7, 94559 Niederwinkling, Deutschland  
 **E-Mail:** vayze.app@gmail.com
@@ -440,6 +440,19 @@ E-Mail: vayze.app@gmail.com
 
 ## Änderungshistorie
 
+### Version 2.0.2 (17. Februar 2026) – Redaktionelle Korrekturen und Übersetzungsverbesserungen
+
+**Korrekturen:**
+1. **Alle Sprachversionen:** Datumskorrektur von „2026" auf „2025" in den Übersetzungen
+2. **Englische Version:** Vollständige Neuformatierung von Plaintext auf Markdown mit korrekten Überschriften, Fettformatierung und Tabellen (Inhaltsverzeichnis und Formatierung nun funktional)
+3. **Alle nicht-deutschen Versionen:** Sprachvorrang-Klausel ergänzt: „Bei Abweichungen zwischen den Sprachversionen gilt die deutsche Version."
+4. **Alle nicht-deutschen Versionen:** Vollständiger englischer Name der BayLDA ergänzt: Bavarian State Office for Data Protection Supervision
+5. **Indonesische Version:** Hinweis auf indonesisches Datenschutzgesetz (UU PDP, Nr. 27/2022) ergänzt
+6. **§3.3 Tabelle (Englisch):** Kategorie-Trennzeilen wiederhergestellt (Entscheidungs-Zeitstempel, Aktivitäts-Tracking, Rate-Limiting, Benutzer-Identifikation)
+7. **Änderungshistorie:** In der englischen Version ergänzt (fehlte bisher)
+
+---
+
 ### Version 2.0.1 (7. Februar 2025) – Technische Präzisierung nach Code-Detailanalyse
 
 **Korrekturen:**
@@ -493,5 +506,5 @@ E-Mail: vayze.app@gmail.com
 
 ---
 
-**Stand:** 7. Februar 2025  
-**Version:** 2.0.1
+**Stand:** 17. Februar 2026
+**Version:** 2.0.2
